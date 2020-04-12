@@ -9,5 +9,9 @@ int main()
 	std::cout << x << std::endl;
 	std::cout << &x << std::endl;	// ampersand
 
+	int y = 123;	// initialization
+	//int y(123); °¡´É
+	y = 5;			// assignment
+
 	return 0;
 }
