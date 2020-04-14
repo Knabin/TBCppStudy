@@ -19,7 +19,7 @@ int main()
 	// 출력: 3
 
 	int z;
-	std::cout << z << std::endl;		 // #5
+	// std::cout << z << std::endl;		 // #5
 	// 빌드 오류가 난다
 
 	return 0;
