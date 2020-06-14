@@ -1,6 +1,5 @@
 #include <iostream>
 #include <array>
-#include "Storage8.h"
 
 using namespace std;
 
