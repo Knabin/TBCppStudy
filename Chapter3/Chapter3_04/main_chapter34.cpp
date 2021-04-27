@@ -4,17 +4,17 @@ int main()
 {
 	using namespace std;
 
-	// sizeof: µ¥ÀÌÅÍÇüÀÇ Å©±â¸¦ ¾Ë°í ½ÍÀ» ¶§ »ç¿ëÇÑ´Ù. ´ÜÀ§-¹ÙÀÌÆ®
-	// structure, class µî »ç¿ëÀÚ°¡ ¸¸µç ÀÚ·áÇü¿¡µµ »ç¿ë °¡´ÉÇÏ´Ù.
-	// sizeof´Â '¿¬»êÀÚ'
+	// sizeof : ë°ì´í„°í˜•ì˜ í¬ê¸°ë¥¼ ì•Œê³  ì‹¶ì„ ë•Œ ì‚¬ìš©í•œë‹¤. ë‹¨ìœ„-ë°”ì´íŠ¸
+	// structure, class ë“± ì‚¬ìš©ìžê°€ ë§Œë“  ìžë£Œí˜•ì—ë„ ì‚¬ìš© ê°€ëŠ¥í•˜ë‹¤.
+	// sizeofëŠ” 'ì—°ì‚°ìž'
 	float f;
 	
 	sizeof(float);
 	sizeof(f);
-	sizeof f;	// º¯¼ö¸íÀÏ °æ¿ì °ýÈ£°¡ ¾ø¾îµµ ÀÛµ¿ÇÔ
+	sizeof f;	// ë³€ìˆ˜ëª…ì¼ ê²½ìš° ê´„í˜¸ê°€ ì—†ì–´ë„ ìž‘ë™í•¨
 	
 
-	// comma operator: ¹Ýº¹¹®(for¹®)¿¡¼­ À¯¿ëÇÏ°Ô »ç¿ëÇÔ
+	// comma operator : ë°˜ë³µë¬¸(forë¬¸)ì—ì„œ ìœ ìš©í•˜ê²Œ ì‚¬ìš©í•¨
 	int x = 3;
 	int y = 10;
 	//int z = (++x, ++y);
@@ -25,18 +25,18 @@ int main()
 	cout << x << " " << y << " " << z << " " << endl;
 
 
-	// ¼±¾ð¿¡ »ç¿ëµÈ ÄÞ¸¶´Â ±¸ºÐÇØ ÁÖ´Â ±âÈ£ ex: sum(1, 2);
+	// ì„ ì–¸ì— ì‚¬ìš©ëœ ì½¤ë§ˆëŠ” êµ¬ë¶„í•´ ì£¼ëŠ” ê¸°í˜¸ ex: sum(1, 2);
 	int a = 1, b = 10;
 	int c;
 
-	// ÄÞ¸¶ ¿¬»êÀÚÀÇ ¿ì¼±¼øÀ§°¡ ´ëÀÔ ¿¬»êÀÚº¸´Ù ³·±â ¶§¹®¿¡ ´ëÀÔÀÌ ¸ÕÀú ÁøÇàµÈ´Ù.
+	// ì½¤ë§ˆ ì—°ì‚°ìžì˜ ìš°ì„ ìˆœìœ„ê°€ ëŒ€ìž… ì—°ì‚°ìžë³´ë‹¤ ë‚®ê¸° ë•Œë¬¸ì— ëŒ€ìž…ì´ ë¨¼ì € ì§„í–‰ëœë‹¤.
 	//c = a, b;
 	c = (a, b);
 
 	cout << a << " " << b << " " << c << endl;
 
 
-	// Á¶°Ç ¿¬»êÀÚ conditional operator (arithmetic if)
+	// ì¡°ê±´ ì—°ì‚°ìž conditional operator (arithmetic if)
 	bool onSale = true;
 	int price;
 
@@ -47,14 +47,14 @@ int main()
 
 	cout << price << endl;
 
-	// if¹®À» »ç¿ëÇÏ·Á¸é µû·Î ÇÔ¼ö¸¦ ¸¸µé¾î¼­ ÀÌ¿ëÇÏ¸é µÊ
-	// Á¶°ÇÀÌ³ª °á°ú°ªÀÌ º¹ÀâÇÑ °æ¿ì, if¹®À¸·Î ÂÉ°³¼­ ±¸ÇöÇÏ´Â °Ô ÀÐ±â ½±°í µð¹ö±ëÀÌ ÆíÇÔ
+	// ifë¬¸ì„ ì‚¬ìš©í•˜ë ¤ë©´ ë”°ë¡œ í•¨ìˆ˜ë¥¼ ë§Œë“¤ì–´ì„œ ì´ìš©í•˜ë©´ ë¨
+	// ì¡°ê±´ì´ë‚˜ ê²°ê³¼ê°’ì´ ë³µìž¡í•œ ê²½ìš°, ifë¬¸ìœ¼ë¡œ ìª¼ê°œì„œ êµ¬í˜„í•˜ëŠ” ê²Œ ì½ê¸° ì‰½ê³  ë””ë²„ê¹…ì´ íŽ¸í•¨
 	const int price2 = (onSale == true)? 10 : 100;
 	
 	cout << price2 << endl;
 
 
-	// ¿¬»êÀÚ ¿ì¼±¼øÀ§ ¶§¹®¿¡ Á¶°Ç ¿¬»êÀÚ¸¦ Ãâ·ÂÇÒ °æ¿ì °ýÈ£ Ã³¸®ÇØ¾ß ÇÔ
+	// ì—°ì‚°ìž ìš°ì„ ìˆœìœ„ ë•Œë¬¸ì— ì¡°ê±´ ì—°ì‚°ìžë¥¼ ì¶œë ¥í•  ê²½ìš° ê´„í˜¸ ì²˜ë¦¬í•´ì•¼ í•¨
 	int xx = 5;
 	cout << ((xx % 2 == 0) ? "even" : "odd") << endl;
 

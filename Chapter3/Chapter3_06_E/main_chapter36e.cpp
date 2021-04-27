@@ -7,7 +7,7 @@ int main()
 	int x = 5;
 	int y = 7;
 
-	if (x != y)	//!x == y => !xÀÇ ¿ì¼±¼øÀ§°¡ ´õ ³ôÀ½, !(x == y)
+	if (x != y)	//!x == y => !xì˜ ìš°ì„ ìˆœìœ„ê°€ ë” ë†’ìŒ, !(x == y)
 	{
 		cout << "x does not equal y" << endl;
 	}
@@ -25,8 +25,8 @@ int main()
 	int a = 1;
 	int b = 2;
 
-	// AND´Â ¿ÞÂÊÀ» ¸ÕÀú °è»êÇÑ ÈÄ, false¶ó¸é ¿À¸¥ÂÊÀ» °è»êÇÏÁö ¾ÊÀ½
-	// µû¶ó¼­ a°¡ 1ÀÌ ¾Æ´Ñ °æ¿ì, b¿¡ ++ Ã³¸®°¡ µÇÁö ¾Ê¾Æ °á°úÀûÀ¸·Î 2°¡ Ãâ·ÂµÊ
+	// ANDëŠ” ì™¼ìª½ì„ ë¨¼ì € ê³„ì‚°í•œ í›„, falseë¼ë©´ ì˜¤ë¥¸ìª½ì„ ê³„ì‚°í•˜ì§€ ì•ŠìŒ
+	// ë”°ë¼ì„œ aê°€ 1ì´ ì•„ë‹Œ ê²½ìš°, bì— ++ ì²˜ë¦¬ê°€ ë˜ì§€ ì•Šì•„ ê²°ê³¼ì ìœ¼ë¡œ 2ê°€ ì¶œë ¥ë¨
 	if (a == 1 && b++ == 2)
 	{
 		// do something
@@ -42,13 +42,13 @@ int main()
 	!(c && d);	// == !c || !d;
 	!c && !d;	// == !(c || d);
 
-	// XOR: C++¿¡ Á¸ÀçÇÏÁö ¾ÊÀ½
+	// XOR: C++ì— ì¡´ìž¬í•˜ì§€ ì•ŠìŒ
 	// false false	> false
 	// false true	> true
 	// true false	> true
 	// true true	> false
 
-	if (c != d)	// c¿Í d°¡ bool Å¸ÀÔÀÌ¾î¾ß ÇÔ
+	if (c != d)	// cì™€ dê°€ bool íƒ€ìž…ì´ì–´ì•¼ í•¨
 	{
 
 	}
@@ -58,8 +58,8 @@ int main()
 	bool v2 = false;
 	bool v3 = false;
 
-	// ¿ì¼±¼øÀ§: && > || !!!
-	// °ýÈ£¸¦ Ä¡´Â °ÍÀÌ ¸¶À½ÀÌ ÆíÇÏ´Ù...
+	// ìš°ì„ ìˆœìœ„: && > || !!!
+	// ê´„í˜¸ë¥¼ ì¹˜ëŠ” ê²ƒì´ ë§ˆìŒì´ íŽ¸í•˜ë‹¤...
 	bool r1 = v1 || v2 && v3;
 	bool r2 = (v1 || v2) && v3;
 	bool r3 = v1 || (v2 && v3);

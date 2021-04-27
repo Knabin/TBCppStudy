@@ -1,10 +1,10 @@
 #include <iostream>
 #include <bitset>
 /*
-±â»ç¸¦ ºÃÀ» ¶§
-±â»çÀÇ ÁÁ¾Æ¿ä¸¦ Å¬¸¯ÇßÀ» ¶§
-±â»çÀÇ ÁÁ¾Æ¿ä¸¦ ´Ù½Ã Å¬¸¯ÇßÀ» ¶§
-º» ±â»ç¸¸ »èÁ¦ÇÒ ¶§
+ê¸°ì‚¬ë¥¼ ë´¤ì„ ë•Œ
+ê¸°ì‚¬ì˜ ì¢‹ì•„ìš”ë¥¼ í´ë¦­í–ˆì„ ë•Œ
+ê¸°ì‚¬ì˜ ì¢‹ì•„ìš”ë¥¼ ë‹¤ì‹œ í´ë¦­í–ˆì„ ë•Œ
+ë³¸ ê¸°ì‚¬ë§Œ ì‚­ì œí•  ë•Œ
 */
 int main()
 {
@@ -21,31 +21,31 @@ int main()
 
 	// code here
 
-	// ±â»ç¸¦ ºÃÀ» ¶§
+	// ê¸°ì‚¬ë¥¼ ë´¤ì„ ë•Œ
 	my_article_flags |= option_viewed;
-	cout << "±â»ç º¸±â: \t" << std::bitset<8>(my_article_flags) << endl;
+	cout << "ê¸°ì‚¬ ë³´ê¸°: \t" << std::bitset<8>(my_article_flags) << endl;
 
-	// ±â»çÀÇ ÁÁ¾Æ¿ä¸¦ Å¬¸¯ÇßÀ» ¶§
+	// ê¸°ì‚¬ì˜ ì¢‹ì•„ìš”ë¥¼ í´ë¦­í–ˆì„ ë•Œ
 	my_article_flags |= option_liked;
-	cout << "ÁÁ¾Æ¿ä Å¬¸¯: \t" << std::bitset<8>(my_article_flags) << endl;
+	cout << "ì¢‹ì•„ìš” í´ë¦­: \t" << std::bitset<8>(my_article_flags) << endl;
 
-	// ÁÁ¾Æ¿ä°¡ ÀÌ¹Ì µÇ¾î ÀÖ´Ù¸é
+	// ì¢‹ì•„ìš”ê°€ ì´ë¯¸ ë˜ì–´ ìˆë‹¤ë©´
 	if (my_article_flags & option_liked)
 	{
 		my_article_flags ^= option_liked;
-		cout << "ÁÁ¾Æ¿ä ÇØÁ¦: \t" << std::bitset<8>(my_article_flags) << endl;
+		cout << "ì¢‹ì•„ìš” í•´ì œ: \t" << std::bitset<8>(my_article_flags) << endl;
 	}
 	else
 	{
 		my_article_flags |= option_liked;
-		cout << "ÁÁ¾Æ¿ä Å¬¸¯: \t" << std::bitset<8>(my_article_flags) << endl;
+		cout << "ì¢‹ì•„ìš” í´ë¦­: \t" << std::bitset<8>(my_article_flags) << endl;
 	}
 
-	// º» ±â»ç¸¸ »èÁ¦
+	// ë³¸ ê¸°ì‚¬ë§Œ ì‚­ì œ
 	if (my_article_flags & option_viewed)
 	{
 		my_article_flags |= option_deleted;
-		cout << "º» ±â»ç »èÁ¦: \t" << std::bitset<8>(my_article_flags) << endl;
+		cout << "ë³¸ ê¸°ì‚¬ ì‚­ì œ: \t" << std::bitset<8>(my_article_flags) << endl;
 	}
 
 

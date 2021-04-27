@@ -10,30 +10,24 @@ int main()
 	bool item2_flag = false;
 	bool item3_flag = false;
 	bool item4_flag = false;
-
 	// event!
 	item1_flag = true;
-
 	// die item2 lost
 	item2_flag = false;
-
 	if (item3_flag == true)
 	{
 		// event
 	}
-
 	if (item3_flag == true && item4_flag == false)
 	{
 		item3_flag = false;
 		item4_flag = true;
 	}
-
 	invokeEvent(item1_flag, item2_flag, item3_flag...); ?!
-
 	*/
 
-	// ¾ÆÀÌÅÛ 8°³¸¦ °¡Áö°í ÀÖ´ÂÁö¸¦ 1¹ÙÀÌÆ®·Î ¾Ë ¼ö ÀÖ°Ô²û!
-	// bool Å¸ÀÔ 8°³¸¦ ¼±¾ğÇÒ ÇÊ¿ä°¡ ¾ø¾îÁø´Ù!
+	// ì•„ì´í…œ 8ê°œë¥¼ ê°€ì§€ê³  ìˆëŠ”ì§€ë¥¼ 1ë°”ì´íŠ¸ë¡œ ì•Œ ìˆ˜ ìˆê²Œë”!
+	// bool íƒ€ì… 8ê°œë¥¼ ì„ ì–¸í•  í•„ìš”ê°€ ì—†ì–´ì§„ë‹¤!
 
 	const unsigned char opt0 = 1 << 0;
 	const unsigned char opt1 = 1 << 1;
@@ -63,7 +57,7 @@ int main()
 	cout << "Item3 lost " << bitset<8>(items_flag) << endl;
 
 	// has item1?
-	// opt1 ÇØ´ç ÀÚ¸® ÀÌÁø¼ö ¼ıÀÚ°¡ 1ÀÌ¸é true ¹İÈ¯
+	// opt1 í•´ë‹¹ ìë¦¬ ì´ì§„ìˆ˜ ìˆ«ìê°€ 1ì´ë©´ true ë°˜í™˜
 	if (items_flag & opt1) { cout << "Has item1" << endl; }
 	else { cout << "Not have item1" << endl; }
 
@@ -76,13 +70,13 @@ int main()
 	cout << bitset<8>(opt2 | opt3) << endl;
 	cout << "Item2,3 obtained " << bitset<8>(items_flag) << endl;
 
-	// 2´Â °¡Áö°í ÀÖ°í, 1Àº °¡Áö°í ÀÖÁö ¾ÊÀ» °æ¿ì
+	// 2ëŠ” ê°€ì§€ê³  ìˆê³ , 1ì€ ê°€ì§€ê³  ìˆì§€ ì•Šì„ ê²½ìš°
 	if ((items_flag & opt2) && !(items_flag & opt1))
 	{
-		// »óÅÂ¸¦ º¯°æ
+		// ìƒíƒœë¥¼ ë³€ê²½
 		items_flag ^= opt2;
 		items_flag ^= opt1;
-		// ÇÑ²¨¹ø¿¡ Ã³¸®~ items_flag ^= (opt2 | opt1);
+		// í•œêº¼ë²ˆì— ì²˜ë¦¬~ items_flag ^= (opt2 | opt1);
 	}
 
 	cout << bitset<8>(items_flag) << endl;

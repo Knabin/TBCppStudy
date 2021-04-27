@@ -14,8 +14,8 @@ int main()
 	cout << std::bitset<32>(blue_mask) << endl;
 
 	// glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	// ¼ö¸¹Àº ¿É¼ÇÀ» ÆÄ¶ó¹ÌÅÍ·Î ÀüºÎ ³Ö±â´Â Èûµé´Ù...
-	// ºñÆ® ¿¬»êÀÚ¸¦ »ç¿ëÇÏ¸é °£ÆíÇÔ
+	// ìˆ˜ë§ì€ ì˜µì…˜ì„ íŒŒë¼ë¯¸í„°ë¡œ ì „ë¶€ ë„£ê¸°ëŠ” í˜ë“¤ë‹¤...
+	// ë¹„íŠ¸ ì—°ì‚°ìë¥¼ ì‚¬ìš©í•˜ë©´ ê°„í¸í•¨
 
 	unsigned int pixel_color = 0xDAA520;
 

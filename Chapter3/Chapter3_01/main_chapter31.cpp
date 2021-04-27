@@ -5,12 +5,12 @@ int main()
 {
 	using namespace std;
 
-	// ¼ö½ÄÀÌ µé¾î¿À¸é ¾î´À ÂÊÀ» ¸ÕÀú °è»êÇÒÁö °áÁ¤ÇÑ´Ù.
-	// ÇÊ¿äÇÑ °æ¿ì °ýÈ£¸¦ »ç¿ëÇØ¼­ ¿ì¼±¼øÀ§¸¦ ¸íÈ®ÇÏ°Ô ³²±âÀÚ.
-	int x = 4 + 2 * 3;	// * ¸ÕÀú
-	int y = 3 * 4 / 2;	// *¿Í /´Â ¿ì¼±¼øÀ§°¡ °°À½, Associativity
+	// ìˆ˜ì‹ì´ ë“¤ì–´ì˜¤ë©´ ì–´ëŠ ìª½ì„ ë¨¼ì € ê³„ì‚°í• ì§€ ê²°ì •í•œë‹¤.
+	// í•„ìš”í•œ ê²½ìš° ê´„í˜¸ë¥¼ ì‚¬ìš©í•´ì„œ ìš°ì„ ìˆœìœ„ë¥¼ ëª…í™•í•˜ê²Œ ë‚¨ê¸°ìž.
+	int x = 4 + 2 * 3;	// * ë¨¼ì €
+	int y = 3 * 4 / 2;	// *ì™€ /ëŠ” ìš°ì„ ìˆœìœ„ê°€ ê°™ìŒ, Associativity
 
-	int z = std::pow(2, 3);	// 2ÀÇ ¼¼Á¦°ö
+	int z = std::pow(2, 3);	// 2ì˜ ì„¸ì œê³±
 	cout << z << endl;
 
 	return 0;

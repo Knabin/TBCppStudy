@@ -5,7 +5,7 @@ int main()
 {
 	using namespace std;
 
-	// cout, cin¿¡¼­ »ç¿ëÇÏ´Â >> <<¿Í´Â ´Ù¸£´Ù! (¿¬»êÀÚ ¿À¹ö·Îµù)
+	// cout, cinì—ì„œ ì‚¬ìš©í•˜ëŠ” >> <<ì™€ëŠ” ë‹¤ë¥´ë‹¤! (ì—°ì‚°ìž ì˜¤ë²„ë¡œë”©)
 	// <<	left shift
 	// >>	right shift
 	// ~(NOT), &(AND), |(OR), ^(XOR)
