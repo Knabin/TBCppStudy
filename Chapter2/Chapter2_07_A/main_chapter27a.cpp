@@ -1,5 +1,5 @@
 #include <iostream>
-//ASCII Ç¥¿¡ ÀÖ´Â ¿©·¯°¡Áö ¹®ÀÚµéÀ» cin/coutÀ¸·Î ÀÔÃâ·Â
+// ASCII í‘œì— ìˆëŠ” ì—¬ëŸ¬ê°€ì§€ ë¬¸ìë“¤ì„ cin/coutìœ¼ë¡œ ì…ì¶œë ¥
 
 int main()
 {
@@ -9,14 +9,14 @@ int main()
 	char star_c = '*';
 	char num_c = 47;
 
-	cout << num_c << star_c << "¹®ÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä." << star_c << num_c << endl;
+	cout << num_c << star_c << "ë¬¸ìë¥¼ ì…ë ¥í•˜ì„¸ìš”." << star_c << num_c << endl;
 	cin >> input_c;
-	cout << "ÀÔ·ÂÇÏ½Å ¹®ÀÚ: " << input_c << endl;
+	cout << "ì…ë ¥í•˜ì‹  ë¬¸ì: " << input_c << endl;
 
 	int input_i = 0;
-	cout << "\n" << num_c << star_c << "¼ıÀÚ(0-127)¸¦ ÀÔ·ÂÇÏ¼¼¿ä." << star_c << num_c << endl;
+	cout << "\n" << num_c << star_c << "ìˆ«ì(0-127)ë¥¼ ì…ë ¥í•˜ì„¸ìš”." << star_c << num_c << endl;
 	cin >> input_i;
-	cout << "ÀÔ·ÂÇÏ½Å ¹®ÀÚ: " << static_cast<char>(input_i) << endl;
+	cout << "ì…ë ¥í•˜ì‹  ë¬¸ì: " << static_cast<char>(input_i) << endl;
 
 	return 0;
 }

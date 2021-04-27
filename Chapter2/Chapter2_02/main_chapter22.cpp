@@ -5,8 +5,8 @@
 int main()
 {
 	using namespace std;
-	short	s = 1;	// 2 bytes = 2 * 8 bits = 16 bits / 2^16°¡Áö ¼ö Ç¥Çö °¡´É
-	int		i = 1;
+	short	s = 1;	// 2 bytes = 2 * 8 bits = 16 bits / 2^16ê°€ì§€ ìˆ˜ í‘œí˜„ ê°€ëŠ¥
+	int	i = 1;
 	long	l = 1;
 	long long ll = 1;
 
@@ -15,8 +15,8 @@ int main()
 	cout << sizeof(long) << endl;		// 4
 	cout << sizeof(long long) << endl;	// 8
 
-	cout << std::pow(2, sizeof(short) * 8) << endl;	// unsigned - 65535, -1Àº ºÎÈ£¿ë
-	cout << std::pow(2, sizeof(short) * 8 - 1) - 1 << endl;	// signed - 32767, ºÎÈ£¿Í 0 Á¦¿Ü
+	cout << std::pow(2, sizeof(short) * 8) << endl;	// unsigned - 65535, -1ì€ ë¶€í˜¸ìš©
+	cout << std::pow(2, sizeof(short) * 8 - 1) - 1 << endl;	// signed - 32767, ë¶€í˜¸ì™€ 0 ì œì™¸
 	cout << std::numeric_limits<short>::max() << endl;
 	cout << std::numeric_limits<short>::min() << endl;
 	cout << std::numeric_limits<short>::lowest() << endl;
@@ -33,11 +33,11 @@ int main()
 	cout << s2 << endl;	// overflow
 
 
-	// ÁÖÀÇ! unsigned int¿¡ signed int¸¦ ³ÖÀ¸¸é unsigned·Î ¹Ù²ã ÁÜ
+	// ì£¼ì˜! unsigned intì— signed intë¥¼ ë„£ìœ¼ë©´ unsignedë¡œ ë°”ê¿” ì¤€ë‹¤.
 	unsigned int i2 = -1;
 	cout << i2 << endl;
 
-	// ÁÖÀÇ! Á¤¼ö³¢¸®ÀÇ ¿¬»êÀº Á¤¼ö·Î ÀúÀåÇÔ
+	// ì£¼ì˜! ì •ìˆ˜ë¼ë¦¬ì˜ ì—°ì‚°ì€ ì •ìˆ˜ë¡œ ì €ìž¥í•œë‹¤.
 	cout << 22 / 4 << endl;
 	cout << (float)22 / 4 << endl;
 

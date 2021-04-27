@@ -15,26 +15,26 @@ int main()
 	bool b3{ true };	// uniform initiaalization
 	b3 = false;
 
-	cout << std::boolalpha;	// true false·Î Ãâ·ÂÇÏ±â
+	cout << std::boolalpha;	// true falseë¡œ ì¶œë ¥í•˜ê¸°
 	cout << b3 << endl;
-	cout << !b1 << endl;	// not ¿¬»êÀÚ true->false, false->true
-	cout << std::noboolalpha;	// 1 0À¸·Î Ãâ·ÂÇÏ±â
+	cout << !b1 << endl;	// not ì—°ì‚°ìž true->false, false->true
+	cout << std::noboolalpha;	// 1 0ìœ¼ë¡œ ì¶œë ¥í•˜ê¸°
 
-	// && AND operator: µÎ °³ ´Ù trueÀÎ °æ¿ì true
+	// && AND operator : ë‘ ê°œ ë‹¤ trueì¸ ê²½ìš° true
 	cout << (true && true) << endl;		// true
 	cout << (true && false) << endl;	// false
 	cout << (false && true) << endl;	// false
 	cout << (false && false) << endl;	// false
 
-	// || OR operator: ÇÑ °³ ÀÌ»ó trueÀÎ °æ¿ì true
+	// || OR operator : í•œ ê°œ ì´ìƒ trueì¸ ê²½ìš° true
 	cout << (true || true) << endl;		// true
 	cout << (true || false) << endl;	// true
 	cout << (false || true) << endl;	// true
 	cout << (false || false) << endl;	// false
 
 
-	// Á¶°Ç¹® if: Á¶°Ç¿¡ µû¶ó¼­ ½ÇÇàÇÒÁö ¾È ÇÒÁö¸¦ °áÁ¤ÇÑ´Ù.
-	// µÎ ÁÙ ÀÌ»óÀ» ½ÇÇàÇÏ°í ½ÍÀ» ¶§´Â Áß°ýÈ£{}¸¦ ÀÌ¿ëÇÑ´Ù.
+	// ì¡°ê±´ë¬¸ if: ì¡°ê±´ì— ë”°ë¼ì„œ ì‹¤í–‰í• ì§€ ì•ˆ í• ì§€ë¥¼ ê²°ì •í•œë‹¤.
+	// ë‘ ì¤„ ì´ìƒì„ ì‹¤í–‰í•˜ê³  ì‹¶ì„ ë•ŒëŠ” ì¤‘ê´„í˜¸{}ë¥¼ ì´ìš©í•œë‹¤.
 	if (false)
 	{
 		cout << "This is true" << endl;
@@ -47,7 +47,7 @@ int main()
 	cout << isEqual(2, 5) << endl;	// false
 
 
-	// if¹®Àº 0ÀÌ¸é false, ±× ¿Ü´Â ÀüºÎ true Ã³¸®!
+	// ifë¬¸ì€ 0ì´ë©´ false, ê·¸ ì™¸ëŠ” ì „ë¶€ true ì²˜ë¦¬!
 	if (5)
 	{
 		cout << "true" << endl;
@@ -56,9 +56,9 @@ int main()
 		cout << "false" << endl;
 
 
-	// ÁÖÀÇ! ºÒ¸®¾ð °ªÀ» ÀÔ·ÂÇÒ ¶§, ¹®ÀÚ°¡ ¾Æ´Ï¶ó 0/1·Î ÀÔ·ÂÇØ¾ß ÇÑ´Ù!
-	// 0ÀÌ ¾Æ´Ï¸é true Ã³¸®¸¦ ÇÏ´Â °ÍÀ» ÁÖÀÇÇÑ´Ù.
-	// ÀÌ·¯ÇÑ À§Çè¼ºÀÌ ÀÖ´Â, ¹®Á¦°¡ »ý±æ ¼ö ÀÖ´Â ÄÚµùÀº ÇÇÇÏÀÚ.
+	// ì£¼ì˜! ë¶ˆë¦¬ì–¸ ê°’ì„ ìž…ë ¥í•  ë•Œ, ë¬¸ìžê°€ ì•„ë‹ˆë¼ 0/1ë¡œ ìž…ë ¥í•´ì•¼ í•œë‹¤!
+	// 0ì´ ì•„ë‹ˆë©´ true ì²˜ë¦¬ë¥¼ í•˜ëŠ” ê²ƒì„ ì£¼ì˜í•œë‹¤.
+	// ì´ëŸ¬í•œ ìœ„í—˜ì„±ì´ ìžˆëŠ”, ë¬¸ì œê°€ ìƒê¸¸ ìˆ˜ ìžˆëŠ” ì½”ë”©ì€ í”¼í•˜ìž.
 	cout << std::boolalpha;
 	bool b;
 

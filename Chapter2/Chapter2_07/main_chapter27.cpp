@@ -6,7 +6,7 @@ int main()
 	using namespace std;
 
 	char c1(65);	// c1 = 65; c1{ 65 };
-	char c2('A');	// ÇÑ ±ÛÀÚ¸¦ Ç¥ÇöÇÒ ¶§´Â µû¿ÈÇ¥ »ç¿ë / ¹®ÀÚ¿­ "Hello"
+	char c2('A');	// í•œ ê¸€ìë¥¼ í‘œí˜„í•  ë•ŒëŠ” ë”°ì˜´í‘œ ì‚¬ìš© / ë¬¸ìì—´ "Hello"
 
 	cout << c1 << " " << c2 << " " << int(c1) << " " << int(c2) << endl;
 
@@ -15,20 +15,20 @@ int main()
 	cout << (int)'A' << endl;	// 65
 
 	// cpp style
-	cout << char(65) << endl;	// 65·Î ÃÊ±âÈ­µÇ´Â char¸¦ ¸¸µç´Ù.
+	cout << char(65) << endl;	// 65ë¡œ ì´ˆê¸°í™”ë˜ëŠ” charë¥¼ ë§Œë“ ë‹¤.
 	cout << int('A') << endl;
 
-	// static_cast<º¯È¯ÇÒÅ¸ÀÔ>(º¯¼ö,¸®ÅÍ·²)
+	// static_cast<ë³€í™˜í• íƒ€ì…>(ë³€ìˆ˜,ë¦¬í„°ëŸ´)
 	cout << static_cast<char>(65) << endl;
 	cout << static_cast<int>('A') << endl;
 
 	char ch(97);	// a
 	cout << ch << endl;
 	cout << static_cast<int>(ch) << endl;
-	cout << ch << endl;	// ¿ø·¡ º¯¼ö °ªÀÌ ¹Ù²îÁö´Â ¾ÊÀ½
+	cout << ch << endl;	// ì›ë˜ ë³€ìˆ˜ ê°’ì´ ë°”ë€Œì§€ëŠ” ì•ŠìŒ
 
 
-	// ÀÔ·Â¹ŞÀº ³»¿ëÀ» ¹öÆÛ¿¡ °¡Áö°í ÀÖÀ½
+	// ì…ë ¥ë°›ì€ ë‚´ìš©ì„ ë²„í¼ì— ê°€ì§€ê³  ìˆìŒ
 	cin >> c1;
 	cout << c1 << " " << static_cast<int>(c1) << endl;
 
@@ -43,22 +43,22 @@ int main()
 	cout << (int)std::numeric_limits<unsigned char>::max() << endl;	// 255
 	cout << (int)std::numeric_limits<unsigned char>::lowest() << endl;	// 0
 
-	// '\n' ÇÏ³ªÀÇ ±ÛÀÚ·Î µ¿ÀÛÇÔ! ÁÙ ¹Ù²Ş
-	// endl: ¹öÆÛ¿¡ ÀÖ´Â °ÍÀ» ¹«Á¶°Ç Ãâ·ÂÇÏ°í ÁÙ ¹Ù²Ş
-	// std::flush: ¹öÆÛ¿¡ ÀÖ´Â °ÍÀ» ¸ğµÎ Ãâ·ÂÇÔ
+	// '\n' í•˜ë‚˜ì˜ ê¸€ìë¡œ ë™ì‘í•¨! ì¤„ ë°”ê¿ˆ
+	// endl : ë²„í¼ì— ìˆëŠ” ê²ƒì„ ë¬´ì¡°ê±´ ì¶œë ¥í•˜ê³  ì¤„ ë°”ê¿ˆ
+	// std::flush : ë²„í¼ì— ìˆëŠ” ê²ƒì„ ëª¨ë‘ ì¶œë ¥í•¨
 	cout << int('\n') << endl;	// 10
 	cout << "This is first line \nsecond line" << endl;
 	cout << "This is first line" << endl;
 	cout << "second line";
 
-	// '\t' ÅÇ
-	// "¸¦ Ãâ·ÂÇÏ°í ½ÍÀ¸¸é '\"'
-	// '\a' ¼Ò¸®
+	// '\t' íƒ­
+	// "ë¥¼ ì¶œë ¥í•˜ê³  ì‹¶ìœ¼ë©´ '\"'
+	// '\a' ì†Œë¦¬
 	cout << "\n\n" << int('\t') << endl;	// 9
 	cout << "This is first line \tsecond line \"\a" << endl;
 	
-	wchar_t c;		// Windows
-	char32_t c3;	// ÀÌ¸ğÆ¼ÄÜ µî À¯´ÏÄÚµå ¹®ÀÚ »ç¿ë
+	wchar_t c;	// Windows
+	char32_t c3;	// ì´ëª¨í‹°ì½˜ ë“± ìœ ë‹ˆì½”ë“œ ë¬¸ì ì‚¬ìš©
 
 	return 0;
 }

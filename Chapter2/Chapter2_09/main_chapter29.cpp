@@ -1,35 +1,35 @@
 #include <iostream>
 #include "MY_CONSTANTS.h"
 #define PRICE_PER_ITEM 30	
-// C++¿¡¼­´Â »ó¼ö ´ëÃ¼¿ëÀ¸·Î ¸ÅÅ©·Î »ç¿ë ¾È ÇÔ!!
-// 1. debugging ¾î·Á¿ò
-// 2. Àû¿ë ¹üÀ§°¡ ³Ê¹« ³ĞÀ½
+// C++ì—ì„œëŠ” ìƒìˆ˜ ëŒ€ì²´ìš©ìœ¼ë¡œ ë§¤í¬ë¡œ ì‚¬ìš© ì•ˆ í•¨!!
+// 1. debugging ì–´ë ¤ì›€
+// 2. ì ìš© ë²”ìœ„ê°€ ë„ˆë¬´ ë„“ìŒ
 
 using namespace std;
 
 void printNumber(const int my_number)
 {
-	// ÀÔ·ÂÀ¸·Î µé¾î¿Â °ªÀ» ¹Ù²ÙÁö´Â ¾Ê±â ¶§¹®¿¡ ÆÄ¶ó¹ÌÅÍ¿¡ const¸¦ ¸¹ÀÌ ºÙÀÓ
-	// const int& º¯¼ö ÇüÅÂ·Î ¸¹ÀÌ »ç¿ëÇÔ
+	// ì…ë ¥ìœ¼ë¡œ ë“¤ì–´ì˜¨ ê°’ì„ ë°”ê¾¸ì§€ëŠ” ì•Šê¸° ë•Œë¬¸ì— íŒŒë¼ë¯¸í„°ì— constë¥¼ ë§ì´ ë¶™ì„
+	// const int& ë³€ìˆ˜ í˜•íƒœë¡œ ë§ì´ ì‚¬ìš©í•¨
 	// my_number = 456; error!
-	int n = my_number;	// ¹Ù²ã¾ß ÇÑ´Ù¸é µû·Î º¹»çÇÏ¿© »ç¿ëÇÔ
+	int n = my_number;	// ë°”ê¿”ì•¼ í•œë‹¤ë©´ ë”°ë¡œ ë³µì‚¬í•˜ì—¬ ì‚¬ìš©í•¨
 	cout << my_number << endl;
 }
 
 int main()
 {
-	// º¯¼ö°ªÀÌ º¯°æµÇÁö ¾Ê¾Æ¾ß ÇÏ´Â °æ¿ì, const¸¦ ÅëÇØ º¯¼ö¸¦ °íÁ¤ÇÔ
-	// ÁÖÀÇ! ¼±¾ğ°ú µ¿½Ã¿¡ ÃÊ±âÈ­µÇ¾î¾ß ÇÔ
-	// ÁÖÀÇ! ÀÚ·áÇü°ú const ¼ø¼­¿¡ µû¶ó ÀÇ¹Ì°¡ ´Ş¶óÁö´Â °æ¿ì°¡ ÀÖÀ½
+	// ë³€ìˆ˜ê°’ì´ ë³€ê²½ë˜ì§€ ì•Šì•„ì•¼ í•˜ëŠ” ê²½ìš°, constë¥¼ í†µí•´ ë³€ìˆ˜ë¥¼ ê³ ì •í•¨
+	// ì£¼ì˜! ì„ ì–¸ê³¼ ë™ì‹œì— ì´ˆê¸°í™”ë˜ì–´ì•¼ í•¨
+	// ì£¼ì˜! ìë£Œí˜•ê³¼ const ìˆœì„œì— ë”°ë¼ ì˜ë¯¸ê°€ ë‹¬ë¼ì§€ëŠ” ê²½ìš°ê°€ ìˆìŒ
 	const double gravity{ 9.8 };
-	double const gravity2{ 9.8 };	// °¡´É
+	double const gravity2{ 9.8 };	// ï¿½ï¿½ï¿½ï¿½
 
 	// gravity = 1.2; error!
 
 	printNumber(123);
 
-	// compile time¿¡ °áÁ¤µÇ´Â »ó¼ö
-	// constexpr: ÄÄÆÄÀÏ ¶§ °áÁ¤µÇ´Â »ó¼ö¸¦ ±¸ºĞÇÏ±â À§ÇÔ
+	// compile timeì— ê²°ì •ë˜ëŠ” ìƒìˆ˜
+	// constexpr: ì»´íŒŒì¼ ë•Œ ê²°ì •ë˜ëŠ” ìƒìˆ˜ë¥¼ êµ¬ë¶„í•˜ê¸° ìœ„í•¨
 	const int my_const(123);
 	constexpr int my_const2(123);
 
@@ -37,8 +37,8 @@ int main()
 	cin >> number;
 
 
-	// º¯¼ö·Î »ó¼ö¸¦ ÃÊ±âÈ­
-	// runtime¿¡ °áÁ¤µÇ´Â »ó¼ö
+	// ë³€ìˆ˜ë¡œ ìƒìˆ˜ë¥¼ ì´ˆê¸°í™”
+	// runtimeì— ê²°ì •ë˜ëŠ” ìƒìˆ˜
 	const int special_number(number);
 	// constexpr int special_number(number); error!
 
@@ -52,7 +52,7 @@ int main()
 	int price = num_item * price_per_item;
 
 
-	// Çì´õ ÆÄÀÏ »ç¿ë
+	// í—¤ë” íŒŒì¼ ì‚¬ìš©
 	double radius;
 	cin >> radius;
 	double circumference = 2.0 * radius * constants::moongravity;

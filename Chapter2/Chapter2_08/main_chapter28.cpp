@@ -17,21 +17,21 @@ int main()
 	// hexa		: 0 1 2 3 4 5 6 7 8 9 A B C D E F 10
 
 	// 0011 1010 1111 1111
-	// 3A7F... Ç¥ÇöÀÌ °£ÆíÇÏ±â ¶§¹®¿¡ ¸¹ÀÌ »ç¿ëÇÔ
+	// 3A7F... í‘œí˜„ì´ ê°„í¸í•˜ê¸° ë•Œë¬¸ì— ë§ì´ ì‚¬ìš©í•¨
 
-	int x = 012;	// 8Áø¼ö, 10
-	int y = 0xF;	// 16Áø¼ö, 15
+	int x = 012;	// 8ì§„ìˆ˜, 10
+	int y = 0xF;	// 16ì§„ìˆ˜, 15
 	cout << x << endl;
 	cout << y << endl;
 
 	// binary literal
-	int z = 0b1010;	// 2Áø¼ö, 10
+	int z = 0b1010;	// 2ì§„ìˆ˜, 10
 	cout << z << endl;
 
-	int a = 0b1011'1111'1010;	// ÄÄÆÄÀÏ·¯°¡ ¸®ÅÍ·² ¼Ó '¸¦ ¹«½ÃÇÏ±â ¶§¹®¿¡ ¼ıÀÚ¸¦ Á÷Á¢ ´Ù·ê ¶§ Æí¸®ÇÔ
+	int a = 0b1011'1111'1010;	// ì»´íŒŒì¼ëŸ¬ê°€ ë¦¬í„°ëŸ´ ì† 'ë¥¼ ë¬´ì‹œí•˜ê¸° ë•Œë¬¸ì— ìˆ«ìë¥¼ ì§ì ‘ ë‹¤ë£° ë•Œ í¸ë¦¬í•¨
 	cout << a << endl;
 	
-	// magic number »ç¿ë ÈÄ ÁÖ¼® ´Ù´Â °Íº¸´Ù´Â »ó¼ö ÀÌ¿ëÇÏ´Â °ÍÀÌ ÁÁÀ½
+	// magic number ì‚¬ìš© í›„ ì£¼ì„ ë‹¤ëŠ” ê²ƒë³´ë‹¤ëŠ” ìƒìˆ˜ ì´ìš©í•˜ëŠ” ê²ƒì´ ì¢‹ìŒ
 	// magic number: Unique values with unexplained meaning or multiple occurrences
 	//	             which could (preferably) be replaced with named constants
 	const int price_per_item = 10;

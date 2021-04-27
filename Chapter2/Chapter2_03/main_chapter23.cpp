@@ -1,19 +1,19 @@
 #include <iostream>
 //#include <cstdint>
-// iostream¿¡¼­ cstdint¸¦ includeÇÏ°í ÀÖ±â ¶§¹®¿¡
-// iostreamÀ» includeÇÏ°í ÀÖ´Ù¸éº°µµ·Î ÇÏÁö ¾Ê¾Æµµ µÈ´Ù.
+// iostreamì—ì„œ cstdintë¥¼ include í•˜ê³  ìˆê¸° ë•Œë¬¸ì—
+// iostreamì„ include í•˜ê³  ìˆë‹¤ë©´ ë³„ë„ë¡œ í•˜ì§€ ì•Šì•„ë„ ëœë‹¤.
 
 int main()
 {
 	using namespace std;
 
-	std::int16_t i(5);		// 16ºñÆ®(2¹ÙÀÌÆ®) µ¥ÀÌÅÍ Å¸ÀÔ
-	std::int8_t myint = 65;	// char, Ä³¸¯ÅÍÇü
+	std::int16_t i(5);	// 16ë¹„íŠ¸(2ë°”ì´íŠ¸) ë°ì´í„° íƒ€ì…
+	std::int8_t myint = 65;	// char, ìºë¦­í„°í˜•
 
 	cout << myint << endl;
 
-	std::int_fast8_t fi(5);	// 8ºñÆ® Áß °¡Àå ºü¸¥(fast) µ¥ÀÌÅÍ Å¸ÀÔ
-	std::int_least64_t fl(5);	// Àû¾îµµ 64ºñÆ®¸¦ °®´Â µ¥ÀÌÅÍ Å¸ÀÔ
+	std::int_fast8_t fi(5);		// 8ë¹„íŠ¸ ì¤‘ ê°€ì¥ ë¹ ë¥¸(fast) ë°ì´í„° íƒ€ì…
+	std::int_least64_t fl(5);	// ì ì–´ë„ 64ë¹„íŠ¸ë¥¼ ê°–ëŠ” ë°ì´í„° íƒ€ì…
 
 	return 0;
 }

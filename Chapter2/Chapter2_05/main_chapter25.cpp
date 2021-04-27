@@ -7,7 +7,7 @@ int main()
 {
 	using namespace std;
 
-	float f(3.141592f);	// f¸¦ ºÙÀÌÁö ¾ÊÀ¸¸é double -> float
+	float f(3.141592f);	// fë¥¼ ë¶™ì´ì§€ ì•Šìœ¼ë©´ double -> float
 	double d(3.141592);
 	long double ld(3.141592);
 
@@ -19,7 +19,7 @@ int main()
 	cout << numeric_limits<double>::max() << endl;
 	cout << numeric_limits<long double>::max() << endl;
 
-	// min(): Ç¥ÇöÇÒ ¼ö ÀÖ´Â °¡Àå ÀÛÀº ¼ýÀÚÀÇ Àý´ë°ª
+	// min() : í‘œí˜„í•  ìˆ˜ ìžˆëŠ” ê°€ìž¥ ìž‘ì€ ìˆ«ìžì˜ ì ˆëŒ€ê°’
 	cout << numeric_limits<float>::min() << endl;
 	cout << numeric_limits<double>::min() << endl;
 	cout << numeric_limits<long double>::min() << endl;
@@ -39,13 +39,13 @@ int main()
 
 	cout << 1.0 / 3.0 << endl;	// 0.333333
 	cout << std::setprecision(16);
-	cout << 1.0 / 3.0 << endl;	// 0.333333... (16ÀÚ¸®±îÁö)
+	cout << 1.0 / 3.0 << endl;	// 0.333333... (16ìžë¦¬ê¹Œì§€)
 
 
 	float f2(123456789.0f);	// 10 significant digits
 
 	cout << std::setprecision(9);
-	cout << f2 << endl;	// 123456792 => ¿ÀÂ÷
+	cout << f2 << endl;	// 123456792 => ì˜¤ì°¨
 
 
 	double d2(0.1);
@@ -58,7 +58,7 @@ int main()
 	double d3(1.0);
 	double d4(0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1);
 	cout << d3 << endl;	// 1
-	cout << d4 << endl;	// 0.9999...99989, ¿ÀÂ÷°¡ ´©ÀûµÈ´Ù
+	cout << d4 << endl;	// 0.9999...99989, ì˜¤ì°¨ê°€ ëˆ„ì ëœë‹¤
 
 
 	double zero = 0.0;

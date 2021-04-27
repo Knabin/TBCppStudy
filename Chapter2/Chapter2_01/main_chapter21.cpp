@@ -4,18 +4,18 @@ int main()
 {
 	using namespace std;
 
-	// ³»ºÎÀûÀ¸·Î ¼ıÀÚ·Î ÀúÀåÇÑ´Ù. (1/0)
+	// ë‚´ë¶€ì ìœ¼ë¡œ ìˆ«ìë¡œ ì €ì¥í•œë‹¤. (1/0)
 	bool bValue = false;
 
 	cout << bValue << endl;
 	
-	// ³»ºÎÀûÀ¸·Î ¼ıÀÚ·Î ÀúÀåÇÑ´Ù.
+	// ë‚´ë¶€ì ìœ¼ë¡œ ìˆ«ìë¡œ ì €ì¥í•œë‹¤.
 	char chValue = 'A';
 	char chValue2 = 65;
 
 	cout << chValue << ", " << chValue2 << endl;
 
-	// f¸¦ ºÙÀÌÁö ¾ÊÀ¸¸é double literal
+	// fë¥¼ ë¶™ì´ì§€ ì•Šìœ¼ë©´ double literal
 	// float f = 1.1; => warning 'initializing': truncation from 'double' to 'float'
 	float fValue = 3.141592f;
 	double dValue = 3.141592;
@@ -23,27 +23,27 @@ int main()
 	cout << fValue << endl;
 	cout << dValue << endl;
 
-	// auto: ºôµåÇÒ ¶§ ÀÚµ¿À¸·Î ÀÚ·áÇüÀ» °áÁ¤ÇÑ´Ù.
+	// auto : ë¹Œë“œí•  ë•Œ ìë™ìœ¼ë¡œ ìë£Œí˜•ì„ ê²°ì •í•œë‹¤.
 	auto aValue = 3.141592;
 	auto aValue2 = 3.141592f;
 
 	cout << aValue << endl;
 	cout << aValue2 << endl;
 
-	// sizeof(º¯¼öorÀÚ·áÇü): ÇØ´ç º¯¼öorÀÚ·áÇüÀÇ ¸Ş¸ğ¸® Å©±â¸¦ Ãâ·Â
+	// sizeof(ë³€ìˆ˜ or ìë£Œí˜•) : í•´ë‹¹ ë³€ìˆ˜ or ìë£Œí˜•ì˜ ë©”ëª¨ë¦¬ í¬ê¸°ë¥¼ ì¶œë ¥
 	cout << sizeof(bool) << endl;
 	cout << sizeof(bValue) << endl;
 
-	// º¯¼ö ÃÊ±âÈ­ ¹æ¹ı
-	// 2,3Àº °´Ã¼ÁöÇâ ³Ñ¾î°¡¼­ Á÷Á¢ ¸¸µç µ¥ÀÌÅÍ Å¸ÀÔÀ» ÃÊ±âÈ­ÇÒ ¶§ ¸¹ÀÌ »ç¿ëÇÔ
-	// uniform initializationÀº µ¥ÀÌÅÍ Å¸ÀÔÀÌ ¸ÂÁö ¾Ê´Â °æ¿ì ¿¡·¯ ¹ß»ı½ÃÅ´
-	// 1,2´Â warning ¶ç¿ì°í Ã³¸®ÇÏ±ä ÇØ ÁÜ
+	// ë³€ìˆ˜ ì´ˆê¸°í™” ë°©ë²•
+	// 2,3ì€ ê°ì²´ì§€í–¥ ë„˜ì–´ê°€ì„œ ì§ì ‘ ë§Œë“  ë°ì´í„° íƒ€ì…ì„ ì´ˆê¸°í™”í•  ë•Œ ë§ì´ ì‚¬ìš©í•œë‹¤.
+	// uniform initializationì€ ë°ì´í„° íƒ€ì…ì´ ë§ì§€ ì•ŠëŠ” ê²½ìš°, ì—ëŸ¬ë¥¼ ë°œìƒì‹œí‚¨ë‹¤.
+	// 1,2ëŠ” warning ë„ìš°ê³  ì²˜ë¦¬í•˜ê¸´ í•´ ì¤€ë‹¤.
 	int a = (int)123.4;	// 1. copy initialization
 	int b(int(123.4));		// 2. direct initialization	
 	int c{ 123 };	// 3. uniform initialization
 
-	// °°Àº µ¥ÀÌÅÍ Å¸ÀÔÀÇ °æ¿ì¿¡¸¸ ¿¬¼ÓÀ¸·Î ¼±¾ğ °¡´É
-	// ¿ìÃøÀÇ º¯¼ö¸¸ ÃÊ±âÈ­ÇÏ´Â °ÍÀº ÁÁÁö ¾ÊÀ½
+	// ê°™ì€ ë°ì´í„° íƒ€ì…ì˜ ê²½ìš°ì—ë§Œ ì—°ì†ì ìœ¼ë¡œ ì„ ì–¸ ê°€ëŠ¥í•˜ë‹¤.
+	// ìš°ì¸¡ì˜ ë³€ìˆ˜ë§Œ ì´ˆê¸°í™”í•˜ëŠ” ê²ƒì€ ì¢‹ì§€ ì•Šë‹¤.
 	int k = 0, l(123), m{ 456 };
 
 	return 0;
