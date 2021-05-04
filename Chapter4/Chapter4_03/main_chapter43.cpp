@@ -14,8 +14,8 @@ namespace b
 
 int main()
 {
-	//std::cout std::endlÀ» ÁÙ¿© ¾²±â À§ÇÔ
-	// using namespace´Â »ç¿ë Ãë¼Ò ¹æ¹ıÀÌ ¾ø±â ¶§¹®¿¡ ºí·ÏÀ¸·Î ½Î ÁÖ´Â °ÍÀÌ ÁÁÀ½
+	//std::cout std::endlì„ ì¤„ì—¬ ì“°ê¸° ìœ„í•¨
+	// using namespaceëŠ” ì‚¬ìš© ì·¨ì†Œ ë°©ë²•ì´ ì—†ê¸° ë•Œë¬¸ì— ë¸”ë¡ìœ¼ë¡œ ì‹¸ ì£¼ëŠ” ê²ƒì´ ì¢‹ìŒ
 	using namespace std;
 	/*using std::cout; 
 	using std::endl;*/
@@ -32,12 +32,11 @@ int main()
 	cout << my_a << endl;
 	cout << my_b << endl;
 
-	// ºí·°À¸·Î ½Î ÁÖ´Â ¹æ¹ıµµ ÀÖÀ½!
+	// ë¸”ëŸ­ìœ¼ë¡œ ì‹¸ ì£¼ëŠ” ë°©ë²•ë„ ìˆìŒ!
 	/*{
 		using namespace a;
 		cout << my_var << endl;
 	}
-
 	{
 		using namespace b;
 		cout << my_var << endl;

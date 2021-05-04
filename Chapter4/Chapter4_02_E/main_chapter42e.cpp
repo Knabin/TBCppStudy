@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// static - ´Ù¸¥ cpp¿¡¼­ Á¢±Ù ºÒ°¡´É!
+// static - ë‹¤ë¥¸ cppì—ì„œ ì ‘ê·¼ ë¶ˆê°€ëŠ¥!
 //static int g_a = 1;
 
 // forward declaration, (extern) void
@@ -12,31 +12,25 @@ extern int a;
 
 /*
 	int g_x;	// external linkage
-	static int g_x;	// internal linkage, ´Ù¸¥ ÆÄÀÏ¿¡¼­ Á¢±Ù ºÒ°¡´É
-	const int g_x;	// X, const´Â ÃÊ±âÈ­¸¦ µ¿½Ã¿¡ ÇØ Áà¾ß ÇÔ
-
+	static int g_x;	// internal linkage, ë‹¤ë¥¸ íŒŒì¼ì—ì„œ ì ‘ê·¼ ë¶ˆê°€ëŠ¥
+	const int g_x;	// X, constëŠ” ì´ˆê¸°í™”ë¥¼ ë™ì‹œì— í•´ ì¤˜ì•¼ í•¨
 	extern int g_z;
-	extern const int g_x;	// externÀº const °¡´É, ÇÑ ±ºµ¥¼­ ÃÊ±âÈ­¸¦ ÇØ Áà¾ß ÇÔ
-
+	extern const int g_x;	// externì€ const ê°€ëŠ¥, í•œ êµ°ë°ì„œ ì´ˆê¸°í™”ë¥¼ í•´ ì¤˜ì•¼ í•¨
 	int g_y(1);
 	static int g_y(1);
-	const int g_y(1);	// °°Àº ÆÄÀÏ ¾È¿¡¼­¸¸ Á¢±Ù °¡´É
-
+	const int g_y(1);	// ê°™ì€ íŒŒì¼ ì•ˆì—ì„œë§Œ ì ‘ê·¼ ê°€ëŠ¥
 	extern int g_w(1);
-	extern const int g_w(1);	// »ó¼ö, ÃÊ±âÈ­O, ¿ÜºÎ Á¢±Ù °¡´É
-
-	Àü¿ªº¯¼ö
-	±âº»ÀûÀ¸·Î internal linkage, Á¤ÀÇ°¡ µÈ ÆÄÀÏ ³»¿¡¼­ »ç¿ëµÉ °æ¿ì ÆíÇÏ°Ô Áö¿ªº¯¼öÃ³·³ »ç¿ë
-	ÇÁ·Î±×·¥ÀÌ º¹ÀâÇØÁö¸é ¾îµğ¼­ ¼öÁ¤Çß´ÂÁö È®ÀÎÇÏ±â°¡ ¾î·Æ±â ¶§¹®¿¡ ´ÜÁ¡ÀÌ ¸¹À½
-
-	¿©·¯ °³ÀÇ cpp ÆÄÀÏÀÌ °øÅëÀûÀ¸·Î »ç¿ëÇÒ ¼ö ÀÖ´Â Àü¿ªº¯¼ö, external linkage
-
-	static Á¤Àû Áö¼Ó º¯¼ö, static duration variable
+	extern const int g_w(1);	// ìƒìˆ˜, ì´ˆê¸°í™”O, ì™¸ë¶€ ì ‘ê·¼ ê°€ëŠ¥
+	ì „ì—­ë³€ìˆ˜
+	ê¸°ë³¸ì ìœ¼ë¡œ internal linkage, ì •ì˜ê°€ ëœ íŒŒì¼ ë‚´ì—ì„œ ì‚¬ìš©ë  ê²½ìš° í¸í•˜ê²Œ ì§€ì—­ë³€ìˆ˜ì²˜ëŸ¼ ì‚¬ìš©
+	í”„ë¡œê·¸ë¨ì´ ë³µì¡í•´ì§€ë©´ ì–´ë””ì„œ ìˆ˜ì •í–ˆëŠ”ì§€ í™•ì¸í•˜ê¸°ê°€ ì–´ë µê¸° ë•Œë¬¸ì— ë‹¨ì ì´ ë§ìŒ
+	ì—¬ëŸ¬ ê°œì˜ cpp íŒŒì¼ì´ ê³µí†µì ìœ¼ë¡œ ì‚¬ìš©í•  ìˆ˜ ìˆëŠ” ì „ì—­ë³€ìˆ˜, external linkage
+	static ì •ì  ì§€ì† ë³€ìˆ˜, static duration variable
 */
 
 int main()
 {
-	// test.cppÀÇ constants::pi¿Í ¸Ş¸ğ¸® ÁÖ¼Ò°¡ ´Ù¸§!! ¸Ş¸ğ¸® ³¶ºñ
+	// test.cppì˜ constants::piì™€ ë©”ëª¨ë¦¬ ì£¼ì†Œê°€ ë‹¤ë¦„!! ë©”ëª¨ë¦¬ ë‚­ë¹„
 	cout << "In main.cpp file " << Constants::pi << " " << &Constants::pi << endl;
 
 	doSomething();

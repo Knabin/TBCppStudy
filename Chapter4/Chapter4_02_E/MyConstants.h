@@ -1,6 +1,6 @@
 #pragma once
 
-// Çì´õÆÄÀÏ¿¡¼­´Â ¼±¾ğ¸¸, ÃÊ±âÈ­´Â MyConstants.cpp¿¡
+// í—¤ë”íŒŒì¼ì—ì„œëŠ” ì„ ì–¸ë§Œ, ì´ˆê¸°í™”ëŠ” MyConstants.cppì—
 namespace Constants
 {
 	extern const double pi;

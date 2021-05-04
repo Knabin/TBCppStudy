@@ -7,64 +7,64 @@ int main()
 	using namespace std;
 
 	int a = 123;
-	int b = 123.0;	// °æ°í´Â ¶ß³ª, ÄÄÆÄÀÏ °¡´ÉÇÔ
-	int bb = (int)123.0;	// ¸í½ÃÀû Çüº¯È¯
+	int b = 123.0;	// ê²½ê³ ëŠ” ëœ¨ë‚˜, ì»´íŒŒì¼ ê°€ëŠ¥í•¨
+	int bb = (int)123.0;	// ëª…ì‹œì  í˜•ë³€í™˜
 
-	// ¾î¶°ÇÑ data typeÀÎÁö Ãâ·Â, auto¿Í Çüº¯È¯¿¡¼­ À¯¿ëÇÏ°Ô »ç¿ë
+	// ì–´ë– í•œ data typeì¸ì§€ ì¶œë ¥, autoì™€ í˜•ë³€í™˜ì—ì„œ ìœ ìš©í•˜ê²Œ ì‚¬ìš©
 	cout << typeid(4.0).name() << endl;
 	cout << typeid(a).name() << endl;
 
 
-	// numeric promotion: ÀÛÀº °Í -> Å« °Í, Å« ¹®Á¦°¡ ¾øÀ½
+	// numeric promotion: ì‘ì€ ê²ƒ -> í° ê²ƒ, í° ë¬¸ì œê°€ ì—†ìŒ
 	float f = 1.0f;
 	double d = f;
 
-	// numeric conversion(º¯È¯)
+	// numeric conversion(ë³€í™˜)
 	double d2 = 3;
 	short s = 2;
 
 	int i = 30000;
-	char c = i;	// char ¹üÀ§¿¡ ¾È µé¾î°¨
+	char c = i;	// char ë²”ìœ„ì— ì•ˆ ë“¤ì–´ê°
 
 	int i2 = 2;
-	char c2 = i2;	// char ¹üÀ§¿¡ µé¾î°¡±â ¶§¹®¿¡ ¹®Á¦ ¾øÀ½
+	char c2 = i2;	// char ë²”ìœ„ì— ë“¤ì–´ê°€ê¸° ë•Œë¬¸ì— ë¬¸ì œ ì—†ìŒ
 
-	// char·Î Ãâ·ÂÇÏ¸é ¹®ÀÚ·Î Ãâ·ÂµÇ±â ¶§¹®¿¡ ¸í½ÃÀû Çüº¯È¯ ÇÊ¿ä
-	cout << static_cast<int>(c) << endl;	// Ãâ·Â: 48
-	cout << static_cast<int>(c2) << endl;	// Ãâ·Â: 2
+	// charë¡œ ì¶œë ¥í•˜ë©´ ë¬¸ìë¡œ ì¶œë ¥ë˜ê¸° ë•Œë¬¸ì— ëª…ì‹œì  í˜•ë³€í™˜ í•„ìš”
+	cout << static_cast<int>(c) << endl;	// ì¶œë ¥: 48
+	cout << static_cast<int>(c2) << endl;	// ì¶œë ¥: 2
 
 
 	double d3 = 0.123456789;
-	float f2 = d3;	// Á¤¹Ğµµ°¡ ºÎÁ·ÇØ¼­ ¿Ïº®ÇÏ°Ô Ãâ·ÂÇÏÁö´Â ¸øÇÔ
+	float f2 = d3;	// ì •ë°€ë„ê°€ ë¶€ì¡±í•´ì„œ ì™„ë²½í•˜ê²Œ ì¶œë ¥í•˜ì§€ëŠ” ëª»í•¨
 
-	cout << std::setprecision(12) << d3 << endl;	// Ãâ·Â: 0.123456789
-	cout << std::setprecision(12) << f2 << endl;	// Ãâ·Â: 0.123456791043
+	cout << std::setprecision(12) << d3 << endl;	// ì¶œë ¥: 0.123456789
+	cout << std::setprecision(12) << f2 << endl;	// ì¶œë ¥: 0.123456791043
 
 
 	int i3 = 1234;
 	float f3 = i;
 
-	cout << std::setprecision(12) << f3 << endl;	// Ãâ·Â: 1234.0
+	cout << std::setprecision(12) << f3 << endl;	// ì¶œë ¥: 1234.0
 
 
 	float f4 = 3.14;
-	int i4 = f4;	// ¼Ò¼öÁ¡ "¹ö¸²" / ¹İ¿Ã¸², ¿Ã¸², ¹ö¸²ÀÇ ÇÔ¼ö´Â µû·Î ÀÖÀ½
+	int i4 = f4;	// ì†Œìˆ˜ì  "ë²„ë¦¼" / ë°˜ì˜¬ë¦¼, ì˜¬ë¦¼, ë²„ë¦¼ì˜ í•¨ìˆ˜ëŠ” ë”°ë¡œ ìˆìŒ
 
-	cout << i4 << endl;	// Ãâ·Â: 3
+	cout << i4 << endl;	// ì¶œë ¥: 3
 
 
-	// unsigned <-> signed´Â ¹®Á¦°¡ »ı±æ ¼ö ÀÖÀ¸´Ï Á¶½ÉÈ÷ ´Ù·ï¾ß ÇÔ
+	// unsigned <-> signedëŠ” ë¬¸ì œê°€ ìƒê¸¸ ìˆ˜ ìˆìœ¼ë‹ˆ ì¡°ì‹¬íˆ ë‹¤ë¤„ì•¼ í•¨
 	cout << 5u - 10 << endl;
 	cout << 5u - 10u << endl;
 
-	// ¿ì¼±¼øÀ§: int < unsigned int < long < unsigned long <
+	// ìš°ì„ ìˆœìœ„: int < unsigned int < long < unsigned long <
 	//       long long < unsigned long long < float < double < long double
 
 
-	// ¾Ï½ÃÀû Çüº¯È¯
+	// ì•”ì‹œì  í˜•ë³€í™˜
 	int x = (int)4.0;	// c style
-	int y = int(4.0);	// cpp style, int Å¸ÀÔÀÇ instance¸¦ ¸¸µé¾î ³ÖÀ½
-	int z = static_cast<int>(4.0);	// ÃÖ±Ù
+	int y = int(4.0);	// cpp style, int íƒ€ì…ì˜ instanceë¥¼ ë§Œë“¤ì–´ ë„£ìŒ
+	int z = static_cast<int>(4.0);	// ìµœê·¼
 
 
 	return 0;

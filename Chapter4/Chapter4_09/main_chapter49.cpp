@@ -7,14 +7,14 @@ int main()
 	using namespace std;
 	typedef double distance_t;
 
-	std::int8_t i(97);	// °íÁ¤³Êºñ Á¤¼ö¿¡¼­µµ »óÈ²¿¡ ÀûÇÕÇÑ ÀÌ¸§À» ¸¸µé¾î ÁØ °ÍÀÓ
+	std::int8_t i(97);	// ê³ ì •ë„ˆë¹„ ì •ìˆ˜ì—ì„œë„ ìƒí™©ì— ì í•©í•œ ì´ë¦„ì„ ë§Œë“¤ì–´ ì¤€ ê²ƒì„
 
-	// ÄÄÆÄÀÏ·¯ ÀÔÀå¿¡¼­´Â °°À½, ÇÁ·Î±×·¡¹Ö ÆíÀÇ¸¦ À§ÇÔ
+	// ì»´íŒŒì¼ëŸ¬ ì…ì¥ì—ì„œëŠ” ê°™ìŒ, í”„ë¡œê·¸ë˜ë° í¸ì˜ë¥¼ ìœ„í•¨
 	double		my_distance;
 	distance_t	home2work;
 	distance_t	home2school;
 	
-	// º¹ÀâÇÑ ÀÚ·áÇüÀÌ Á¸ÀçÇÒ ¼ö ÀÖÀ½
+	// ë³µì¡í•œ ìë£Œí˜•ì´ ì¡´ì¬í•  ìˆ˜ ìˆìŒ
 	vector<pair<string, int> > pairlist1;
 	vector<pair<string, int> > pairlist2;
 

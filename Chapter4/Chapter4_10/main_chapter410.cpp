@@ -4,22 +4,21 @@
 using namespace std;
 
 /*
-¸Å°³º¯¼ö¸¦ ´Ù ³Ö±â¿¡´Â ³Ê¹« Èûµê
+ë§¤ê°œë³€ìˆ˜ë¥¼ ë‹¤ ë„£ê¸°ì—ëŠ” ë„ˆë¬´ í˜ë“¦
 void printPerson(double height, float weight, int age, string name)
 {
-
 }
 */
 
 struct Person
 {
-	// member, ±âº»°ªÀ» ³ÖÀ» ¼ö ÀÖÀ½
+	// member, ê¸°ë³¸ê°’ì„ ë„£ì„ ìˆ˜ ìˆìŒ
 	double	height;
 	float	weight;
 	int		age;
 	string	name = "Mr. Incredible";
 
-	// ±¸Á¶Ã¼¿¡ ¼ÓÇØ ÀÖ´Â ÇÔ¼ö
+	// êµ¬ì¡°ì²´ì— ì†í•´ ìˆëŠ” í•¨ìˆ˜
 	void print()
 	{
 		cout << height << " " << weight << " " << age << " " << name;
@@ -39,7 +38,7 @@ struct Employee		// 2 + (2) + 4 + 8 = 16		padding
 	double	wage;	// 8 bytes
 };
 
-// returnµµ °¡´É
+// returnë„ ê°€ëŠ¥
 Person getMe()
 {
 	Person me{ 2.0, 100.0, 20,"Jack Jack" };
@@ -50,7 +49,7 @@ Person getMe()
 
 int main()
 {
-	// ¿©·¯ ¸íÀ» ÀúÀåÇÏ·Á¸é Èûµê
+	// ì—¬ëŸ¬ ëª…ì„ ì €ì¥í•˜ë ¤ë©´ í˜ë“¦
 	double	height1, height2, height3;	// double height1[100];
 	float	weight;
 	int		age;
@@ -65,14 +64,14 @@ int main()
 	Person mom;
 	Person dad;
 
-	// ±¸Á¶Ã¼ ¾È¿¡ ÀÖ´Â °Í¿¡ Á¢±ÙÇÏ·Á¸é "."(member access operator)
+	// êµ¬ì¡°ì²´ ì•ˆì— ìˆëŠ” ê²ƒì— ì ‘ê·¼í•˜ë ¤ë©´ "."(member access operator)
 	me.weight;
 	me.print();
 
 	Person me2(me);
 	me2.print();
 
-	// ´ëÀÔ ¿¬»êÀÚ°¡ ³»°¡ ÀÇµµÇÑ ´ë·Î ÀÛµ¿µÇÁö ¾ÊÀ» ¼ö ÀÖÀ¸´Ï ÁÖÀÇ!
+	// ëŒ€ì… ì—°ì‚°ìê°€ ë‚´ê°€ ì˜ë„í•œ ëŒ€ë¡œ ì‘ë™ë˜ì§€ ì•Šì„ ìˆ˜ ìˆìœ¼ë‹ˆ ì£¼ì˜!
 	Person me3;
 	me3 = me;
 	me3.print();
@@ -82,7 +81,7 @@ int main()
 
 
 	Employee emp1;
-	cout << sizeof(Employee) << endl;	// Ãâ·Â: 16
+	cout << sizeof(Employee) << endl;	// ì¶œë ¥: 16
 
 
 	return 0;

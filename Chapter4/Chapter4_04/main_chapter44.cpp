@@ -1,7 +1,7 @@
 #include <iostream>
 
-// ¸Å°³º¯¼ö¿¡´Â auto ºÒ°¡´É! => template
-auto add(int x, int y) -> int	// ÄÚµå Á¤¸® ½Ã º¸±â ÁÁÀ½, trailing return type
+// ë§¤ê°œë³€ìˆ˜ì—ëŠ” auto ë¶ˆê°€ëŠ¥! => template
+auto add(int x, int y) -> int	// ì½”ë“œ ì •ë¦¬ ì‹œ ë³´ê¸° ì¢‹ìŒ, trailing return type
 {
 	return x + y;
 }
@@ -10,9 +10,9 @@ int main()
 {
 	using namespace std;
 
-	int a = 123;	// Áßº¹µÈ Á¤º¸: 123(Á¤¼ö), int(Á¤¼öÇü)
+	int a = 123;	// ì¤‘ë³µëœ ì •ë³´: 123(ì •ìˆ˜), int(ì •ìˆ˜í˜•)
 
-	auto b = 123;	// ´ç¿¬ÇÑ ¾ê±âÁö¸¸ ÃÊ±âÈ­¸¦ ²À ÇØ¾ß ÇÑ´Ù!
+	auto b = 123;	// ë‹¹ì—°í•œ ì–˜ê¸°ì§€ë§Œ ì´ˆê¸°í™”ë¥¼ ê¼­ í•´ì•¼ í•œë‹¤!
 	auto d = 123.0;
 	auto c = 1 + 2.0;
 	auto result = add(1, 2);

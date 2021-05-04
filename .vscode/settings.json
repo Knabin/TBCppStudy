@@ -55,6 +55,10 @@
     },
     "files.associations": {
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "utility": "cpp",
+        "xstring": "cpp",
+        "istream": "cpp",
+        "iomanip": "cpp"
     }
 }

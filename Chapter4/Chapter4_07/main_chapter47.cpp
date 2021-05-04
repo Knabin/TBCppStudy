@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-// ÇÇÇØÄ¡¸¦ ¾ó¸¶³ª Áà¾ß ÇÏ´ÂÁö...
+// í”¼í•´ì¹˜ë¥¼ ì–¼ë§ˆë‚˜ ì¤˜ì•¼ í•˜ëŠ”ì§€...
 int computeDamage(int weapon_id)
 {
 	if (weapon_id == 0)	// sword
@@ -17,11 +17,11 @@ int computeDamage(int weapon_id)
 
 enum Color	// user-defined data types
 {
-	COLOR_BLACK = -3,	// ¼öµ¿À¸·Î °ªÀ» ÇÒ´çÇÒ ¼ö ÀÖ°í, ÀÚµ¿À¸·Î ´ÙÀ½ °ªµµ ÇÒ´çµÊ
+	COLOR_BLACK = -3,	// ìˆ˜ë™ìœ¼ë¡œ ê°’ì„ í• ë‹¹í•  ìˆ˜ ìˆê³ , ìë™ìœ¼ë¡œ ë‹¤ìŒ ê°’ë„ í• ë‹¹ë¨
 	COLOR_RED,			// -2
 	COLOR_BLUE = 5,
-	COLOR_GREEN = 5,	// ¼öµ¿À¸·Î °°Àº °ªÀ» ÇÒ´çÇÒ ¼ö ÀÖÀ¸³ª ±¸ºĞµÇÁö ¾ÊÀ¸¹Ç·Î ±ÇÀåX
-	COLOR_SKYBLUE,	// ¸¶Áö¸·¿¡ Äİ·Ğ ºÙ¿©µµ »ó°ü¾øÀ½!
+	COLOR_GREEN = 5,	// ìˆ˜ë™ìœ¼ë¡œ ê°™ì€ ê°’ì„ í• ë‹¹í•  ìˆ˜ ìˆìœ¼ë‚˜ êµ¬ë¶„ë˜ì§€ ì•Šìœ¼ë¯€ë¡œ ê¶Œì¥X
+	COLOR_SKYBLUE,	// ë§ˆì§€ë§‰ì— ì½œë¡  ë¶™ì—¬ë„ ìƒê´€ì—†ìŒ!
 	BLUE
 };
 
@@ -39,7 +39,7 @@ int main()
 
 	Color paint = COLOR_BLACK;
 	Color house(COLOR_BLUE);
-	Color apple{ COLOR_RED };	// ÁÖÀÇÇÒ ÇÊ¿ä°¡ ÀÖÀ½ => class ÃÊ±âÈ­¿¡¼­..
+	Color apple{ COLOR_RED };	// ì£¼ì˜í•  í•„ìš”ê°€ ìˆìŒ => class ì´ˆê¸°í™”ì—ì„œ..
 
 	Color my_color = COLOR_BLACK;
 
@@ -53,7 +53,7 @@ int main()
 
 	int color_id = COLOR_BLACK;	// OK
 	Color my_id = static_cast<Color>(3);	// OK
-	//Color my_id = 3;	error! integer¸¦ ³ÖÀ» ¼ö ¾øÀ½
+	//Color my_id = 3;	error! integerë¥¼ ë„£ì„ ìˆ˜ ì—†ìŒ
 
 	//cin >> my_id;	error!
 	int in_number;
@@ -65,7 +65,7 @@ int main()
 	string str_input;
 	std::getline(cin, str_input);
 
-	// ±ÇÀå X, ¿ÀÅ¸ ³¾ °æ¿ì...
+	// ê¶Œì¥ X, ì˜¤íƒ€ ë‚¼ ê²½ìš°...
 	if (str_input == "COLOR_BLACK")
 		my_color = static_cast<Color>(0);
 	

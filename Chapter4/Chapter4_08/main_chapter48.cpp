@@ -31,12 +31,12 @@ int main()
 	Color color2 = Color::RED;
 	Fruit fruit = Fruit::BANANA;
 	/*
-	∫Ò±≥(color == fruit) ∫“∞°¥…
+	ÎπÑÍµê(color == fruit) Î∂àÍ∞ÄÎä•
 	if (color == fruit)	
 		cout << "Color is fruit ? " << endl;
 	*/
 
-	// ∞∞¿∫ ∞ÕµÈ≥¢∏Æ¥¬ ∫Ò±≥ ∞°¥…
+	// Í∞ôÏùÄ Í≤ÉÎì§ÎÅºÎ¶¨Îäî ÎπÑÍµê Í∞ÄÎä•
 	if (color == color2)
 		cout << "Same color" << endl;
 
