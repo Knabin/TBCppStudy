@@ -5,17 +5,17 @@
 
 unsigned int PRNG()	// Pseudo Random Number Generator
 {
-	static unsigned int seed = 5523;	// seed number: ½ÃÀÛÇÏ´Â ¼ıÀÚ
+	static unsigned int seed = 5523;	// seed number: ì‹œì‘í•˜ëŠ” ìˆ«ì
 
-	seed = 8253729 * seed + 2396403;	// overflow¸¦ ÀÌ¿ë
+	seed = 8253729 * seed + 2396403;	// overflowë¥¼ ì´ìš©
 	
 	return seed % 32768;
 }
 
 int getRandomNumber(int min, int max)
 {
-	// RAND_MAX: ·£´ıÀ¸·Î ³ª¿Ã ¼ö ÀÖ´Â °¡Àå Å« ¼ıÀÚ
-	// ³ª´©±â°¡ ´À¸®±â ¶§¹®¿¡ °á°ú¸¦ ÀúÀåÇØ¼­ »ç¿ë
+	// RAND_MAX: ëœë¤ìœ¼ë¡œ ë‚˜ì˜¬ ìˆ˜ ìˆëŠ” ê°€ì¥ í° ìˆ«ì
+	// ë‚˜ëˆ„ê¸°ê°€ ëŠë¦¬ê¸° ë•Œë¬¸ì— ê²°ê³¼ë¥¼ ì €ì¥í•´ì„œ ì‚¬ìš©
 	static const double fraction = 1.0 / (RAND_MAX + 1.0);
 
 	return min + static_cast<int>((max - min + 1)*(std::rand()*fraction));
@@ -36,8 +36,8 @@ int main()
 
 
 	cout << "srand()" << endl;
-	//std::srand(5323);	// seed ¼³Á¤
-	// seed number°¡ °íÁ¤µÇ¾î ÀÖÀ¸¸é ´Ù¸¥ ¼ıÀÚ¸¦ Ãâ·ÂÇÒ ¼ö ¾øÀ½, µğ¹ö±ë ½Ã¿¡´Â ¼ıÀÚ °íÁ¤
+	//std::srand(5323);	// seed ì„¤ì •
+	// seed numberê°€ ê³ ì •ë˜ì–´ ìˆìœ¼ë©´ ë‹¤ë¥¸ ìˆ«ìë¥¼ ì¶œë ¥í•  ìˆ˜ ì—†ìŒ, ë””ë²„ê¹… ì‹œì—ëŠ” ìˆ«ì ê³ ì •
 	std::srand(static_cast<unsigned int>(std::time(0)));
 
 	for (int count = 1; count <= 20; count++)
@@ -59,10 +59,10 @@ int main()
 	cout << endl;
 
 
-	cout << "rand() 5~8 Ãâ·Â" << endl;
+	cout << "rand() 5~8 ì¶œë ¥" << endl;
 	for (int count = 1; count <= 20; count++)
 	{
-		// ´Ü, ¹üÀ§°¡ Å©¸é Æ¯Á¤ ¼ıÀÚ·Î ¸ô¸®´Â Çö»óÀÌ ¹ß»ıÇÒ ¼ö ÀÖÀ½
+		// ë‹¨, ë²”ìœ„ê°€ í¬ë©´ íŠ¹ì • ìˆ«ìë¡œ ëª°ë¦¬ëŠ” í˜„ìƒì´ ë°œìƒí•  ìˆ˜ ìˆìŒ
 		cout << rand() % 4 + 5 << "\t";
 
 		if (count % 5 == 0) cout << endl;
@@ -70,12 +70,12 @@ int main()
 	cout << endl;
 
 
-	// C++ 11ºÎÅÍ Ãß°¡µÊ!!
+	// C++ 11ë¶€í„° ì¶”ê°€ë¨!!
 	std::random_device rd;
 	// create a mesenne twister
-	// mt19937: ¾Ë°í¸®Áò °ü·Ã, mt19937_64´Â 64ºñÆ® ³­¼ö
+	// mt19937: ì•Œê³ ë¦¬ì¦˜ ê´€ë ¨, mt19937_64ëŠ” 64ë¹„íŠ¸ ë‚œìˆ˜
 	std::mt19937 mersenne(rd());	
-	// 1 ~ 6 Áß ¼±ÅÃµÇ´Âµ¥, È®·üÀº ÀüºÎ µ¿ÀÏÇÔ
+	// 1 ~ 6 ì¤‘ ì„ íƒë˜ëŠ”ë°, í™•ë¥ ì€ ì „ë¶€ ë™ì¼í•¨
 	std::uniform_int_distribution<> dice(1, 6);
 
 

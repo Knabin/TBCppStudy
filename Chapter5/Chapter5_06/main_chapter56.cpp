@@ -14,7 +14,7 @@ int main()
 		cout << "4. div" << endl;
 		cin >> selection;
 	} while (selection <= 0 || selection >= 5);
-	// do-while ³¡¿¡ semicolon ÇÊ¼ö!!
+	// do-while ë‹¤ìŒ semicolon í•„ìˆ˜!!
 
 	cout << "You selected " << selection << endl;
 

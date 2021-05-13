@@ -7,8 +7,8 @@ int main()
 
 	cout << "I love you " << endl;
 	
-	exit(0);	// ÄÚµå ¾îµğ¿¡ ÀÖµç ±ä±ŞÇÏ°Ô Á¾·á °¡´É
-	return 0;	// return Å¸ÀÔ¿¡ ¸ÂÃç¼­ returnÇØ Áà¾ß ÇÔ
+	exit(0);	// ì½”ë“œ ì–´ë””ì— ìˆë“  ê¸´ê¸‰í•˜ê²Œ ì¢…ë£Œ ê°€ëŠ¥
+	return 0;	// return íƒ€ì…ì— ë§ì¶°ì„œ returní•´ ì¤˜ì•¼ í•¨
 
 	cout << "I love you, too" << endl;
 

@@ -7,11 +7,11 @@ int getNumber()
 	while (true)
 	{
 		cin >> tmp;
-		if (std::cin.fail())	// ½ÇÆĞÇßÀ» °æ¿ì return true
+		if (std::cin.fail())	// ì‹¤íŒ¨í–ˆì„ ê²½ìš° return true
 		{
 			std::cin.clear();
-			std::cin.ignore(32767, '\n');	// ¹öÆÛ ºñ¿ì±â, 32767=Àû´çÈ÷ Å« ¼ıÀÚ
-			cout << "À¯È¿ÇÏÁö ¾ÊÀº ¼ıÀÚÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØ ÁÖ¼¼¿ä." << endl;
+			std::cin.ignore(32767, '\n');	// ë²„í¼ ë¹„ìš°ê¸°, 32767=ì ë‹¹íˆ í° ìˆ«ì
+			cout << "ìœ íš¨í•˜ì§€ ì•Šì€ ìˆ«ìì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ ì£¼ì„¸ìš”." << endl;
 		}
 		else
 		{
@@ -23,10 +23,10 @@ int getNumber()
 
 int main(void)
 {
-	cout << "1. ±¸±¸´Ü Ãâ·Â" << endl;
-	cout << "½ÃÀÛÇÒ ´ÜÀ» ÀÔ·ÂÇØ ÁÖ¼¼¿ä: ";
+	cout << "1. êµ¬êµ¬ë‹¨ ì¶œë ¥" << endl;
+	cout << "ì‹œì‘í•  ë‹¨ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”: ";
 	int start = getNumber();
-	cout << "³¡³¾ ´ÜÀ» ÀÔ·ÂÇØ ÁÖ¼¼¿ä: ";
+	cout << "ëë‚¼ ë‹¨ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”: ";
 	int end = getNumber();
 	cout << endl;
 
@@ -41,7 +41,7 @@ int main(void)
 	}
 	cout << endl;
 
-	cout << "2. 1ºÎÅÍ 20±îÁö Â¦¼ö¸¸ Ãâ·ÂÇÏ±â" << endl;
+	cout << "2. 1ë¶€í„° 20ê¹Œì§€ ì§ìˆ˜ë§Œ ì¶œë ¥í•˜ê¸°" << endl;
 	for (int i = 1; i <= 20; i++)
 	{
 		if (i % 2 == 0) cout << i << "\t";
@@ -49,7 +49,7 @@ int main(void)
 	}
 	cout << endl;
 
-	cout << "3. 0ºÎÅÍ 10±îÁö ´õÇÏ±â" << endl;
+	cout << "3. 0ë¶€í„° 10ê¹Œì§€ ë”í•˜ê¸°" << endl;
 	int result = 0;
 	for (int i = 1; i <= 10; i++)
 	{

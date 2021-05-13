@@ -47,28 +47,28 @@ int main()
 	cin >> x;
 
 	{
-		int y1 = 0;	// Â÷¶ó¸® ÀÌÂÊ¿¡ ¼±¾ğÇÏ´Â °ÍÀÌ ÁÁ°í(1)
+		int y1 = 0;	// ì°¨ë¼ë¦¬ ì´ìª½ì— ì„ ì–¸í•˜ëŠ” ê²ƒì´ ì¢‹ê³ (1)
 		switch (x)
 		{
 			int a;
-			//int b = 5;	ÃÊ±âÈ­ ºÒ°¡´É! error C2360: initialization of 'b' is skipped by 'case' label
+			//int b = 5;	ì´ˆê¸°í™” ë¶ˆê°€ëŠ¥! error C2360: initialization of 'b' is skipped by 'case' label
 		case 0:
-			int y;	// case¹® ¾È¿¡ ¼±¾ğÇØµµ À§¿¡ int aÃ³·³ ¶È°°ÀÌ ÀÛµ¿ÇÔ
-			break;	// switch¸¦ ºüÁ®³ª°¨
+			int y;	// caseë¬¸ ì•ˆì— ì„ ì–¸í•´ë„ ìœ„ì— int aì²˜ëŸ¼ ë˜‘ê°™ì´ ì‘ë™í•¨
+			break;	// switchë¥¼ ë¹ ì ¸ë‚˜ê°
 		case 1:
 			y = 5;
 			cout << y << endl;
 			break;
 		case 2:
 		{
-			// ¶Ç´Â case¹® ÀüÃ¼¸¦ ºí·ÏÀ¸·Î ½Î¼­ »ç¿ëÇÏÀÚ(2)
+			// ë˜ëŠ” caseë¬¸ ì „ì²´ë¥¼ ë¸”ë¡ìœ¼ë¡œ ì‹¸ì„œ ì‚¬ìš©í•˜ì(2)
 			int y = 0;
 			cout << y << endl;
 			break;
 		}
 		default:
 			cout << "Undefined input " << x << endl;
-			break;	// ¾ø¾îµµ µÊ
+			break;	// ì—†ì–´ë„ ë¨
 		}
 	}
 

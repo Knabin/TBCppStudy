@@ -4,7 +4,6 @@ int main()
 {
 	using namespace std;
 
-	// while문을 goto문으로 바꿔 보기
 	int count = 0;
 
 replay:

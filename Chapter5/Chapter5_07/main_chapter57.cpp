@@ -4,7 +4,7 @@ int pow(int base, int exponent)
 {
 	int result = 1;
 
-	//for (int count = 1; count <= exponent; count++) °¡´É
+	//for (int count = 1; count <= exponent; count++) ê°€ëŠ¥
 	for (int count = 0; count < exponent; count++)
 		result *= base;
 
@@ -17,14 +17,14 @@ int main()
 
 	/*
 	1. int count = 0;
-	2. count < 10 == true ~> ºí·° ½ÇÇà
+	2. count < 10 == true ~> ë¸”ëŸ­ ì‹¤í–‰
 	3. ++count
-	4. count < 10 == true ~> ºí·° ½ÇÇà
-					false ~> for¹® Á¾·á
+	4. count < 10 == true ~> ë¸”ëŸ­ ì‹¤í–‰
+					false ~> forë¬¸ ì¢…ë£Œ
 	*/
 	
 	//int count = 0;
-	//for(; count < 10; ++count) °¡´É
+	//for(; count < 10; ++count) ê°€ëŠ¥
 
 	for (int count = 0; count < 10; ++count) // iteration
 	{
@@ -59,7 +59,7 @@ int main()
 		}
 	}
 
-	/* while¹® ¿¹Á¦¿Í ¸¶Âù°¡Áö·Î ¹®Á¦°¡ ÀÖ´Â ÄÚµå!!
+	/* whileë¬¸ ì˜ˆì œì™€ ë§ˆì°¬ê°€ì§€ë¡œ ë¬¸ì œê°€ ìžˆëŠ” ì½”ë“œ!!
 	for (unsigned int i = 9; i >= 0; i--)
 	{
 		cout << i << endl;

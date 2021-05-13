@@ -21,11 +21,11 @@ int main()
 	}
 	else
 		cout << x << " is not greater than 10" << endl;
-	cout << "Test 1" << endl;	// else¹® ¹ÛÀÓ! block ÇÊ¿ä!
+	cout << "Test 1" << endl;	// elseë¬¸ ë°–ì„! block í•„ìš”!
 
 
-	if (1)	// 0ÀÌ ¾Æ´Ï¸é trueÀÓ!! ÁÖÀÇ
-		int x = 5;	// if¹® blockÀ» ¹ş¾î³ª´Â ¼ø°£ »ç¶óÁü¿¡ ÁÖÀÇ!!
+	if (1)	// 0ì´ ì•„ë‹ˆë©´ trueì„!! ì£¼ì˜
+		int x = 5;	// ifë¬¸ blockì„ ë²—ì–´ë‚˜ëŠ” ìˆœê°„ ì‚¬ë¼ì§ì— ì£¼ì˜!!
 	else
 		int x = 6;
 
@@ -51,9 +51,9 @@ int main()
 	int y;
 	cin >> y;
 
-	if (x > 0 && y > 0)	// µÑ ´Ù ¾ç¼ö
+	if (x > 0 && y > 0)	// ë‘˜ ë‹¤ ì–‘ìˆ˜
 		cout << "both numbers are positive" << endl;
-	else if (x > 0 || y > 0)	// µÑ Áß¿¡ ÇÏ³ª¸¸ ¾ç¼ö
+	else if (x > 0 || y > 0)	// ë‘˜ ì¤‘ì— í•˜ë‚˜ë§Œ ì–‘ìˆ˜
 		cout << "one of the numbers is positive" << endl;
 	else
 		cout << "Neither number is positive" << endl;
@@ -62,12 +62,12 @@ int main()
 	if (x > 10)
 		cout << "A" << endl;
 	else if (x == -1)
-		return 0;	// ÇÁ·Î±×·¥À» Áß´Ü½ÃÅ°´Â °Íµµ °¡´É
+		return 0;	// í”„ë¡œê·¸ë¨ì„ ì¤‘ë‹¨ì‹œí‚¤ëŠ” ê²ƒë„ ê°€ëŠ¥
 	else if (x < 0)
 		cout << "B " << endl;
 
 
-	// null statement Á¶½É!
+	// null statement ì¡°ì‹¬!
 	if (x > 10);
 	{
 		x = 1;
@@ -75,7 +75,7 @@ int main()
 
 
 	// x = 0; if(x)
-	if (x = 0)	// if (x == 0) ÁÖÀÇ!
+	if (x = 0)	// if (x == 0) ì£¼ì˜!
 		cout << x << endl;
 
 	return 0;

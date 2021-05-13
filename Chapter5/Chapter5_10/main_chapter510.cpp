@@ -8,10 +8,10 @@ int getInt()
 		cout << "Enter an integer number : ";
 		int x;
 		cin >> x;
-		if (std::cin.fail())	// ½ÇÆĞÇßÀ» °æ¿ì return true
+		if (std::cin.fail())	// ì‹¤íŒ¨í–ˆì„ ê²½ìš° return true
 		{
 			std::cin.clear();
-			std::cin.ignore(32767, '\n');	// ¹öÆÛ ºñ¿ì±â, 32767=Àû´çÈ÷ Å« ¼ıÀÚ
+			std::cin.ignore(32767, '\n');	// ë²„í¼ ë¹„ìš°ê¸°, 32767=ì ë‹¹íˆ í° ìˆ«ì
 			cout << "Invalid number, please try again" << endl;
 		}
 		else

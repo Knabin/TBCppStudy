@@ -15,7 +15,7 @@ void breakOrReturn()
 			return;
 	}
 
-	// break´Â Hello Ãâ·Â / returnÀº ÇÔ¼ö Å»Ãâ
+	// breakëŠ” Hello ì¶œë ¥ / returnì€ í•¨ìˆ˜ íƒˆì¶œ
 	cout << "Hello" << endl;
 }
 
@@ -25,7 +25,7 @@ int main()
 	while (true)
 	{
 		cout << count << endl;
-		if (count == 2) break;	// ÇöÀç ºí·°¿¡¼­ ºüÁ®³ª°¨
+		if (count == 2) break;	// í˜„ì¬ ë¸”ëŸ­ì—ì„œ ë¹ ì ¸ë‚˜ê°
 		count++; 
 	}
 
@@ -35,7 +35,7 @@ int main()
 	{
 		//if (i % 2 == 1) cout << i << endl;
 		
-		// continue´Â ¾Æ·§ºÎºĞÀ» ½ÇÇàÇÏÁö ¾Ê°í for¹®ÀÇ i++ ½ÇÇà
+		// continueëŠ” ì•„ë«ë¶€ë¶„ì„ ì‹¤í–‰í•˜ì§€ ì•Šê³  forë¬¸ì˜ i++ ì‹¤í–‰
 		if (i % 2 == 0) continue;
 
 		cout << i << endl;
@@ -52,28 +52,26 @@ int main()
 	} while (++count2 < 10);
 
 	/*
-	ÀÌ·¸°Ô ÄÚµùÇÏ¸é count2==5ÀÎ °æ¿ì, continue·Î ÀÎÇØ count2++ÀÌ ÁøÇà X(¹«ÇÑ·çÇÁ)
-	while¹®ÀÌ³ª do-while¹®Àº for¹®º¸´Ù Á¶±İ ±î´Ù·Î¿ï ¼ö ÀÖÀ½
-
+	ì´ë ‡ê²Œ ì½”ë”©í•˜ë©´ count2==5ì¸ ê²½ìš°, continueë¡œ ì¸í•´ count2++ì´ ì§„í–‰ X(ë¬´í•œë£¨í”„)
+	whileë¬¸ì´ë‚˜ do-whileë¬¸ì€ forë¬¸ë³´ë‹¤ ì¡°ê¸ˆ ê¹Œë‹¤ë¡œìš¸ ìˆ˜ ìˆìŒ
 	do
 	{
 		if (count2 == 5)
 			continue;
-
 		cout << count2 << endl;
 		count2++;
 	} while (count2 < 10);
 	*/
 
 
-	// break°¡ Á¶°Çº¸´Ù ÆíÇÑ °æ¿ì
-	// flag »ç¿ë
+	// breakê°€ ì¡°ê±´ë³´ë‹¤ í¸í•œ ê²½ìš°
+	// flag ì‚¬ìš©
 	int count3(0);
 	bool escape_flag = false;
 
 	while (!escape_flag)
 	{
-		// »ç¿ëÀÚ Á¤ÀÇ º¯¼ö µîÀ» »ç¿ëÇÏ¸é ´À·ÁÁú ¼ö ÀÖÀ½, ¹ÛÀ¸·Î »©´Â °Ô ÁÁÀ½
+		// ì‚¬ìš©ì ì •ì˜ ë³€ìˆ˜ ë“±ì„ ì‚¬ìš©í•˜ë©´ ëŠë ¤ì§ˆ ìˆ˜ ìˆìŒ, ë°–ìœ¼ë¡œ ë¹¼ëŠ” ê²Œ ì¢‹ìŒ
 		char ch;
 		cin >> ch;
 
@@ -85,7 +83,7 @@ int main()
 	
 	int count4(0);
 
-	// break »ç¿ë
+	// break ì‚¬ìš©
 	while (true)
 	{
 		char ch;

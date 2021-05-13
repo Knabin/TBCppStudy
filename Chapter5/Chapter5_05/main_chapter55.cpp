@@ -11,25 +11,24 @@ int main()
 
 	cout << "While-loop test" << endl;
 
-	int count = 0;	// ¸î ¹ø µ¹¸± °ÇÁö
-	while (1)	// °ıÈ£°¡ true(0ÀÌ ¾Æ´Ô)ÀÎ °æ¿ì ¹İº¹
+	int count = 0;	// ëª‡ ë²ˆ ëŒë¦´ ê±´ì§€
+	while (1)	// ê´„í˜¸ê°€ true(0ì´ ì•„ë‹˜)ì¸ ê²½ìš° ë°˜ë³µ
 	{
-		//int count = 0;	// ¿©±â¿¡ ¼±¾ğÇØ¼­ Ãâ·ÂÇÏ¸é °è¼Ó 0¸¸ Ãâ·ÂµÊ, static ºÙÀÌ¸é OK
+		//int count = 0;	// ì—¬ê¸°ì— ì„ ì–¸í•´ì„œ ì¶œë ¥í•˜ë©´ ê³„ì† 0ë§Œ ì¶œë ¥ë¨, static ë¶™ì´ë©´ OK
 		cout << count << endl;
 		++count;
 
 		if (count >= 10) break;
 	}
 
-	// unsigned int¸¦ »ç¿ëÇÏ¸é ¹®Á¦°¡ »ı±æ ¼ö ÀÖ´Ù! 10 9 ... 1 0 4294967295
-	// unsigned°¡ signedº¸´Ù ºü¸¥ °Í °°±â ¶§¹®¿¡ ²À! »ç¿ëÇÏÁö ¸»¶ó´Â °ÍÀº ¾Æ´Ï´Ù
+	// unsigned intë¥¼ ì‚¬ìš©í•˜ë©´ ë¬¸ì œê°€ ìƒê¸¸ ìˆ˜ ìˆë‹¤! 10 9 ... 1 0 4294967295
+	// unsignedê°€ signedë³´ë‹¤ ë¹ ë¥¸ ê²ƒ ê°™ê¸° ë•Œë¬¸ì— ê¼­! ì‚¬ìš©í•˜ì§€ ë§ë¼ëŠ” ê²ƒì€ ì•„ë‹ˆë‹¤
 	unsigned int count_u = 10;
 	/*
 	while (count_u >= 0)
 	{
 		if (count_u == 0) cout << "Zero";
 		else cout << count_u << " ";
-
 		count_u--;
 	}
 	*/
