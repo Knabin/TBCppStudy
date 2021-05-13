@@ -21,7 +21,7 @@ public:
 	AutoPtr(AutoPtr &a)
 	{
 		m_ptr = a.m_ptr;
-		a.m_ptr = nullptr;	// Áı ¿­¼è¸¦ »¯¾î ¹ö¸²
+		a.m_ptr = nullptr;	// ê°€ì§€ê³  ì™”ìœ¼ë‹ˆ ë” ì´ìƒ ê´€ì—¬í•˜ì§€ ëª»í•˜ê²Œë”, ëºì–´ì˜¤ëŠ” ê°œë…
 	}
 
 	AutoPtr& operator = (AutoPtr &a)

@@ -26,7 +26,7 @@ public:
 
 		// deep copy
 		m_ptr = new T;
-		*m_ptr = *a.m_ptr;	// ResourceÀÇ °æ¿ì, ResourceÀÇ copy assignment operator
+		*m_ptr = *a.m_ptr;	// Resourceì˜ ê²½ìš°, Resourceì˜ copy assignment operator
 	}
 
 	AutoPtr& operator = (const AutoPtr& a)
@@ -63,7 +63,7 @@ public:
 		if (!m_ptr) delete m_ptr;
 
 		// shallow copy
-		m_ptr = a.m_ptr;		// ¸Ş¸ğ¸®¿¡ Ã¹ ÁÖ¼Ò¸¦ º¹»çÇØ¼­ ³Ñ°Ü ÁÜ! ResourceÀÇ = ¾Æ´Ô!
+		m_ptr = a.m_ptr;		// ë©”ëª¨ë¦¬ì— ì²« ì£¼ì†Œë¥¼ ë³µì‚¬í•´ì„œ ë„˜ê²¨ ì¤Œ! Resourceì˜ = ì•„ë‹˜!
 		a.m_ptr = nullptr;
 
 		return *this;

@@ -18,19 +18,19 @@ int main()
 		res2 = res1;	// move semantics
 
 		cout << res1.m_ptr << endl;
-		cout << res2.m_ptr << endl;	// ÀÌ¹Ì Áö¿öÁø ¸Ş¸ğ¸®¸¦ ´Ù½Ã Áö¿ì·Á°í ÇÔ
+		cout << res2.m_ptr << endl;	// ì´ë¯¸ ì§€ì›Œì§„ ë©”ëª¨ë¦¬ë¥¼ ë‹¤ì‹œ ì§€ìš°ë ¤ê³  í•¨
 	}
 
-	//	syntax					vs. semantics
-	// ¹®¹ı, ÄÄÆÄÀÏÀÌ µÇ´Â °Å³Ä?	vs. ½ÇÁ¦·Î ³»ºÎÀûÀÎ ÀÇ¹Ì°¡ ¹¹³Ä?
+	// syntax					vs. semantics
+	// ë¬¸ë²•, ì»´íŒŒì¼ì´ ë˜ëŠ” ê±°ëƒ?	vs. ì‹¤ì œë¡œ ë‚´ë¶€ì ì¸ ì˜ë¯¸ê°€ ë­ëƒ?
 	int x = 1, y = 1;
 	x + y;
 
 	string str1("Hello"), str2("World");
-	str1 + str2;	// ÀÇ¹Ì°¡ ´Ş¶óÁü
+	str1 + str2;	// ì˜ë¯¸ê°€ ë‹¬ë¼ì§
 
-	// doSomething(res1); Ã³·³
-	// ³Ö¾ú´Âµ¥ ¾î¶»°Ô ÀÛµ¿ÇÒÁö´Â sementics¿¡ µû¶ó ´Ş¶óÁü!
+	// doSomething(res1); ì²˜ëŸ¼
+	// ë„£ì—ˆëŠ”ë° ì–´ë–»ê²Œ ì‘ë™í• ì§€ëŠ” sementicsì— ë”°ë¼ ë‹¬ë¼ì§!
 
 	// value semantics (copy semantics)
 	// reference sementics (pointer)
@@ -38,8 +38,8 @@ int main()
 
 	//AutoPtr<Resource> res1(new Resource);
 	//doSomething(res1);
-	// ÀÌµ¿ÇØ¼­ ¹ŞÀ¸¸é doSomething()ÀÌ ³¡³ª¸é¼­ res1ÀÌ ¼Ò¸êµÉ °ÍÀÓ
-	// ÀÌ·¯ÇÑ °ÍµéÀ» ¾î¶»°Ô Ã³¸®ÇÒ °Å³Ä? => ½º¸¶Æ® Æ÷ÀÎÅÍ¿¡¼­ Áß¿äÇÑ ºÎºĞ!
+	// ì´ë™í•´ì„œ ë°›ìœ¼ë©´ doSomething()ì´ ëë‚˜ë©´ì„œ res1ì´ ì†Œë©¸ë  ê²ƒì„
+	// ì´ëŸ¬í•œ ê²ƒë“¤ì„ ì–´ë–»ê²Œ ì²˜ë¦¬í•  ê±°ëƒ? => ìŠ¤ë§ˆíŠ¸ í¬ì¸í„°ì—ì„œ ì¤‘ìš”í•œ ë¶€ë¶„!
 
 	return 0;
 }

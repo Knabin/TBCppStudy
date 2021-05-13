@@ -13,13 +13,13 @@ void doSomething()
 		//Resource *res = new Resource;			// dull pointer
 		AutoPtr<Resource> res(new Resource);	// smart pointer
 
-		return;	// early returnÀÎ °æ¿ì¿¡µµ AutoPtrÀº ÀÚµ¿À¸·Î Áö¿öÁü
+		return;	// early returnì¸ ê²½ìš°ì—ë„ AutoPtrì€ ìë™ìœ¼ë¡œ ì§€ì›Œì§
 
 		// work with res
 		if (true)
 		{
-			//return;	// early return, delete ºÒ°¡´É
-			throw - 1;	// exception, delete ºÒ°¡´É
+			//return;	// early return, delete ë¶ˆê°€ëŠ¥
+			throw - 1;	// exception, delete ë¶ˆê°€ëŠ¥
 		}
 
 		//delete res;

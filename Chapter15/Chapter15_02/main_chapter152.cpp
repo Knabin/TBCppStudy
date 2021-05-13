@@ -25,7 +25,7 @@ int main()
 	const int cy = getResult();
 
 	// L-value references
-	// xÀÇ ³»¿ë¹°À» ¿Å°Ü ¹ö¸®¸é x¸¦ ÅëÇØ¼­ Á¢±ÙÇÒ ¼ö ¾øÀ¸´Ï±î Ãæµ¹ÀÌ »ı±è
+	// xì˜ ë‚´ìš©ë¬¼ì„ ì˜®ê²¨ ë²„ë¦¬ë©´ xë¥¼ í†µí•´ì„œ ì ‘ê·¼í•  ìˆ˜ ì—†ìœ¼ë‹ˆê¹Œ ì¶©ëŒì´ ìƒê¹€
 
 	int &lr1 = x;			// Modifiable l-values
 	//int &lr2 = cx;		// Non-modifiable l-values
@@ -37,7 +37,7 @@ int main()
 
 
 	// R-value references
-	// °ğ »ç¶óÁú °Íµé¸¸ ´ãÀ» ¼ö ÀÖÀ½
+	// ê³§ ì‚¬ë¼ì§ˆ ê²ƒë“¤ë§Œ ë‹´ì„ ìˆ˜ ìˆìŒ
 
 	//int &&rr1 = x;		// Modifiable l-values
 	//int &&rr2 = cx;		// Non-modifiable l-values
