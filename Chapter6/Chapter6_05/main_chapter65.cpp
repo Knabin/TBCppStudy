@@ -38,7 +38,7 @@ int main()
 
 	cout << endl;
 
-	// ÁÖ¼Ò Âï¾î º¸¸é 4¾¿ Â÷ÀÌ³²
+	// ì£¼ì†Œ ì°ì–´ ë³´ë©´ 4ì”© ì°¨ì´ë‚¨
 	for (int row = 0; row < num_rows; row++)
 	{
 		for (int col = 0; col < num_columns; col++)
@@ -48,10 +48,10 @@ int main()
 		cout << endl;
 	}
 
-	// num_rows¸¸ »ı·« °¡´É! num_columns´Â »ı·« ºÒ°¡´É
+	// num_rowsë§Œ ìƒëµ ê°€ëŠ¥! num_columnsëŠ” ìƒëµ ë¶ˆê°€ëŠ¥
 	int array2[][num_columns] =
 	{
-		{1,2},	// ³ª¸ÓÁö 0À¸·Î Ã¤¿ò
+		{1,2},	// ë‚˜ë¨¸ì§€ 0ìœ¼ë¡œ ì±„ì›€
 		{6,7,8,9,10},
 		{11,12,13,14,15}
 	};

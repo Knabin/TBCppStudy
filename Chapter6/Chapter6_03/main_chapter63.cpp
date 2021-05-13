@@ -11,17 +11,15 @@ int main()
 	int score2 = 76;
 	int score3 = 81;
 	int score4 = 56;
-
 	int total_score = score0 + score1 + score2 + score3 + score4;
-
 	double avg_score = static_cast<double>(total_score) / num_students;
 	//Note: double(total_score) / num_students != double(total_score / num_students);
 	*/
 
 	int scores[] = { 84, 92, 76, 81, 56 };
 
-	// ¹è¿­ÀÌ ÇÔ¼ö parameter·Î ³Ñ¾î°¬À» ¶§, ÇÔ¼ö¿¡¼­ ÀÌ·¸°Ô ¿¬»êÇÏ¸é Æ÷ÀÎÅÍÀÇ »çÀÌÁî¸¦ °è»êÇØ ¹ö¸± ¼ö ÀÖÀ¸´Ï ÁÖÀÇ!!
-	// ¹è¿­À» º¸³¾ ¶§´Â elements °³¼ö¸¦ °°ÀÌ ³Ñ±â±â
+	// ë°°ì—´ì´ í•¨ìˆ˜ parameterë¡œ ë„˜ì–´ê°”ì„ ë•Œ, í•¨ìˆ˜ì—ì„œ ì´ë ‡ê²Œ ì—°ì‚°í•˜ë©´ í¬ì¸í„°ì˜ ì‚¬ì´ì¦ˆë¥¼ ê³„ì‚°í•´ ë²„ë¦´ ìˆ˜ ìˆìœ¼ë‹ˆ ì£¼ì˜!!
+	// ë°°ì—´ì„ ë³´ë‚¼ ë•ŒëŠ” elements ê°œìˆ˜ë¥¼ ê°™ì´ ë„˜ê¸°ê¸°
 	const int num_students = sizeof(scores) / sizeof(int);
 
 	int max_score = 0;

@@ -9,21 +9,21 @@ struct MyStruct
 
 void doSomething(MyStruct ms)
 {
-	cout << sizeof(ms.array) << endl;	// Ãâ·Â: 20
+	cout << sizeof(ms.array) << endl;	// ï¿½ï¿½ï¿½: 20
 }
 
 void doSomething(MyStruct *ms)
 {
-	cout << sizeof((*ms).array) << endl;	// Ãâ·Â: 20
+	cout << sizeof((*ms).array) << endl;	// ï¿½ï¿½ï¿½: 20
 }
 
 
 int main()
 {
-	// array°¡ structure, class ¾È¿¡ µé¾î ÀÖÀ» °æ¿ì, Æ÷ÀÎÅÍ·Î °­Á¦ º¯È¯µÇÁö ¾ÊÀ½
+	// arrayê°€ structure, class ì•ˆì— ë“¤ì–´ ìžˆì„ ê²½ìš°, í¬ì¸í„°ë¡œ ê°•ì œ ë³€í™˜ë˜ì§€ ì•ŠìŒ
 	MyStruct ms;
 	cout << ms.array[0] << endl;
-	cout << sizeof(ms.array) << endl;	// Ãâ·Â: 20
+	cout << sizeof(ms.array) << endl;	// ì¶œë ¥: 20
 
 	doSomething(ms);
 	doSomething(&ms);

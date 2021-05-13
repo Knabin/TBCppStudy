@@ -2,12 +2,12 @@
 
 using namespace std;
 
-//void printArray (int *array)	µ¿ÀÏÇÔ!
+//void printArray (int *array)	ë™ì¼í•¨!
 void printArray(int array[])
 {
-	// parameter·Î ¹è¿­ÀÌ µé¾î¿À´Â °ÍÃ³·³ º¸ÀÌÁö¸¸, ³»ºÎÀûÀ¸·Î´Â Æ÷ÀÎÅÍ·Î ´Ù·ë
-	cout << sizeof(array) << endl;	// Ãâ·Â: 4
-	cout << *array << endl;	// Ãâ·Â: 9
+	// parameterë¡œ ë°°ì—´ì´ ë“¤ì–´ì˜¤ëŠ” ê²ƒì²˜ëŸ¼ ë³´ì´ì§€ë§Œ, ë‚´ë¶€ì ìœ¼ë¡œëŠ” í¬ì¸í„°ë¡œ ë‹¤ë£¸
+	cout << sizeof(array) << endl;	// ì¶œë ¥: 4
+	cout << *array << endl;	// ì¶œë ¥: 9
 
 	*array = 100;
 }
@@ -17,36 +17,36 @@ int main()
 {
 	int array[5] = { 9,7,5,3,1 };
 
-	// array´Â ¹è¿­ÀÌ ¾Æ´Ï¶ó 'Æ÷ÀÎÅÍ', Ã¹ ¹øÂ° ¹æÀÇ ÁÖ¼Ò¸¦ ´ã°í ÀÖÀ½
+	// arrayëŠ” ë°°ì—´ì´ ì•„ë‹ˆë¼ 'í¬ì¸í„°', ì²« ë²ˆì§¸ ë°©ì˜ ì£¼ì†Œë¥¼ ë‹´ê³  ìˆìŒ
 	cout << array[0] << " " << array[1] << endl;
 	cout << array << endl;	// == &array[0]
 	cout << &array[0] << endl;
 
-	cout << *array << endl;	// Ãâ·Â: 9
+	cout << *array << endl;	// ì¶œë ¥: 9
 
-	// ¹®ÀÚÇü Æ÷ÀÎÅÍÀÌ±â ¶§¹®¿¡ Á÷Á¢ Á¢±Ù ½Ã ¹®ÀÚÇüÀ¸·Î Ãâ·ÂÇÔ
+	// ë¬¸ìí˜• í¬ì¸í„°ì´ê¸° ë•Œë¬¸ì— ì§ì ‘ ì ‘ê·¼ ì‹œ ë¬¸ìí˜•ìœ¼ë¡œ ì¶œë ¥í•¨
 	char name[] = "jackjack";
-	cout << *name << endl;	// Ãâ·Â: j
+	cout << *name << endl;	// ì¶œë ¥: j
 
 
 	int *ptr = array;
 	cout << ptr << endl;	// == &array[0]
-	cout << *ptr << endl;	// Ãâ·Â: 9
+	cout << *ptr << endl;	// ì¶œë ¥: 9
 
 
-	cout << sizeof(array) << endl;	// Ãâ·Â: 20, 4*5
-	cout << sizeof(ptr) << endl;	// Ãâ·Â: 4, Æ÷ÀÎÅÍ º¯¼öÀÇ size
+	cout << sizeof(array) << endl;	// ì¶œë ¥: 20, 4*5
+	cout << sizeof(ptr) << endl;	// ì¶œë ¥: 4, í¬ì¸í„° ë³€ìˆ˜ì˜ size
 
 
 	printArray(array);
 
-	// printArray ÇÔ¼ö ¾È¿¡¼­ º¯°æÇÑ °ÍÀ» main ÇÔ¼ö¿¡¼­µµ È®ÀÎ °¡´É
-	// C¿¡¼­´Â ÀÌ·¯ÇÑ ¿ëµµ·Î ¸¹ÀÌ »ç¿ëÇÏ¿´À½, C++Àº reference¸¦ »ç¿ë
-	cout << array[0] << " " << *array << endl;	// Ãâ·Â: 100 100
+	// printArray í•¨ìˆ˜ ì•ˆì—ì„œ ë³€ê²½í•œ ê²ƒì„ main í•¨ìˆ˜ì—ì„œë„ í™•ì¸ ê°€ëŠ¥
+	// Cì—ì„œëŠ” ì´ëŸ¬í•œ ìš©ë„ë¡œ ë§ì´ ì‚¬ìš©í•˜ì˜€ìŒ, C++ì€ referenceë¥¼ ì‚¬ìš©
+	cout << array[0] << " " << *array << endl;	// ì¶œë ¥: 100 100
 
 	
-	// Æ÷ÀÎÅÍ ¿¬»ê, ´ÙÀ½ Ç×¸ñ Ãâ·Â °¡´É
-	cout << *ptr << " " << *(ptr + 1) << endl;	// Ãâ·Â: 100 7
+	// í¬ì¸í„° ì—°ì‚°, ë‹¤ìŒ í•­ëª© ì¶œë ¥ ê°€ëŠ¥
+	cout << *ptr << " " << *(ptr + 1) << endl;	// ì¶œë ¥: 100 7
 
 
 	return 0;

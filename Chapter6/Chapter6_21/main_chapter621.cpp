@@ -16,7 +16,7 @@ int main()
 	cout << array3.size() << endl;
 	cout << array4.size() << endl;
 
-	array2.resize(10);	// resize °¡´É
+	array2.resize(10);	// resize ê°€ëŠ¥
 
 	for (auto &itr : array2)
 		cout << itr;
@@ -27,8 +27,8 @@ int main()
 	cout << array2.size() << endl;	// size
 
 	int *my_arr = new int[5];
-	delete[] my_arr;	// ²À Áö¿ö¾ß ÇÑ´Ù´Â ºÎ´ãÀÌ ÀÖÀ½
-	// vector´Â ºí·°À» ³ª°¡¸é »ç¶óÁü!! ¾ÆÁÖ Å« ÀåÁ¡
+	delete[] my_arr;	// ê¼­ ì§€ì›Œì•¼ í•œë‹¤ëŠ” ë¶€ë‹´ì´ ìˆìŒ
+	// vectorëŠ” ë¸”ëŸ­ì„ ë‚˜ê°€ë©´ ì‚¬ë¼ì§!! ì•„ì£¼ í° ì¥ì 
 
 
 	return 0;

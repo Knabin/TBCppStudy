@@ -7,7 +7,7 @@ int main()
 	short value = 7;
 	short *ptr = &value;
 
-	// µ¥ÀÌÅÍ Å¸ÀÔÀÇ »çÀÌÁî¿¡ ¸ÂÃç¼­ ¿·À¸·Î ÇÑ Ä­
+	// ë°ì´í„° íƒ€ìž…ì˜ ì‚¬ì´ì¦ˆì— ë§žì¶°ì„œ ì˜†ìœ¼ë¡œ í•œ ì¹¸
 	cout << uintptr_t(ptr - 1) << endl;
 	cout << uintptr_t(ptr) << endl;
 	cout << uintptr_t(ptr + 1) << endl;

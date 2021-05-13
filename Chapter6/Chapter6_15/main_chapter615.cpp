@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void doSomething(const int& x)	// ¿Â¡°: ∫πªÁX
+void doSomething(const int& x)	// Ïû•Ï†ê: Î≥µÏÇ¨ X
 {
 	cout << x << endl;
 }
@@ -12,10 +12,9 @@ int main()
 	int a = 1;
 
 	doSomething(a);
-	doSomething(1);	// parameter∞° const reference∂Û∏È ∞°¥…!
+	doSomething(1);	// parameterÏóê const reference Î∂ôÏó¨ÎèÑ ÏÇ¨Ïö© Í∞ÄÎä•!
 	doSomething(a + 3);
 	doSomething(3 * 4);
-
 
 	return 0;
 }

@@ -21,24 +21,24 @@ int main()
 	cout << (int)&x << endl;
 
 	// de-reference operator (*)
-	// reference: °£Á¢ÀûÀ¸·Î Âü°íÇÏ´Â °³³ä
-	// de-reference: Æ÷ÀÎÅÍ°¡ µ¥ÀÌÅÍÀÇ ÁÖ¼Ò¸¦ °£Á¢ÀûÀ¸·Î °¡¸®Å°°í ÀÖ´Â °Í¿¡ ´ëÇÏ¿©, ±×°÷¿¡ ¹¹°¡ ÀÖ´ÂÁö Á÷Á¢ Á¢±ÙÇÏ°Ú´Ù´Â ÀÇ¹Ì
+	// reference: ê°„ì ‘ì ìœ¼ë¡œ ì°¸ê³ í•˜ëŠ” ê°œë…
+	// de-reference: í¬ì¸í„°ê°€ ë°ì´í„°ì˜ ì£¼ì†Œë¥¼ ê°„ì ‘ì ìœ¼ë¡œ ê°€ë¦¬í‚¤ê³  ìˆëŠ” ê²ƒì— ëŒ€í•˜ì—¬, ê·¸ê³³ì— ë­ê°€ ìˆëŠ”ì§€ ì§ì ‘ ì ‘ê·¼í•˜ê² ë‹¤ëŠ” ì˜ë¯¸
 
 	cout << *(&x) << endl;	// == x
 	cout << endl;
 
-	// pointer: ¸Ş¸ğ¸® ÁÖ¼Ò¸¦ ´ã´Â º¯¼ö
+	// pointer: ë©”ëª¨ë¦¬ ì£¼ì†Œë¥¼ ë‹´ëŠ” ë³€ìˆ˜
 	typedef int* pint;
 	int *ptr_x = &x, *ptr_y = &x;
-	//int *ptr_x = &x, ptr_y = &x;	// error!! ptr_y¿¡µµ *À» ºÙ¿©¾ß ÇÔ
-	//pint ptr_x = &x, ptr_y = &x;	// °¡´ÉÇÏÁö¸¸ typedefº¸´Ù´Â Á÷Á¢ ¼±¾ğÇÏ±â
+	//int *ptr_x = &x, ptr_y = &x;	// error!! ptr_yì—ë„ *ì„ ë¶™ì—¬ì•¼ í•¨
+	//pint ptr_x = &x, ptr_y = &x;	// ê°€ëŠ¥í•˜ì§€ë§Œ typedefë³´ë‹¤ëŠ” ì§ì ‘ ì„ ì–¸í•˜ê¸°
 
-	cout << ptr_x << endl;	// µ¥ÀÌÅÍÀÇ ÁÖ¼Ò
-	cout << *ptr_x << endl;	// µ¥ÀÌÅÍÀÇ ÁÖ¼Ò¿¡ ÀÖ´Â ³»¿ë(µ¥ÀÌÅÍ)
+	cout << ptr_x << endl;	// ë°ì´í„°ì˜ ì£¼ì†Œ
+	cout << *ptr_x << endl;	// ë°ì´í„°ì˜ ì£¼ì†Œì— ìˆëŠ” ë‚´ìš©(ë°ì´í„°)
 
 	cout << endl;
 
-	// array¸¦ parameter·Î ³ÖÀ¸¸é ÀüºÎ º¹»çµÊ... => Æ÷ÀÎÅÍ·Î Ã¹ ¹øÂ° ÁÖ¼Ò¿Í µ¥ÀÌÅÍ °³¼ö¸¸ ¾Ë·Á ÁØ´Ù¸é ÇØ°á °¡´É
+	// arrayë¥¼ parameterë¡œ ë„£ìœ¼ë©´ ì „ë¶€ ë³µì‚¬ë¨... => í¬ì¸í„°ë¡œ ì²« ë²ˆì§¸ ì£¼ì†Œì™€ ë°ì´í„° ê°œìˆ˜ë§Œ ì•Œë ¤ ì¤€ë‹¤ë©´ í•´ê²° ê°€ëŠ¥
 	
 	double d = 123.0;
 	//int *ptr_i = &d;	// error!
@@ -47,28 +47,28 @@ int main()
 	cout << ptr_d << endl;
 	cout << *ptr_d << endl;
 
-	cout << typeid(ptr_x).name() << endl;	// Ãâ·Â: int *, gcc¿¡¼­´Â Pi Ãâ·Â
+	cout << typeid(ptr_x).name() << endl;	// ì¶œë ¥: int *, gccì—ì„œëŠ” Pi ì¶œë ¥
 
 
-	// Æ÷ÀÎÅÍ ÀÚÃ¼ÀÇ »çÀÌÁî´Â °íÁ¤! ÁÖ¼Ò´Â ±×³É ÁÖ¼ÒÀÓ!
-	// ´Ü, Æ÷ÀÎÅÍ¿¡µµ Å¸ÀÔÀÌ ÀÖ´Â ÀÌÀ¯´Â de-referencingÀ» À§ÇØ
-	// 64ºñÆ®¿¡¼­´Â ÁÖ¼Ò°¡ ´õ ±ç
-	cout << sizeof(x) << endl;	// Ãâ·Â: 4
-	cout << sizeof(d) << endl;	// Ãâ·Â: 8
-	cout << sizeof(&x) << " " << sizeof(ptr_x) << endl;	// Ãâ·Â: 4 4
-	cout << sizeof(&d) << " " << sizeof(ptr_d) << endl;	// Ãâ·Â: 4 4
+	// í¬ì¸í„° ìì²´ì˜ ì‚¬ì´ì¦ˆëŠ” ê³ ì •! ì£¼ì†ŒëŠ” ê·¸ëƒ¥ ì£¼ì†Œì„!
+	// ë‹¨, í¬ì¸í„°ì—ë„ íƒ€ì…ì´ ìˆëŠ” ì´ìœ ëŠ” de-referencingì„ ìœ„í•´
+	// 64ë¹„íŠ¸ì—ì„œëŠ” ì£¼ì†Œê°€ ë” ê¸º
+	cout << sizeof(x) << endl;	// ì¶œë ¥: 4
+	cout << sizeof(d) << endl;	// ì¶œë ¥: 8
+	cout << sizeof(&x) << " " << sizeof(ptr_x) << endl;	// ì¶œë ¥: 4 4
+	cout << sizeof(&d) << " " << sizeof(ptr_d) << endl;	// ì¶œë ¥: 4 4
 	
 	cout << endl;
 
 	Something ss;
 	Something *ptr_s;
 
-	cout << sizeof(Something) << endl;	// Ãâ·Â: 16
-	cout << sizeof(ptr_s) << endl;		// Ãâ·Â: 4
+	cout << sizeof(Something) << endl;	// ì¶œë ¥: 16
+	cout << sizeof(ptr_s) << endl;		// ì¶œë ¥: 4
 
 	cout << endl;
 
-	// ÃÊ±âÈ­ ¾È µÈ »óÅÂ¿¡¼­ Ãâ·ÂÇÏ¸é ¾û¶×ÇÑ °ªÀÓ
+	// ì´ˆê¸°í™” ì•ˆ ëœ ìƒíƒœì—ì„œ ì¶œë ¥í•˜ë©´ ì—‰ëš±í•œ ê°’ì„
 	int *ptr_a;
 	cout << *ptr_a << endl;
 

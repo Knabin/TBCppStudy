@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// return type °¡´É
+// return type ê°€ëŠ¥
 const char* getName()
 {
 	return "Jack Jack";
@@ -11,26 +11,26 @@ const char* getName()
 int main()
 {
 	//char name[] = "Jack Jack";
-	//char *name = "Jack Jack";	error!! ½ÇÁ¦·Î "Jack Jack"ÀÌ ´ã±æ ¸Ş¸ğ¸®¿¡ ´ëÇÑ Á¤º¸°¡ ¾øÀ½
-	const char *name = "Jack Jack";	// °¡´É
+	//char *name = "Jack Jack";	error!! ì‹¤ì œë¡œ "Jack Jack"ì´ ë‹´ê¸¸ ë©”ëª¨ë¦¬ì— ëŒ€í•œ ì •ë³´ê°€ ì—†ìŒ
+	const char *name = "Jack Jack";	// ê°€ëŠ¥
 	const char *name2 = getName();
 	const char *name3 = "Jack Jack2";
 
 	cout << uintptr_t(name) << endl;
-	cout << uintptr_t(name2) << endl;	// µ¿ÀÏÇÑ ¸Ş¸ğ¸® »ç¿ë
-	cout << uintptr_t(name3) << endl;	// ´Ù¸¥ ¸Ş¸ğ¸® »ç¿ë
+	cout << uintptr_t(name2) << endl;	// ë™ì¼í•œ ë©”ëª¨ë¦¬ ì‚¬ìš©
+	cout << uintptr_t(name3) << endl;	// ë‹¤ë¥¸ ë©”ëª¨ë¦¬ ì‚¬ìš©
 
 
 	int int_arr[5] = { 1,2,3,4,5 };
 	char char_arr[] = "Hello, World!";
 
-	// cout¿¡¼­ ¹®ÀÚ¿­Àº Æ¯º°ÇÏ°Ô Ã³¸®ÇÔ! ¹®ÀÚÀÇ Æ÷ÀÎÅÍ°¡ µé¾î¿À¸é ¹®ÀÚÀÇ ¹è¿­ÀÏ °¡´É¼ºÀÌ ³ô´Ù°í ÆÇ´Ü
-	cout << int_arr << endl;	// Ãâ·Â: ÁÖ¼Ò
-	cout << char_arr << endl;	// Ãâ·Â: Hello, World!
-	cout << name << endl;		// Ãâ·Â: Jack Jack
+	// coutì—ì„œ ë¬¸ìì—´ì€ íŠ¹ë³„í•˜ê²Œ ì²˜ë¦¬í•¨! ë¬¸ìì˜ í¬ì¸í„°ê°€ ë“¤ì–´ì˜¤ë©´ ë¬¸ìì˜ ë°°ì—´ì¼ ê°€ëŠ¥ì„±ì´ ë†’ë‹¤ê³  íŒë‹¨
+	cout << int_arr << endl;	// ì¶œë ¥: ì£¼ì†Œ
+	cout << char_arr << endl;	// ì¶œë ¥: Hello, World!
+	cout << name << endl;		// ì¶œë ¥: Jack Jack
 
 	char c = 'Q';
-	// ¸Ş¸ğ¸® ÁÖ¼Ò°¡ µé¾î°¡´Ï±î ¹®ÀÚ¿­ÀÌ¶ó°í »ı°¢ÇÏ±â ¶§¹®¿¡, nullÀÌ ³ª¿Ã ¶§±îÁö Âß Ãâ·ÂÇÔ!
+	// ë©”ëª¨ë¦¬ ì£¼ì†Œê°€ ë“¤ì–´ê°€ë‹ˆê¹Œ ë¬¸ìì—´ì´ë¼ê³  ìƒê°í•˜ê¸° ë•Œë¬¸ì—, nullì´ ë‚˜ì˜¬ ë•Œê¹Œì§€ ì­‰ ì¶œë ¥í•¨!
 	cout << &c << endl;	
 
 	return 0;

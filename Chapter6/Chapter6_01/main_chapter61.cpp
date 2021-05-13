@@ -39,7 +39,7 @@ int main()
 	student_scores[3] = 50;		// 4th element
 	student_scores[4] = 0;		// 5th element
 	//student_scores[5] = 30;		// 6th element? runtime error!
-	// ÁıÁÖÀÎ¿¡°Ô Çã¶ô¹ŞÁö ¾Ê°í ¿·ÁıÀ» »ç¿ëÇØ ¹ö¸° »óÈ²
+	// ì§‘ì£¼ì¸ì—ê²Œ í—ˆë½ë°›ì§€ ì•Šê³  ì˜†ì§‘ì„ ì‚¬ìš©í•´ ë²„ë¦° ìƒí™©
 
 	cout << student_scores[0] << endl;
 	cout << student_scores[1] << endl;
@@ -48,11 +48,11 @@ int main()
 	cout << student_scores[4] << endl;
 	//cout << student_scores[5] << endl;
 
-	// Æò¹üÇÑ º¯¼öÃ³·³ »ç¿ë °¡´ÉÇÔ
+	// í‰ë²”í•œ ë³€ìˆ˜ì²˜ëŸ¼ ì‚¬ìš© ê°€ëŠ¥í•¨
 	cout << (student_scores[0] + student_scores[1]) / 2.0 << endl;
 
 
-	// ±¸Á¶Ã¼ ¹è¿­
+	// êµ¬ì¡°ì²´ ë°°ì—´
 	Rectangle rect_arr[10];
 
 	cout << sizeof(Rectangle) << endl;
@@ -62,13 +62,13 @@ int main()
 	rect_arr[0].width = 2;
 
 
-	// ¹è¿­ ÃÊ±âÈ­
-	int my_array[5] = { 1, 2, 3 };	// ³ÖÁö ¾ÊÀ¸¸é ¾Ë¾Æ¼­ ÃÊ±âÈ­
+	// ë°°ì—´ ì´ˆê¸°í™”
+	int my_array[5] = { 1, 2, 3 };	// ë„£ì§€ ì•Šìœ¼ë©´ ì•Œì•„ì„œ ì´ˆê¸°í™”
 	int my_array2[] = { 1, 2, 3, 4, 5 };
-	int my_array3[]{ 1, 2, 3, 4, 5 };	// C++ 11ºÎÅÍ °¡´É
+	int my_array3[]{ 1, 2, 3, 4, 5 };	// C++ 11ë¶€í„° ê°€ëŠ¥
 
 
-	// enum »ç¿ë °¡´É
+	// enum ì‚¬ìš© ê°€ëŠ¥
 	int students_scores[NUM_STUDENTS];
 	students_scores[JACKJACK] = 0;
 	students_scores[DASH] = 100;
@@ -79,13 +79,13 @@ int main()
 	cin >> num_students;
 
 	//int students_scores2[num_students];	error!!
-	// cinÀ¸·Î ÀÔ·Â¹Ş´Â´Ù´Â °ÍÀº runtime¿¡ °ªÀÌ Á¤ÇØÁø´Ù´Â ¶æÀÓ
-	// »çÀÌÁî°¡ °íÁ¤µÈ ¹è¿­ÀÇ »çÀÌÁî´Â compile-time¿¡ °íÁ¤µÇ¾î¾ß ÇÔ!!
-	// => C style: #define D_NUM_STUDENTS 100000(Å« ¼ö)
-	// µ¿Àû ÇÒ´çÀ» ÀÌ¿ëÇÏ¸é µÇ±â ¶§¹®¿¡ ±ÇÀåÇÏÁö ¾ÊÀ½
+	// cinìœ¼ë¡œ ì…ë ¥ë°›ëŠ”ë‹¤ëŠ” ê²ƒì€ runtimeì— ê°’ì´ ì •í•´ì§„ë‹¤ëŠ” ëœ»ì„
+	// ì‚¬ì´ì¦ˆê°€ ê³ ì •ëœ ë°°ì—´ì˜ ì‚¬ì´ì¦ˆëŠ” compile-timeì— ê³ ì •ë˜ì–´ì•¼ í•¨!!
+	// => C style: #define D_NUM_STUDENTS 100000(í° ìˆ˜)
+	// ë™ì  í• ë‹¹ì„ ì´ìš©í•˜ë©´ ë˜ê¸° ë•Œë¬¸ì— ê¶Œì¥í•˜ì§€ ì•ŠìŒ
 
 
-	// const º¯¼ö·Î »çÀÌÁî ¼³Á¤Àº °¡´É
+	// const ë³€ìˆ˜ë¡œ ì‚¬ì´ì¦ˆ ì„¤ì •ì€ ê°€ëŠ¥
 	const int num_students2 = 10;
 
 	int students_scores3[num_students2];

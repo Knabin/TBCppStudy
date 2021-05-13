@@ -5,7 +5,7 @@ using namespace std;
 
 void doSomething(double *ptr)
 {
-	// parameter´Â ´Ù½Ã ¼±¾ğÀÌ µÇ°í, °ªÀÌ º¹»ç°¡ µÇ´Â Çü½ÄÀÓ! µû¶ó¼­ ´Ù¸¥ main()°ú ÁÖ¼Ò Ãâ·Â!
+	// parameterëŠ” ë‹¤ì‹œ ì„ ì–¸ì´ ë˜ê³ , ê°’ì´ ë³µì‚¬ê°€ ë˜ëŠ” í˜•ì‹ì„! ë”°ë¼ì„œ ë‹¤ë¥¸ main()ê³¼ ì£¼ì†Œ ì¶œë ¥!
 	cout << "address of pointer variable in doSomething() " << &ptr << endl;
 	if (ptr != nullptr)
 	{
@@ -37,7 +37,7 @@ int main()
 	cout << "address of pointer variable in main() " << &ptr << endl;
 
 
-	std::nullptr_t nptr;	// null pointer type, parameter·Î ³Î Æ÷ÀÎÅÍ¸¸ ¹Ş¾Æ¾ß ÇÏ´Â °æ¿ì »ç¿ë
+	std::nullptr_t nptr;	// null pointer type, parameterë¡œ ë„ í¬ì¸í„°ë§Œ ë°›ì•„ì•¼ í•˜ëŠ” ê²½ìš° ì‚¬ìš©
 
 	return 0;
 }

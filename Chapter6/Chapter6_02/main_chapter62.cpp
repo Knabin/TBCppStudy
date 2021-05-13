@@ -2,15 +2,15 @@
 
 using namespace std;
 
-void doSomething(int students_scores[20])	// == int students_score[], Æ÷ÀÎÅÍ·Î ¹Ş¾Æ¼­ °ıÈ£ ¾È »ó°ü¾øÀ½
+void doSomething(int students_scores[20])	// == int students_score[], í¬ì¸í„°ë¡œ ë°›ì•„ì„œ ê´„í˜¸ ì•ˆ ìƒê´€ì—†ìŒ
 {
-	// array¸¦ ÇÔ¼öÀÇ parameter·Î ³Ö¾î ÁÙ ¼ö ÀÖÀ½
-	cout << (int)&students_scores << endl;		// Æ÷ÀÎÅÍ º¯¼öÀÇ ÁÖ¼Ò°ª
-	cout << (int)&students_scores[0] << endl;	// Æ÷ÀÎÅÍ º¯¼ö¿¡ ÀúÀåµÇ¾î ÀÖ´Â °ª(¿ø·¡ ¹è¿­)
+	// arrayë¥¼ í•¨ìˆ˜ì˜ parameterë¡œ ë„£ì–´ ì¤„ ìˆ˜ ìˆìŒ
+	cout << (int)&students_scores << endl;		// í¬ì¸í„° ë³€ìˆ˜ì˜ ì£¼ì†Œê°’
+	cout << (int)&students_scores[0] << endl;	// í¬ì¸í„° ë³€ìˆ˜ì— ì €ì¥ë˜ì–´ ìˆëŠ” ê°’(ì›ë˜ ë°°ì—´)
 	cout << students_scores[0] << endl;
 	cout << students_scores[1] << endl;
 	cout << students_scores[2] << endl;
-	cout << "Size in doSomething : " << sizeof(students_scores) << endl;	// Æ÷ÀÎÅÍÀÇ size
+	cout << "Size in doSomething : " << sizeof(students_scores) << endl;	// í¬ì¸í„°ì˜ size
 }
 
 int main()
@@ -20,7 +20,7 @@ int main()
 
 	int students_scores[num_students] = {1, 2, 3, 4, 5};
 
-	cout << (int)&students_scores << endl;		//1832, Ã¹ ¹øÂ° ¹æ ÁÖ¼Ò
+	cout << (int)&students_scores << endl;		//1832, ì²« ë²ˆì§¸ ë°© ì£¼ì†Œ
 	cout << (int)&students_scores[0] << endl;	//1832
 	cout << (int)&students_scores[1] << endl;	//1836
 	cout << (int)&students_scores[2] << endl;	//1840
@@ -30,11 +30,11 @@ int main()
 
 	cout << endl;
 
-	// ~ÇÔ¼ö¿Í ¸ŞÀÎ ÇÔ¼ö¿¡¼­ÀÇ ¹è¿­ ÁÖ¼Ò°¡ ´Ù¸£°Ô ÂïÈ÷´Â ÀÌÀ¯~
-	// ¹è¿­Àº ÀÌ¸§ ÀÚÃ¼°¡ ³»ºÎÀûÀ¸·Î ÁÖ¼Ò·Î »ç¿ëÀÌ µÊ, &¸¦ ºÙÀÌÁö ¾Ê¾Æµµ ÁÖ¼Ò¸¦ ¾òÀ» ¼ö ÀÖÀ½
-	// ÇÔ¼öÀÇ ¸Å°³º¯¼ö·Î ¹ŞÀº °Í(int students_scores[20])Àº ¹è¿­ÀÌ ¾Æ´Ï¶ó Æ÷ÀÎÅÍ!
-	// ¹è¿­À» ¹ŞÀ» ¶§ »ç¿ëÀ» ÇÒ °ÍÀÌ¶ó°í ÄÚµùÀ» ÇÒ ¼ö ÀÖ´Â °Í»Ó, ÄÄÆÄÀÏ·¯ ³»ºÎ¿¡¼­´Â Æ÷ÀÎÅÍ·Î Ã³¸®ÇÔ
-	// ¹è¿­ÀÇ ¸ğµç ¿ø¼Ò¸¦ º¹»çÇØ¼­ °¡Á®¿À´Â °ÍÀÌ ¾Æ´Ñ, ¹è¿­ÀÇ Ã¹ ¹øÂ° ÁÖ¼Ò°ª¸¸ ³Ñ¾î°£´Ù´Â °ÍÀÓ
+	// ~í•¨ìˆ˜ì™€ ë©”ì¸ í•¨ìˆ˜ì—ì„œì˜ ë°°ì—´ ì£¼ì†Œê°€ ë‹¤ë¥´ê²Œ ì°íˆëŠ” ì´ìœ ~
+	// ë°°ì—´ì€ ì´ë¦„ ìì²´ê°€ ë‚´ë¶€ì ìœ¼ë¡œ ì£¼ì†Œë¡œ ì‚¬ìš©ì´ ë¨, &ë¥¼ ë¶™ì´ì§€ ì•Šì•„ë„ ì£¼ì†Œë¥¼ ì–»ì„ ìˆ˜ ìˆìŒ
+	// í•¨ìˆ˜ì˜ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ ê²ƒ(int students_scores[20])ì€ ë°°ì—´ì´ ì•„ë‹ˆë¼ í¬ì¸í„°!
+	// ë°°ì—´ì„ ë°›ì„ ë•Œ ì‚¬ìš©ì„ í•  ê²ƒì´ë¼ê³  ì½”ë”©ì„ í•  ìˆ˜ ìˆëŠ” ê²ƒë¿, ì»´íŒŒì¼ëŸ¬ ë‚´ë¶€ì—ì„œëŠ” í¬ì¸í„°ë¡œ ì²˜ë¦¬í•¨
+	// ë°°ì—´ì˜ ëª¨ë“  ì›ì†Œë¥¼ ë³µì‚¬í•´ì„œ ê°€ì ¸ì˜¤ëŠ” ê²ƒì´ ì•„ë‹Œ, ë°°ì—´ì˜ ì²« ë²ˆì§¸ ì£¼ì†Œê°’ë§Œ ë„˜ì–´ê°„ë‹¤ëŠ” ê²ƒì„
 	cout << (int)&students_scores << endl;
 	cout << students_scores[0] << endl;
 	cout << students_scores[1] << endl;

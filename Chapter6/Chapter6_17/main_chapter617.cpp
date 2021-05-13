@@ -9,7 +9,7 @@ int main()
 {
 	int fibonacci[] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
 
-	// change array values? => ½ÇÆĞ
+	// change array values? => ì‹¤íŒ¨
 	for (int number : fibonacci)
 		number = 10;
 
@@ -22,7 +22,7 @@ int main()
 	cout << endl;
 
 
-	// °¡Àå Å« ¼ıÀÚ Ã£±â
+	// ê°€ì¥ í° ìˆ«ì ì°¾ê¸°
 	int max_number = numeric_limits<int>::lowest();
 
 	for (const auto &n : fibonacci)
@@ -31,8 +31,8 @@ int main()
 	cout << max_number << endl;
 	
 
-	// µ¿Àû ÇÒ´ç array´Â for-each »ç¿ë ºÒ°¡´É => vector »ç¿ë!
-	// µ¿Àû ÇÒ´ç ¹è¿­À» ¾ÆÁÖ ÆíÇÏ°Ô »ç¿ëÇÒ ¼ö ÀÖ°Ô std¿¡ µé¾î ÀÖÀ½
+	// ë™ì  í• ë‹¹ arrayëŠ” for-each ì‚¬ìš© ë¶ˆê°€ëŠ¥ => vector ì‚¬ìš©!
+	// ë™ì  í• ë‹¹ ë°°ì—´ì„ ì•„ì£¼ í¸í•˜ê²Œ ì‚¬ìš©í•  ìˆ˜ ìˆê²Œ stdì— ë“¤ì–´ ìˆìŒ
 	vector<int> fibonacci2 = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
 
 	return 0;

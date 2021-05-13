@@ -11,7 +11,7 @@ enum Type
 
 int main()
 {
-	// void pointer, generic(Æ÷°ıÀû) pointer
+	// void pointer, generic(í¬ê´„ì ) pointer
 
 	int i = 5;
 	float f = 3.0;
@@ -19,7 +19,7 @@ int main()
 
 	void *ptr = nullptr;
 
-	// ÁÖ¼Ò ³Ö´Â °ÍÀº ¹®Á¦ ¾øÀ½! ´Ü, ±×·¸±â ¶§¹®¿¡ ¾î¶² Å¸ÀÔÀÎÁö ¾Ë ¼ö°¡ ¾ø¾îÁü
+	// ì£¼ì†Œ ë„£ëŠ” ê²ƒì€ ë¬¸ì œ ì—†ìŒ! ë‹¨, ê·¸ë ‡ê¸° ë•Œë¬¸ì— ì–´ë–¤ íƒ€ì…ì¸ì§€ ì•Œ ìˆ˜ê°€ ì—†ì–´ì§
 	ptr = &i;
 	ptr = &f;
 	//ptr = &c;
@@ -29,14 +29,14 @@ int main()
 	cout << ptr_i << endl;
 	cout << ptr_i + 1 << endl;
 
-	cout << &f << " " << ptr << endl;	// 'ÁÖ¼Ò' Ãâ·Â °¡´É
-	//cout << *ptr << endl;	// error! ÁÖ¼Ò¿¡ °ªÀÌ ÀÖ´Â °Ç ¾Ë°ÚÁö¸¸, ¾î¶² ÇüÀÎÁö ¾Ë ¼ö ¾øÀ½!
+	cout << &f << " " << ptr << endl;	// 'ì£¼ì†Œ' ì¶œë ¥ ê°€ëŠ¥
+	//cout << *ptr << endl;	// error! ì£¼ì†Œì— ê°’ì´ ìˆëŠ” ê±´ ì•Œê² ì§€ë§Œ, ì–´ë–¤ í˜•ì¸ì§€ ì•Œ ìˆ˜ ì—†ìŒ!
 	cout << *static_cast<float*>(ptr) << endl;
 
-	//cout << ptr + 1 << endl;	// error! ´ëÃ¼ ¸î ¹ÙÀÌÆ®¸¦ ´õÇØ¾ß ÇÏ´ÂÁö ¾Ë ¼ö ¾øÀ½!
+	//cout << ptr + 1 << endl;	// error! ëŒ€ì²´ ëª‡ ë°”ì´íŠ¸ë¥¼ ë”í•´ì•¼ í•˜ëŠ”ì§€ ì•Œ ìˆ˜ ì—†ìŒ!
 
 
-	// void pointer¸¦ ¸¹ÀÌ »ç¿ëÇÏÁø ¾Ê°ÚÁö¸¸... Æ÷ÀÎÅÍ¸¦ ÀÌÇØÇÏ´Â µ¥ µµ¿òÀÌ µÊ
+	// void pointerë¥¼ ë§ì´ ì‚¬ìš©í•˜ì§„ ì•Šê² ì§€ë§Œ... í¬ì¸í„°ë¥¼ ì´í•´í•˜ëŠ” ë° ë„ì›€ì´ ë¨
 	Type type = FLOAT;
 	if (type == FLOAT)
 		cout << *static_cast<float*>(ptr) << endl;

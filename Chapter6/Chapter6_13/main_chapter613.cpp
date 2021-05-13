@@ -4,12 +4,12 @@ using namespace std;
 
 int main()
 {
-	const int value = 5;		// º¯¼ö°¡ const¸é
-	const int *ptr = &value;	// Æ÷ÀÎÅÍµµ const
+	const int value = 5;		// ë³€ìˆ˜ê°€ constë©´
+	const int *ptr = &value;	// í¬ì¸í„°ë„ const
 	//*ptr = 6;		error!
 	//value = 6;	error!
 
-	cout << *ptr << endl;	// Ãâ·ÂÀº ¹®Á¦¾øÀ½
+	cout << *ptr << endl;	// ì¶œë ¥ì€ ë¬¸ì œì—†ìŒ
 
 
 	int value2 = 5;
@@ -17,29 +17,29 @@ int main()
 	//*ptr2 = 6;	error!
 	value2 = 6;
 
-	cout << *ptr2 << endl;	// Ãâ·ÂÀº ¹®Á¦¾øÀ½
+	cout << *ptr2 << endl;	// ì¶œë ¥ì€ ë¬¸ì œì—†ìŒ
 
 
 	int v1 = 5;
-	const int *p = &v1;	// const int *: °¡¸®Å°°í ÀÖ´Â ÁÖ¼Ò¿¡ ÀÖ´Â 'µ¥ÀÌÅÍ'¸¦ ¹Ù²ÙÁö ¾Ê°Ú´Ù!
+	const int *p = &v1;	// const int *: ê°€ë¦¬í‚¤ê³  ìˆëŠ” ì£¼ì†Œì— ìˆëŠ” 'ë°ì´í„°'ë¥¼ ë°”ê¾¸ì§€ ì•Šê² ë‹¤!
 	//*p = 10;		error!
 
 	int v2 = 6;
-	p = &v2;	// °¡´É! 
+	p = &v2;	// ê°€ëŠ¥! 
 
 
 	int v3 = 5;
-	int *const p2 = &v3;	// int *const: °¡¸®Å°°í ÀÖ´Â '¸Ş¸ğ¸® ÁÖ¼Ò'¸¦ ¹Ù²ÙÁö ¾Ê°Ú´Ù!
-	*p2 = 10;	// °¡´É!
+	int *const p2 = &v3;	// int *const: ê°€ë¦¬í‚¤ê³  ìˆëŠ” 'ë©”ëª¨ë¦¬ ì£¼ì†Œ'ë¥¼ ë°”ê¾¸ì§€ ì•Šê² ë‹¤!
+	*p2 = 10;	// ê°€ëŠ¥!
 
 	int v4 = 8;
 	//p2 = &v4;		error!
 
 
-	const int *const p3 = &value;	// ÃÊ±âÈ­ ÇÊ¿ä
+	const int *const p3 = &value;	// ì´ˆê¸°í™” í•„ìš”
 
 
-	// ÇÔ¼ö parameter¿¡¼­ Á¾Á¾ »ç¿ë!
+	// í•¨ìˆ˜ parameterì—ì„œ ì¢…ì¢… ì‚¬ìš©!
 	int a = 5;
 	const int *pt1 = &a;
 	int *const pt2 = &a;		

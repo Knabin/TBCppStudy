@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void printElements(const int(&arr)[5])	// ÀÌ °æ¿ì, [5] ÇÊ¼ö
+void printElements(const int(&arr)[5])	// ì´ ê²½ìš°, [5] í•„ìˆ˜
 {
 	for (int i = 0; i < 5; i++)
 	{
@@ -37,7 +37,7 @@ int main()
 
 
 	int value = 5;
-	// ±â´É»ó µ¿ÀÏÇÔ
+	// ê¸°ëŠ¥ìƒ ë™ì¼í•¨
 	int *const ptr = &value;
 	int &ref = value;
 

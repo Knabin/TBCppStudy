@@ -3,7 +3,7 @@
 using namespace std;
 
 //void doSomething(int &n)
-void doSomething(const int &n)	// °ª º¯°æ ºÒ°¡
+void doSomething(const int &n)	// ê°’ ë³€ê²½ ë¶ˆê°€
 {
 	//n = 10;
 	cout << "In doSomething " << n << endl;
@@ -18,20 +18,20 @@ int main()
 	int *ptr = nullptr;
 	ptr = &value;
 
-	int &ref = value;	// ÂüÁ¶, ref = valueÃ³·³ ÀÛµ¿ÇÔ
-	//int &r;		error! reference´Â ¹Ýµå½Ã ÃÊ±âÈ­µÇ¾î¾ß ÇÔ
-	//int &r = 104;	error! ¸®ÅÍ·²Àº ¸Þ¸ð¸® ÁÖ¼Ò°¡ ¾øÀ½
+	int &ref = value;	// ì°¸ì¡°, ref = valueì²˜ëŸ¼ ìž‘ë™í•¨
+	//int &r;		error! referenceëŠ” ë°˜ë“œì‹œ ì´ˆê¸°í™”ë˜ì–´ì•¼ í•¨
+	//int &r = 104;	error! ë¦¬í„°ëŸ´ì€ ë©”ëª¨ë¦¬ ì£¼ì†Œê°€ ì—†ìŒ
 	//int &r = y;	error! 
-	const int &r = y;	// const´Â const·Î ¼±¾ð
+	const int &r = y;	// constëŠ” constë¡œ ì„ ì–¸
 
 	cout << ref << endl;
 
 	ref = 10;
 
-	cout << value << " " << ref << endl;	// Ãâ·Â: 10 10
+	cout << value << " " << ref << endl;	// ì¶œë ¥: 10 10
 
 	cout << &value << endl;
-	cout << &ref << endl;	// value¿Í µ¿ÀÏÇÑ ÁÖ¼Ò
+	cout << &ref << endl;	// valueì™€ ë™ì¼í•œ ì£¼ì†Œ
 	cout << ptr << endl;
 	cout << &ptr << endl;
 
@@ -52,8 +52,8 @@ int main()
 	cout << n << endl;
 	cout << &n << endl;
 
-	// Æ÷ÀÎÅÍ´Â º¹»çÇØ¼­ ³Ö¾î ÁÖ´Â °Í, ·¹ÆÛ·±½º¸¦ ¾²°Ô µÇ¸é ¾Æ¿¹ º¯¼ö ÀÚÃ¼°¡ ³Ñ¾î°¨
-	// ÁÖ¼ÒÁ¶Â÷µµ º¹»çÇÒ ÇÊ¿ä°¡ ¾ø±â ¶§¹®¿¡ È¿À²ÀÌ ´õ ³ôÀ½
+	// í¬ì¸í„°ëŠ” ë³µì‚¬í•´ì„œ ë„£ì–´ ì£¼ëŠ” ê²ƒ, ë ˆí¼ëŸ°ìŠ¤ë¥¼ ì“°ê²Œ ë˜ë©´ ì•„ì˜ˆ ë³€ìˆ˜ ìžì²´ê°€ ë„˜ì–´ê°
+	// ì£¼ì†Œì¡°ì°¨ë„ ë³µì‚¬í•  í•„ìš”ê°€ ì—†ê¸° ë•Œë¬¸ì— íš¨ìœ¨ì´ ë” ë†’ìŒ
 	doSomething(n);
 	cout << n << endl;
 

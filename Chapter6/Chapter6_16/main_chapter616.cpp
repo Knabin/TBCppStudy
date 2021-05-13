@@ -26,7 +26,7 @@ int main()
 	ref2.age = 45;
 
 	cout << &person << endl;
-	cout << &ref2 << endl;	// ¿øº»°ú µ¿ÀÏÇÑ ÁÖ¼Ò
+	cout << &ref2 << endl;	// ì£¼ì†Œë¥¼ ì°ì–´ ë³´ë©´ ì›ë˜ ë³€ìˆ˜ì™€ ë˜‘ê°™ì´ ë‚˜ì˜´
 
 	return 0;
 }

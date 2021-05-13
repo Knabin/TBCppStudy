@@ -32,7 +32,6 @@ int main()
 	//printArray(array, 5);
 	// std::swap(...)
 
-	// 내가 구현한 선택 정렬
 	for (int i = 0; i < length - 1; i++)
 	{
 		int value = array[i];

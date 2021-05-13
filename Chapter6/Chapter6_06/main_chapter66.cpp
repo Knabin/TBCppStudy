@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-	char myString[] = "string";	// ¸¶Áö¸· ÀÚ¸®¿¡ null character°¡ ÀÖÀ½! '\0'
+	char myString[] = "string";	// ë§ˆì§€ë§‰ ìë¦¬ì— null characterê°€ ìˆìŒ! '\0'
 
 	for (int i = 0; i < 7; i++)
 		cout << (int)myString[i] << endl;
@@ -13,21 +13,21 @@ int main()
 	cout << sizeof(myString) / sizeof(myString[0]) << endl;	// array size: 7
 	cout << endl;
 
-	// ÀÔ·Â¹Ş±â
+	// ì…ë ¥ë°›ê¸°
 	char myString2[255];
 	//cin >> myString2;
-	cin.getline(myString2, 255);	// °ø¹é Æ÷ÇÔÇØ¼­ ÀÔ·Â¹Ş±â
+	cin.getline(myString2, 255);	// ê³µë°± í¬í•¨í•´ì„œ ì…ë ¥ë°›ê¸°
 
 	//myString2[0] = 'A';
 	//cout << myString2 << endl;
 
-	// char·Î µÈ ¹®ÀÚ¿­À» Ãâ·ÂÇÒ °æ¿ì, NULL(\0)ÀÌ ³ª¿À±â Àü±îÁö Ãâ·ÂÇÔ
+	// charë¡œ ëœ ë¬¸ìì—´ì„ ì¶œë ¥í•  ê²½ìš°, NULL(\0)ì´ ë‚˜ì˜¤ê¸° ì „ê¹Œì§€ ì¶œë ¥í•¨
 	//myString2[4] = '\0';
 	//cout << myString2 << endl;
 
 	int ix = 0;
 
-	// while¹®À¸·Î Ãâ·ÂÇÏ±â
+	// whileë¬¸ìœ¼ë¡œ ì¶œë ¥í•˜ê¸°
 	while (true)
 	{
 		if (myString2[ix] == '\0') break;
@@ -38,7 +38,7 @@ int main()
 	cout << endl;
 
 
-	// cstring ¾È¿¡ Á¤ÀÇµÇ¾î ÀÖ´Â ÇÔ¼öµé
+	// cstring ì•ˆì— ì •ì˜ë˜ì–´ ìˆëŠ” í•¨ìˆ˜ë“¤
 	char source[] = "Copy this!";
 	char dest[50];
 	strcpy_s(dest, 50, source);
@@ -46,15 +46,15 @@ int main()
 	//cout << source << endl;
 	//cout << dest << endl;
 
-	//strcat() ¹®ÀÚ¿­ µÚ¿¡ ºÙ¿© ÁÖ±â
+	//strcat() ë¬¸ìì—´ ë’¤ì— ë¶™ì—¬ ì£¼ê¸°
 	strcat_s(dest, source);
 
 	cout << "source: " << source << endl;
 	cout << "dest: " << dest << endl;
 
 
-	//strcmp() µÎ ¹®ÀÚ¿­ÀÌ µ¿ÀÏÇÑÁö ºñ±³ÇÏ±â
-	//°°À¸¸é 0 return!! Á¶°Ç¹® »ç¿ë½Ã Á¶½É
+	//strcmp() ë‘ ë¬¸ìì—´ì´ ë™ì¼í•œì§€ ë¹„êµí•˜ê¸°
+	//ê°™ìœ¼ë©´ 0 return!! ì¡°ê±´ë¬¸ ì‚¬ìš©ì‹œ ì¡°ì‹¬
 	cout << strcmp(source, dest) << endl;
 	if (strcmp(source, dest) == 0)
 	{

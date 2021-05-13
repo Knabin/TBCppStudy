@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 	int *ptr = nullptr;
-	int **ptrptr = nullptr;	// ÀÌÁß Æ÷ÀÎÅÍ, Æ÷ÀÎÅÍ¿¡ ´ëÇÑ Æ÷ÀÎÅÍ, ¿ø·¡ µ¥ÀÌÅÍ Å¸ÀÔÀº integer
+	int **ptrptr = nullptr;	// ì´ì¤‘ í¬ì¸í„°, í¬ì¸í„°ì— ëŒ€í•œ í¬ì¸í„°, ì›ë˜ ë°ì´í„° íƒ€ì…ì€ integer
 
 	int value = 5;
 
@@ -32,15 +32,12 @@ int main()
 	int *r1 = new int[col] { 1, 2, 3, 4, 5 };
 	int *r2 = new int[col] { 6, 7, 8, 9, 10 };
 	int *r3 = new int[col] { 11, 12, 13, 14, 15 };
-
 	int **rows = new int*[row] {r1, r2, r3};
-
 	for (int r = 0; r < row; r++) {
 		for (int c = 0; c < col; c++)
 			cout << rows[r][c] << "\t";
 		cout << endl;
 	}
-
 	delete[] r1;
 	delete[] r2;
 	delete[] r3;

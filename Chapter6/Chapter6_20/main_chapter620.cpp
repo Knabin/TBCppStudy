@@ -6,18 +6,18 @@ using namespace std;
 
 void printLength(const array<int, 5>& my_arr)
 {
-	// ¶È°°ÀÌ ÀÛµ¿ °¡´ÉÇÏ³ª, array ¶ÇÇÑ º¹»çµÇ¾î ÀÛµ¿ÇÔ! (& ÀÌ¿ë)
+	// ë˜‘ê°™ì´ ì‘ë™ ê°€ëŠ¥í•˜ë‚˜, array ë˜í•œ ë³µì‚¬ë˜ì–´ ì‘ë™í•¨! (& ì´ìš©)
 	cout << my_arr.size() << endl;	
 }
 
 int main()
 {
 	//int array[5] = { 1, 2, 3, 4, 5 };
-	array<int, 5> my_arr = { 1, 2, 3, 4, 5 };	// ¼±¾ğ ½Ã, ¼ıÀÚ°¡ ²À µé¾î°¡¾ß ÇÔ
-	my_arr = { 0, 1, 2 };	// °¡´É
+	array<int, 5> my_arr = { 1, 2, 3, 4, 5 };	// ì„ ì–¸ ì‹œ, ìˆ«ìê°€ ê¼­ ë“¤ì–´ê°€ì•¼ í•¨
+	my_arr = { 0, 1, 2 };	// ê°€ëŠ¥
 
 	cout << my_arr[0] << endl;
-	cout << my_arr.at(0) << endl;	// ¶È°°ÀÌ Ãâ·ÂÇÏ³ª, °Ë»ö ÈÄ ¹®Á¦ ¹ß»ı½Ã ¿¹¿Ü Ã³¸®!
+	cout << my_arr.at(0) << endl;	// ë˜‘ê°™ì´ ì¶œë ¥í•˜ë‚˜, ê²€ìƒ‰ í›„ ë¬¸ì œ ë°œìƒì‹œ ì˜ˆì™¸ ì²˜ë¦¬!
 	cout << my_arr.size() << endl;
 	printLength(my_arr);
 	cout << endl;
