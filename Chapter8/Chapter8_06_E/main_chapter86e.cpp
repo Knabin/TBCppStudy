@@ -12,7 +12,7 @@ public:
 	IntArray(const int length_in)
 	{
 		m_length = length_in;
-		m_arr = new int[m_length];	// 동적 할당
+		m_arr = new int[m_length];
 
 		cout << "Constructor" << endl;
 	}

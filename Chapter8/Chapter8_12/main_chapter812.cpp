@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class B;	// forward declaration class B라는 게 있다, 넘어가라
+class B;	// forward declaration class
 
 class A
 {

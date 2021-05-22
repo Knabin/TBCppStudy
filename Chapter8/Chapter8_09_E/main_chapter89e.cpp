@@ -8,8 +8,6 @@ class Something
 public:
 	string m_value = "default";
 
-	// const 유무에 따라서도 overloading 가능!!
-
 	const string& getValue() const 
 	{ 
 		cout << "const version" << endl;

@@ -10,16 +10,16 @@ private:
 public:
 	Simple(int id)
 	{
-		// this: ÇöÀç ÀÌ ÁÖ¼Ò¸¦ °®°í ÀÖ´Â ÀÎ½ºÅÏ½º, ¿©±â¼­´Â »ý·« °¡´É
+		// this: í˜„ìž¬ ì´ ì£¼ì†Œë¥¼ ê°–ê³  ìžˆëŠ” ì¸ìŠ¤í„´ìŠ¤, ì—¬ê¸°ì„œëŠ” ìƒëžµ ê°€ëŠ¥
 		this->setID(id);
 		this->m_id;
 
-		// ÀÚ±â ÀÚ½ÅÀÇ ÁÖ¼Ò¸¦ Ãâ·Â
+		// ìžê¸° ìžì‹ ì˜ ì£¼ì†Œë¥¼ ì¶œë ¥
 		cout << this << endl;
 	}
 
-	// ÀÎ½ºÅÏ½º°¡ Ãß°¡µÉ ¶§¸¶´Ù ÇÔ¼ö¸¦ »ý¼ºÇÏ´Â °ÍÀÌ ¾Æ´Ñ, ¸ðµç ÀÎ½ºÅÏ½º°¡ °øÀ¯ÇÏ¿© »ç¿ë
-	// Simple::setID()°¡ ¾îµò°¡¿¡ ÀúÀåµÇ¾î ÀÖ°í, Simple::setID(&s1, 2); ÀÌ·± ½ÄÀ¸·Î ÀÛµ¿ÇÔ
+	// ì¸ìŠ¤í„´ìŠ¤ê°€ ì¶”ê°€ë  ë•Œë§ˆë‹¤ í•¨ìˆ˜ë¥¼ ìƒì„±í•˜ëŠ” ê²ƒì´ ì•„ë‹Œ, ëª¨ë“  ì¸ìŠ¤í„´ìŠ¤ê°€ ê³µìœ í•˜ì—¬ ì‚¬ìš©
+	// Simple::setID()ê°€ ì–´ë”˜ê°€ì— ì €ìž¥ë˜ì–´ ìžˆê³ , Simple::setID(&s1, 2); ì´ëŸ° ì‹ìœ¼ë¡œ ìž‘ë™í•¨
 	void setID(int id) { m_id = id; }
 	int	 getID() { return m_id; }
 };
@@ -28,7 +28,7 @@ int main()
 {
 	Simple s1(1), s2(2);
 	s1.setID(2);
-	s2.setID(4);	// == Simple::setID(&s2, 4); ¹®¹ýÀûÀ¸·Î´Â Çã¿ëX
+	s2.setID(4);	// == Simple::setID(&s2, 4); ë¬¸ë²•ì ìœ¼ë¡œëŠ” í—ˆìš©X
 
 	cout << &s1 << " " << &s2 << endl;
 

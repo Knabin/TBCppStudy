@@ -6,7 +6,7 @@ class Something
 {
 public:
 	// inner class
-	// class ³»¿¡¼­ static º¯¼ö¸¦ ÃÊ±âÈ­ÇÏ´Â °ÍÃ³·³ ±¸ÇöÇÒ ¼ö ÀÖÀ½
+	// class ë‚´ì—ì„œ static ë³€ìˆ˜ë¥¼ ì´ˆê¸°í™”í•˜ëŠ” ê²ƒì²˜ëŸ¼ êµ¬í˜„í•  ìˆ˜ ìžˆìŒ
 	class _init
 	{
 	public:
@@ -24,21 +24,21 @@ private:
 
 public:
 	Something()
-		: m_value(123)//, s_value(1024)	// error! static »ý¼ºÀÚ Áö¿øX
+		: m_value(123)//, s_value(1024)	// error! static ìƒì„±ìž ì§€ì›X
 	{
 
 	}
 
 	static int getValue()
 	{
-		//return this->s_value;	//error! nonstatic function¿¡¼­¸¸ °¡´É
-		//return m_value;	//error! this·Î Á¢±ÙÇØ¾ß ÇÏ´Â ¸ðµç °Í ºÒ°¡´É
+		//return this->s_value;	//error! nonstatic functionì—ì„œë§Œ ê°€ëŠ¥
+		//return m_value;	//error! thisë¡œ ì ‘ê·¼í•´ì•¼ í•˜ëŠ” ëª¨ë“  ê²ƒ ë¶ˆê°€ëŠ¥
 		return s_value;
 	}
 
 	int temp()
 	{
-		// this: Æ¯Á¤ ÀÎ½ºÅÏ½ºÀÇ ±× ¸â¹ö °ªÀ» »ç¿ëÇÏ°Ú´Ù
+		// this: íŠ¹ì • ì¸ìŠ¤í„´ìŠ¤ì˜ ê·¸ ë©¤ë²„ ê°’ì„ ì‚¬ìš©í•˜ê² ë‹¤
 		return this->s_value;
 	}
 };
@@ -48,8 +48,8 @@ Something::_init Something::s_initializer;
 
 int main()
 {
-	// ÀÎ½ºÅÏ½º Á¤ÀÇ Àü, static ¸â¹ö º¯¼ö Á¢±Ù °¡´É
-	// private¶ó°í ÇÏ¸é Á¢±Ù ºÒ°¡´É!! => static ÇÔ¼ö È£Ãâ
+	// ì¸ìŠ¤í„´ìŠ¤ ì •ì˜ ì „, static ë©¤ë²„ ë³€ìˆ˜ ì ‘ê·¼ ê°€ëŠ¥
+	// privateë¼ê³  í•˜ë©´ ì ‘ê·¼ ë¶ˆê°€ëŠ¥!! => static í•¨ìˆ˜ í˜¸ì¶œ
 	//cout << Something::s_value << endl;
 	cout << Something::getValue() << endl;
 
@@ -59,16 +59,16 @@ int main()
 
 
 	// member function pointer
-	// ÇÔ¼ö´Â ÁÖ¼Ò°¡ °°À½! s1¿¡ µû·Î, s2¿¡ µû·Î°¡ ¾Æ´Ï¶ó SomethingÀÇ temp°¡ ÇÏ³ª ÀÖ°í,
-	// s1¿¡ ÀÖ´Â °É °¡Áö°í ÀÌ ÇÔ¼ö¸¦ ½ÇÇà½ÃÄÑ¶ó!
+	// í•¨ìˆ˜ëŠ” ì£¼ì†Œê°€ ê°™ìŒ! s1ì— ë”°ë¡œ, s2ì— ë”°ë¡œê°€ ì•„ë‹ˆë¼ Somethingì˜ tempê°€ í•˜ë‚˜ ìžˆê³ ,
+	// s1ì— ìžˆëŠ” ê±¸ ê°€ì§€ê³  ì´ í•¨ìˆ˜ë¥¼ ì‹¤í–‰ì‹œì¼œë¼!
 	//int (Something::*fpr1)() = &s1.temp;
 	int (Something::*fptr1)() = &Something::temp;
 
-	//s2.*fptr1 => s2¶ó´Â ÀÎ½ºÅÏ½ºÀÇ Æ÷ÀÎÅÍ¸¦ ³Ñ°Ü ÁÖ°í, temp°¡ ÀÛµ¿ÇÏ´Â ÇüÅÂ
+	//s2.*fptr1 => s2ë¼ëŠ” ì¸ìŠ¤í„´ìŠ¤ì˜ í¬ì¸í„°ë¥¼ ë„˜ê²¨ ì£¼ê³ , tempê°€ ìž‘ë™í•˜ëŠ” í˜•íƒœ
 	cout << (s2.*fptr1)() << endl;
 
 
-	// ÀÎ½ºÅÏ½º¿Í °ü°è ¾øÀÌ ½ÇÇà½ÃÅ³ ¼ö ÀÖÀ½
+	// ì¸ìŠ¤í„´ìŠ¤ì™€ ê´€ê³„ ì—†ì´ ì‹¤í–‰ì‹œí‚¬ ìˆ˜ ìžˆìŒ
 	int (*fptr2)() = &Something::getValue;
 	cout << fptr2() << endl;
 

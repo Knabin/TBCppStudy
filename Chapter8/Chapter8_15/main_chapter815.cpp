@@ -2,7 +2,7 @@
 #include <vector>
 #include <algorithm>
 #include <random>
-#include <chrono>	// ½Ã°£
+#include <chrono>	// ì‹œê°„
 
 using namespace std;
 
@@ -11,14 +11,14 @@ class Timer
 	using clock_t = std::chrono::high_resolution_clock;
 	using second_t = std::chrono::duration<double, std::ratio<1>>;
 
-	std::chrono::time_point<clock_t> start_time = clock_t::now();	// ½ÃÀÛ ½Ã°£, Timer°¡ ¸¸µé¾îÁö´Â ¼ø°£
+	std::chrono::time_point<clock_t> start_time = clock_t::now();	// ì‹œì‘ ì‹œê°„, Timerê°€ ë§Œë“¤ì–´ì§€ëŠ” ìˆœê°„
 
 public:
 	void elapsed()
 	{
-		std::chrono::time_point<clock_t> end_time = clock_t::now();	// ³¡³ª´Â ½Ã°£
+		std::chrono::time_point<clock_t> end_time = clock_t::now();	// ëë‚˜ëŠ” ì‹œê°„
 
-		// ³¡³ª´Â ½Ã°£ - ½ÃÀÛ ½Ã°£À» ÃÊ·Î º¯È¯ÇØ¼­ Ãâ·Â
+		// ëë‚˜ëŠ” ì‹œê°„ - ì‹œì‘ ì‹œê°„ì„ ì´ˆë¡œ ë³€í™˜í•´ì„œ ì¶œë ¥
 		cout << std::chrono::duration_cast<second_t>(end_time - start_time).count() << endl;
 	}
 };
@@ -32,7 +32,7 @@ int main()
 	for (unsigned int i = 0; i < vec.size(); i++)
 		vec[i] = i;
 
-	// vector¸¦ shuffle
+	// vectorë¥¼ shuffle
 	std::shuffle(begin(vec), end(vec), mersenne_engine);
 
 	//for (auto &e : vec) cout << e << " ";
@@ -41,7 +41,7 @@ int main()
 	Timer timer;
 	std::sort(begin(vec), end(vec));
 
-	// Àé ½Ã°£À» Ãâ·Â
+	// ì° ì‹œê°„ì„ ì¶œë ¥
 	timer.elapsed();
 
 	//for (auto &e : vec) cout << e << " ";

@@ -21,7 +21,6 @@ private:
 	friend void B::doSomething(A& a);
 };
 
-// 선언과 정의를 분리함
 void B::doSomething(A& a)
 {
 	cout << a.m_value << endl;

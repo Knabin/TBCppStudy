@@ -10,7 +10,7 @@ private:
 	string	m_name;
 
 public:
-	// ¾î¶°ÇÑ ±â´ÉÀ» ÇÏ´Â ÄÚµå´Â ÇÑ ±ºµ¥¼­¸¸!
+	// ì–´ë– í•œ ê¸°ëŠ¥ì„ í•˜ëŠ” ì½”ë“œëŠ” í•œ êµ°ë°ì„œë§Œ!
 	Student(const string& name_in)
 	//	: m_id(0), m_name(name_in)
 		: Student(0, name_in)
@@ -24,7 +24,7 @@ public:
 		//init(id_in, name_in);
 	}
 
-	// ÃÊ±âÈ­ ÄÚµå¸¦ ºĞ¸®ÇÏ´Â °æ¿ìµµ ÀÖÀ½!
+	// ì´ˆê¸°í™” ì½”ë“œë¥¼ ë¶„ë¦¬í•˜ëŠ” ê²½ìš°ë„ ìˆìŒ!
 	void init(const int& id_in, const string& name_in)
 	{
 		m_id = id_in;

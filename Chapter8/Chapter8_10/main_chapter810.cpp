@@ -13,10 +13,10 @@ class Something
 public:
 	//static int m_value = 1; // error!
 	// a static data member with an in-class initializer must have non-volatile const integral type or be specified as 'inline'
-	// staticÀº initialize ÇÒ ¼ö ¾øÀ½
+	// staticì€ initialize í•  ìˆ˜ ì—†ìŒ
 	static int				s_value;
-	static const int		s_value2 = 1;	// static constÀÎ °æ¿ì ¹Ù·Î ÃÊ±âÈ­
-	static constexpr int	s_value3 = 1;	// constexpr: ÄÄÆÄÀÏ Å¸ÀÓ¿¡ °ªÀÌ °áÁ¤µÇ¾î¾ß ÇÔ, ½Ì±ÛÅæ
+	static const int		s_value2 = 1;	// static constì¸ ê²½ìš° ë°”ë¡œ ì´ˆê¸°í™”
+	static constexpr int	s_value3 = 1;	// constexpr: ì»´íŒŒì¼ íƒ€ì„ì— ê°’ì´ ê²°ì •ë˜ì–´ì•¼ í•¨, ì‹±ê¸€í†¤
 };
 
 int Something::s_value = 1;	// define in cpp
@@ -24,13 +24,13 @@ int Something::s_value = 1;	// define in cpp
 
 int main()
 {
-	// È£ÃâµÉ ¶§¸¶´Ù s_id Áõ°¡
+	// í˜¸ì¶œë  ë•Œë§ˆë‹¤ s_id ì¦ê°€
 	cout << generateID() << endl;
 	cout << generateID() << endl;
 	cout << generateID() << endl;
 
 
-	// Something º¯¼ö ¼±¾ğ Àü¿¡µµ Á¸ÀçÇÔ!
+	// Something ë³€ìˆ˜ ì„ ì–¸ ì „ì—ë„ ì¡´ì¬í•¨!
 	cout << &Something::s_value << " " << Something::s_value << endl;
 
 	Something st1;

@@ -20,7 +20,6 @@ Cents add(const Cents &c1, const Cents &c2)
 
 int main()
 {
-	// À¯»ç¼º?
 	cout << add(Cents(6), Cents(8)).getCents() << endl;
 	cout << int(6) + int(8) << endl;
 

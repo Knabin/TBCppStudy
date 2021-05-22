@@ -25,8 +25,8 @@ public:
 	//int  getValue() { return m_value; }
 	int  getValue() const
 	{
-		// ÀÌ member functionÀº const´Ù = ³»ºÎ¿¡¼­ °ªÀ» ¹Ù²ÙÁö ¾Ê´Â´Ù
-		// const·Î »ç¿ëÇÒ ¼ö ÀÖ´Â °Ç const·Î ¸·¾Æ µÎ´Â °ÍÀÌ ÁÁÀ½! debugging À¯¿ë
+		// ì´ member functionì€ constë‹¤ = ë‚´ë¶€ì—ì„œ ê°’ì„ ë°”ê¾¸ì§€ ì•ŠëŠ”ë‹¤
+		// constë¡œ ì‚¬ìš©í•  ìˆ˜ ìžˆëŠ” ê±´ constë¡œ ë§‰ì•„ ë‘ëŠ” ê²ƒì´ ì¢‹ìŒ! debugging ìœ ìš©
 		return m_value; 
 	}
 	
@@ -34,8 +34,8 @@ public:
 
 void print(const Something &st)
 {
-	// º¹»çµÇ´Â °Ô ¸ÂÀ¸³ª, default copy constuctor°¡ ¼û¾î ÀÖÀ½
-	// const & »ç¿ëÇÏ¸é º¹»ç ÁøÇàX -> È¿À²ÀûÀÓ
+	// ë³µì‚¬ë˜ëŠ” ê²Œ ë§žìœ¼ë‚˜, default copy constuctorê°€ ìˆ¨ì–´ ìžˆìŒ
+	// const & ì‚¬ìš©í•˜ë©´ ë³µì‚¬ ì§„í–‰X -> íš¨ìœ¨ì ìž„
 	cout << &st << endl;
 	cout << st.getValue() << endl;
 }
@@ -45,7 +45,7 @@ int main()
 	const int i = 0;
 	//i = 1;	//error!
 
-	// ÀÎ½ºÅÏ½º¸¦ const·Î ¼±¾ðÇÑ´Ù´Â °ÍÀº Å¬·¡½º ³» º¯¼ö¸¦ const·Î ¼±¾ðÇÏ´Â °Í°ú °°Àº È¿°ú
+	// ì¸ìŠ¤í„´ìŠ¤ë¥¼ constë¡œ ì„ ì–¸í•œë‹¤ëŠ” ê²ƒì€ í´ëž˜ìŠ¤ ë‚´ ë³€ìˆ˜ë¥¼ constë¡œ ì„ ì–¸í•˜ëŠ” ê²ƒê³¼ ê°™ì€ íš¨ê³¼
 	const Something something;
 	//something.setValue(3);	//error!
 

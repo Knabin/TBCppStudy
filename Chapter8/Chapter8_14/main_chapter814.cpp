@@ -12,7 +12,6 @@ enum FruitType
 class Fruit
 {
 public:
-	// enum class도 가능!
 	enum FruitType
 	{
 		APPLE, BANANA, CHERRY,
@@ -40,7 +39,7 @@ public:
 
 int main()
 {
-	// enum class의 경우, Fruit::FruitType::APPLE
+	// enum class, Fruit::FruitType::APPLE
 	Fruit apple(Fruit::APPLE);
 
 	if (apple.getType() == Fruit::APPLE)

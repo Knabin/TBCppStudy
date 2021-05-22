@@ -31,7 +31,6 @@ int main()
 	cal.print();*/
 	
 	// member-function chaining
-	// C++에서의 실용성은 글쎄요...
 	cal.add(10).sub(1).mult(2).print();
 	Calc &temp1 = cal.add(10);
 	Calc &temp2 = temp1.sub(1);

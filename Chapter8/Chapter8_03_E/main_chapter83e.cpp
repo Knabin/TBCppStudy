@@ -15,7 +15,7 @@ class First
 	Second sec; 
 
 public:
-//private:	¸»µµ ¾È µÇ³ª, »ç¿ëÇÏ´Â Æ¯º°ÇÑ °æ¿ìµµ ÀÖÀ½ ÃßÈÄ ¹è¿ò
+//private:	ë§ë„ ì•ˆ ë˜ë‚˜, ì‚¬ìš©í•˜ëŠ” íŠ¹ë³„í•œ ê²½ìš°ë„ ìˆìŒ ì¶”í›„ ë°°ì›€
 	First()
 	{
 		cout << "class First constructor()" << endl;
@@ -24,8 +24,8 @@ public:
 
 int main()
 {
-	// Second »ı¼ºÀÚ -> First »ı¼ºÀÚ
-	// ¸â¹öÀÎ SecondºÎÅÍ ÃÊ±âÈ­ÇÏ±â À§ÇØ ¸ÕÀú »ı¼ºÀÚ ½ÇÇà, ±× ÈÄ FirstÀÇ »ı¼ºÀÚ ½ÇÇà
+	// Second ìƒì„±ì -> First ìƒì„±ì
+	// ë©¤ë²„ì¸ Secondë¶€í„° ì´ˆê¸°í™”í•˜ê¸° ìœ„í•´ ë¨¼ì € ìƒì„±ì ì‹¤í–‰, ê·¸ í›„ Firstì˜ ìƒì„±ì ì‹¤í–‰
 	First fir;
 
 	return 0;

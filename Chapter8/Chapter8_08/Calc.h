@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
 
-// Çì´õÆÄÀÏ¿¡¼­ using namespace¸¦ »ç¿ëÇÏ°Ô µÇ¸é includeÇÏ´Â °ÍµéÀÌ
-// ÀüºÎ ¿µÇâÀ» ¹Þ±â ¶§¹®¿¡ »ç¿ëÇÏÁö ¾Ê´Â °Ô ÁÁÀ½!!
+// í—¤ë”íŒŒì¼ì—ì„œ using namespaceë¥¼ ì‚¬ìš©í•˜ê²Œ ë˜ë©´ includeí•˜ëŠ” ê²ƒë“¤ì´
+// ì „ë¶€ ì˜í–¥ì„ ë°›ê¸° ë•Œë¬¸ì— ì‚¬ìš©í•˜ì§€ ì•ŠëŠ” ê²Œ ì¢‹ìŒ!!
 
 class Calc
 {

@@ -4,13 +4,13 @@
 
 using namespace std;
 
-// Object (°³³ä)
+// Object (ê°œë…)
 // Friend: name, address, age, height, weight, ...
 //		   print()
 
-// Class (±¸Çö)
-// C++¿¡¼­´Â struct »ç¿ëµµ OK! 
-// ´Ü, ÀÏ¹İÀûÀ¸·Î´Â µ¥ÀÌÅÍ ¹­À» ¶§ struct »ç¿ë, ±â´Éµµ ³ÖÀ» °æ¿ì class »ç¿ë 
+// Class (êµ¬í˜„)
+// C++ì—ì„œëŠ” struct ì‚¬ìš©ë„ OK! 
+// ë‹¨, ì¼ë°˜ì ìœ¼ë¡œëŠ” ë°ì´í„° ë¬¶ì„ ë•Œ struct ì‚¬ìš©, ê¸°ëŠ¥ë„ ë„£ì„ ê²½ìš° class ì‚¬ìš© 
 class Friend
 {
 public:	// access specifier (public, private, protected)
@@ -20,7 +20,7 @@ public:	// access specifier (public, private, protected)
 	double	height;
 	double	weight;
 
-	// °°Àº ¸â¹öÀÌ±â ¶§¹®¿¡ Á÷Á¢ Á¢±ÙÇÒ ¼ö°¡ ÀÖÀ½!
+	// ê°™ì€ ë©¤ë²„ì´ê¸° ë•Œë¬¸ì— ì§ì ‘ ì ‘ê·¼í•  ìˆ˜ê°€ ìˆìŒ!
 	void print()
 	{
 		cout << m_name << " " << address_ << " " << _age << " " << height << " " << weight << endl;

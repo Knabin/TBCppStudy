@@ -7,7 +7,7 @@ using namespace std;
 class Date
 {
 //public:		// access specifier
-//private:	// ±âº» Á¢±Ù ÁöÁ¤ÀÚ, Á¢±Ù ½Ã access functionÀ» ¸¸µé¾î Áà¾ß ÇÔ
+//private:	// ê¸°ë³¸ ì ‘ê·¼ ì§€ì •ìž, ì ‘ê·¼ ì‹œ access functionì„ ë§Œë“¤ì–´ ì¤˜ì•¼ í•¨
 	int m_month;
 	int m_day;
 	int m_year;
@@ -55,7 +55,7 @@ public:
 
 	void copyFrom(const Date& original)
 	{
-		// ´Ù¸¥ ÀÎ½ºÅÏ½ºÁö¸¸, °°Àº class¶ó¸é private¶óµµ Á¢±Ù °¡´É!
+		// ë‹¤ë¥¸ ì¸ìŠ¤í„´ìŠ¤ì§€ë§Œ, ê°™ì€ classë¼ë©´ privateë¼ë„ ì ‘ê·¼ ê°€ëŠ¥!
 		m_month = original.m_month;
 		m_day = original.m_day;
 		m_year = original.m_year;
@@ -66,7 +66,7 @@ int main()
 {
 	Date today;// { 8, 4, 2025 };
 	
-	// std->class ÈÄ ¹Ù·Î Á¢±ÙÇÏ·Á°í ÇÏ¸é error!!
+	// std->class í›„ ë°”ë¡œ ì ‘ê·¼í•˜ë ¤ê³  í•˜ë©´ error!!
 	//today.m_month = 8;
 	//today.m_day = 4;
 	//today.m_year = 2025;
