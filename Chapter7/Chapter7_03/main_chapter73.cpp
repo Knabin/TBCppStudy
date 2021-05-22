@@ -4,18 +4,18 @@
 
 using namespace std;
 
-void addOne(int &y)	// int y¶ó¸é ¾Æ¹«·± ÀÇ¹Ì ¾ø´Â ÇÔ¼ö
+void addOne(int &y)	// int yë¼ë©´ ì•„ë¬´ëŸ° ì˜ë¯¸ ì—†ëŠ” í•¨ìˆ˜
 {
 	cout << y << " " << &y << endl;
 	y += 1;
 }
 
-// return°ªÀ» ¿©·¯ °³ Áà¾ß ÇÒ ¶§, reference »ç¿ë
-// ÀÔ·ÂÀ» º¸Åë ¾Õ¿¡, Ãâ·ÂÀ» reference·Î µÚ¿¡
+// returnê°’ì„ ì—¬ëŸ¬ ê°œ ì¤˜ì•¼ í•  ë•Œ, reference ì‚¬ìš©
+// ì…ë ¥ì„ ë³´í†µ ì•ì—, ì¶œë ¥ì„ referenceë¡œ ë’¤ì—
 void getSinCos(const double degrees, double &sin_out, double &cos_out)
 {
-	static const double pi = 3.141592;	// static: ÇÔ¼ö ¾È¿¡¼­ Àç»ç¿ë
-	//static const double pi = 3.141592 / 180.0;	// ³ª´©±â ¿¬»ê ÇÑ ¹ø¸¸ ÁøÇà
+	static const double pi = 3.141592;	// static: í•¨ìˆ˜ ì•ˆì—ì„œ ì¬ì‚¬ìš©
+	//static const double pi = 3.141592 / 180.0;	// ë‚˜ëˆ„ê¸° ì—°ì‚° í•œ ë²ˆë§Œ ì§„í–‰
 
 	const double radians = degrees * pi / 180.0;
 	//const double radians = degrees * pi;
@@ -24,7 +24,7 @@ void getSinCos(const double degrees, double &sin_out, double &cos_out)
 	cos_out = std::cos(radians);
 }
 
-// const ¾øÀÌ´Â ¸®ÅÍ·²¸¸ ¹ŞÁö ¸øÇÔ
+// const ì—†ì´ëŠ” ë¦¬í„°ëŸ´ë§Œ ë°›ì§€ ëª»í•¨
 // ex) foo(6); //error!
 void foo(const int &x)
 {
@@ -49,7 +49,7 @@ int main()
 
 	cout << x << " " << &x << endl;
 
-	addOne(x);	// x¶ó´Â º¯¼ö ÀÚÃ¼°¡ ³Ñ¾î°¨
+	addOne(x);	// xë¼ëŠ” ë³€ìˆ˜ ìì²´ê°€ ë„˜ì–´ê°
 	cout << x << " " << &x << endl;
 	cout << endl;
 

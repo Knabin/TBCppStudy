@@ -3,8 +3,8 @@ using namespace std;
 
 void countDown(int count)
 {
-	// ���� �ڵ带 ���ε��� �����Ű�� �ִ� ��, �ڵ�� �ٸ� ���� ����Ǿ� �ְ� �ּҸ� ã�Ƽ� ȣ����
-	// ���� �����÷ο� ����!
+	// 같은 코드를 따로따로 실행시키고 있는 것, 코드는 다른 곳에 저장되어 있고 주소를 찾아서 호출함
+	// 스택 오버플로우 주의!
 	cout << count << endl;
 
 	if(count > 0)

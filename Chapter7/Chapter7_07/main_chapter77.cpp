@@ -12,7 +12,7 @@ int addDouble(double x, double y)
 	return x + y;
 }
 
-// ÇÔ¼ö ¿À¹ö·Îµù!
+// í•¨ìˆ˜ ì˜¤ë²„ë¡œë”©!
 int add(int x, int y)
 {
 	return x + y;
@@ -24,26 +24,26 @@ double add(double x, double y)
 }
 
 /*
-error! return Å¸ÀÔ¸¸ÀÌ ´Ù¸£´Ù¸é ¿À¹ö·Îµù ºÒ°¡´É!
+error! return íƒ€ìž…ë§Œì´ ë‹¤ë¥´ë‹¤ë©´ ì˜¤ë²„ë¡œë”© ë¶ˆê°€ëŠ¥!
 int add(double x, double y)
 {
 	return x + y;
 }
 */
 
-// ¸Å°³º¯¼ö·Î °ªÀ» µ¹·Á¹Þ´Â ¹æ¹ý
+// ë§¤ê°œë³€ìˆ˜ë¡œ ê°’ì„ ëŒë ¤ë°›ëŠ” ë°©ë²•
 void getRandom(int &x) {}
 void getRandom(double &x) {}
 
 typedef int my_int;
 
-// °°Àº Å¸ÀÔÀ¸·Î ÀÎ½ÄµÊ! error C2084: function 'void print(int)' already has a body
+// ê°™ì€ íƒ€ìž…ìœ¼ë¡œ ì¸ì‹ë¨! error C2084: function 'void print(int)' already has a body
 void print1(int x) {}
 void print1(my_int x) {}
 
 void print2(char *value) {}
 void print2(int value) {}
-void print2(const char *value) {}	// "a" ¿¹Á¦ ÇØ°á!
+void print2(const char *value) {}	// "a" ì˜ˆì œ í•´ê²°!
 
 void print3(unsigned int value) {}
 void print3(float value) {}
@@ -52,19 +52,19 @@ int main()
 {
 	addInt(1, 2);
 	addDouble(1.0, 2.0);
-	// intÀÎÁö doubleÀÎÁö ½Å°æ ¾²°í ½ÍÁö ¾Ê¾Æ => ¸Å°³º¯¼ö´Â ´Ù¸£Áö¸¸ ÀÛµ¿ÀÌ °°Àº °æ¿ì, ¿À¹ö·Îµù »ç¿ë
+	// intì¸ì§€ doubleì¸ì§€ ì‹ ê²½ ì“°ê³  ì‹¶ì§€ ì•Šì•„ => ë§¤ê°œë³€ìˆ˜ëŠ” ë‹¤ë¥´ì§€ë§Œ ìž‘ë™ì´ ê°™ì€ ê²½ìš°, ì˜¤ë²„ë¡œë”© ì‚¬ìš©
 
 	add(1, 2);
 	add(3.0, 4.0);
 
-	// ÀÌ¸§ÀÌ °°¾Æµµ ¸Å°³º¯¼ö°¡ ´Ù¸£¸é ´Ù¸¥ ÇÔ¼ö·Î µ¿ÀÛÇÔ
-	// ÁÖ¾îÁø ÀÎÀÚ¿Í °¡Àå Àß ¸Â´Â ¸Å°³º¯¼öÀÎ ÇÔ¼ö¸¦ Ã£¾Æ¼­ ½ÇÇàÇÔ
-	// µû¶ó¼­ ¿©±â¼­ ¾î¶² add¸¦ »ç¿ëÇÒÁö 'ÄÄÆÄÀÏ Å¸ÀÓ'¿¡ °áÁ¤µÇ¾î¾ß ÇÔ
+	// ì´ë¦„ì´ ê°™ì•„ë„ ë§¤ê°œë³€ìˆ˜ê°€ ë‹¤ë¥´ë©´ ë‹¤ë¥¸ í•¨ìˆ˜ë¡œ ë™ìž‘í•¨
+	// ì£¼ì–´ì§„ ì¸ìžì™€ ê°€ìž¥ ìž˜ ë§žëŠ” ë§¤ê°œë³€ìˆ˜ì¸ í•¨ìˆ˜ë¥¼ ì°¾ì•„ì„œ ì‹¤í–‰í•¨
+	// ë”°ë¼ì„œ ì—¬ê¸°ì„œ ì–´ë–¤ addë¥¼ ì‚¬ìš©í• ì§€ 'ì»´íŒŒì¼ íƒ€ìž„'ì— ê²°ì •ë˜ì–´ì•¼ í•¨
 
 	int x;
-	getRandom(x);	// ÀÔ·ÂÀÎÁö, ÇÔ¼ö¿¡ °ª¸¸ Àü´ÞÇÏ´ÂÁö Çò°¥¸²
+	getRandom(x);	// ìž…ë ¥ì¸ì§€, í•¨ìˆ˜ì— ê°’ë§Œ ì „ë‹¬í•˜ëŠ”ì§€ í—·ê°ˆë¦¼
 
-	// int x = getRandomInt(x);	// return type intÀÎ °æ¿ì
+	// int x = getRandomInt(x);	// return type intì¸ ê²½ìš°
 	// int x = getRandom(int());
 
 
@@ -78,8 +78,8 @@ int main()
 	//print3(0);
 	//print3(3.141592);
 
-	// ÀÇµµ´ë·Î ¸íÈ®ÇÏ°Ô ÀûÀ¸¸é ¸ðÈ£¼ºÀ» Á¦°ÅÇÒ ¼ö ÀÖÀ½! => ¾ÖÃÊ¿¡ ¿À¹ö·ÎµùÇÒ ¶§ ¸íÈ®ÇÏ°Ô ±¸ÇöÇÏ±â
-	// ÀÌ¸§À¸·Î ±¸ºÐÇÏ´Â °Ô ¾ïÁö·Î »ç¿ëÇÏ´Â °Íº¸´Ù ÁÁÀº °æ¿ìµµ ÀÖÀ½, ÁÖ¼® ´Þ±â
+	// ì˜ë„ëŒ€ë¡œ ëª…í™•í•˜ê²Œ ì ìœ¼ë©´ ëª¨í˜¸ì„±ì„ ì œê±°í•  ìˆ˜ ìžˆìŒ! => ì• ì´ˆì— ì˜¤ë²„ë¡œë”©í•  ë•Œ ëª…í™•í•˜ê²Œ êµ¬í˜„í•˜ê¸°
+	// ì´ë¦„ìœ¼ë¡œ êµ¬ë¶„í•˜ëŠ” ê²Œ ì–µì§€ë¡œ ì‚¬ìš©í•˜ëŠ” ê²ƒë³´ë‹¤ ì¢‹ì€ ê²½ìš°ë„ ìžˆìŒ, ì£¼ì„ ë‹¬ê¸°
 	print3((unsigned int)'a');
 	print3(0u);
 	print3(3.141592f);

@@ -3,18 +3,18 @@ using namespace std;
 
 typedef int* pint;
 
-//void foo(pint ptr)	ÁÖ¼Ò¶ó´Â °ªÀ» °ª¿¡ ÀÇÇÑ Àü´ŞÇÑ °Í, ÁÖ¼Ò°ªÀÌ º¹»ç°¡ µÊ! Æ÷ÀÎÅÍ º¯¼öµµ º¯¼ö´Ù
+//void foo(pint ptr)	ì£¼ì†Œë¼ëŠ” ê°’ì„ ê°’ì— ì˜í•œ ì „ë‹¬í•œ ê²ƒ, ì£¼ì†Œê°’ì´ ë³µì‚¬ê°€ ë¨! í¬ì¸í„° ë³€ìˆ˜ë„ ë³€ìˆ˜ë‹¤
 void foo(int *ptr)
 {
 	cout << *ptr << " " << ptr << " " << &ptr << endl;
 
-	//*ptr = 10;	// const int *ptrÀÇ °æ¿ì, error!
+	//*ptr = 10;	// const int *ptrì˜ ê²½ìš°, error!
 }
 
 void foo2(double degrees, double *sin_out, double *cos_out)
 {
-	// °°Àº º¯¼ö°¡ ³Ñ¾î¿Â °ÍÀÌ ¾Æ´Ô! main º¯¼öÀÇ ÁÖ¼Ò¿Í parameterÀÇ ÁÖ¼Ò´Â ´Ù¸§
-	// => °ª¿¡ ÀÇÇÑ Àü´Ş
+	// ê°™ì€ ë³€ìˆ˜ê°€ ë„˜ì–´ì˜¨ ê²ƒì´ ì•„ë‹˜! main ë³€ìˆ˜ì˜ ì£¼ì†Œì™€ parameterì˜ ì£¼ì†ŒëŠ” ë‹¤ë¦„
+	// => ê°’ì— ì˜í•œ ì „ë‹¬
 	*sin_out = 1.0;
 	*cos_out = 2.0;
 }
@@ -23,14 +23,14 @@ void foo3(const int *ptr, int * const ptr2, int *arr, int length)
 {
 	for (int i = 0; i < length; i++)
 		cout << arr[i] << endl;
-	arr[0] = 1.0;	// ¸Ş¸ğ¸® ÁÖ¼Ò¿¡ Á¢±ÙÇØ¼­ °ªÀ» º¯°æ, []´Â de-referencing
+	arr[0] = 1.0;	// ë©”ëª¨ë¦¬ ì£¼ì†Œì— ì ‘ê·¼í•´ì„œ ê°’ì„ ë³€ê²½, []ëŠ” de-referencing
 	//*ptr = 1.0;	// error!
 	*ptr2 = 1.0;
 
 	int x = 1;
-	ptr = &x;	// °¡´É!
+	ptr = &x;	// ê°€ëŠ¥!
 	//ptr2 = &x;	// error!
-	// ±¸ÇöÇÏ´Â Áß°£¿¡ ÁÖ¼Ò¸¦ ¹Ù²Ù´Â °æ¿ì´Â ÀûÀ½
+	// êµ¬í˜„í•˜ëŠ” ì¤‘ê°„ì— ì£¼ì†Œë¥¼ ë°”ê¾¸ëŠ” ê²½ìš°ëŠ” ì ìŒ
 }
 
 int main()
@@ -43,15 +43,15 @@ int main()
 
 	foo(ptr);
 	foo(&value);
-	//foo(5);	// error! literalÀÌ¶ó¼­ ÁÖ¼Ò°¡ ¾øÀ½
+	//foo(5);	// error! literalì´ë¼ì„œ ì£¼ì†Œê°€ ì—†ìŒ
 	
-	cout << &ptr << endl;	// ÇÔ¼ö¿¡¼­ ÂïÀº °Í°ú ÁÖ¼Ò ´Ù¸§!
+	cout << &ptr << endl;	// í•¨ìˆ˜ì—ì„œ ì°ì€ ê²ƒê³¼ ì£¼ì†Œ ë‹¤ë¦„!
 
 
 	double degrees = 30;
 	double sin, cos;
 
-	foo2(degrees, &sin, &cos);	// ÁÖ¼Ò·Î ³Ö¾î Áà¾ß ÇÔ
+	foo2(degrees, &sin, &cos);	// ì£¼ì†Œë¡œ ë„£ì–´ ì¤˜ì•¼ í•¨
 
 	cout << sin << " " << cos << endl;
 

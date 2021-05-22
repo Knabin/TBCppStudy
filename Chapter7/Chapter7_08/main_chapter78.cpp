@@ -3,8 +3,8 @@
 
 using namespace std;
 
-// ±âº»°ªÀ» ¼³Á¤ÇÒ °æ¿ì, ÇÑ ±ºµ¥¼­¸¸ ÇØ¾ß ÇÔ!! (declaration or definition)
-void print(int x = 10, int y = 20, int z = 30);	// in header, º¸Åë ¿©±â¿¡ ¸¹ÀÌ ¼³Á¤ÇÔ
+// ê¸°ë³¸ê°’ì„ ì„¤ì •í•  ê²½ìš°, í•œ êµ°ë°ì„œë§Œ í•´ì•¼ í•¨!! (declaration or definition)
+void print(int x = 10, int y = 20, int z = 30);	// in header, ë³´í†µ ì—¬ê¸°ì— ë§ì´ ì„¤ì •í•¨
 
 //void print(int x, int y = 20, int z) error!
 void print(int x, int y, int z)
@@ -26,7 +26,7 @@ int main()
 	print(100, 200);
 	print(100, 200, 300);
 
-	print2();	// char Å¸ÀÔ
+	print2();	// char íƒ€ì…
 	
 	//print3(10);	// error! error C2668: 'print3': ambiguous call to overloaded function
 

@@ -4,20 +4,20 @@ using namespace std;
 
 int foo(int x, int y);
 
-// parameter: ÇÔ¼ö°¡ ¾î¶² ±â´ÉÀ» ÇÏ´ÂÁö, ¹Ù²ã ÁÖ´Â ¿ªÇÒ
+// parameter: í•¨ìˆ˜ê°€ ì–´ë–¤ ê¸°ëŠ¥ì„ í•˜ëŠ”ì§€, ë°”ê¿” ì£¼ëŠ” ì—­í• 
 int foo(int x, int y)
 {
 	// like... int x, y;
 	return x + y;
-} // x and y are destroyed here, ÇÔ¼ö°¡ ³¡³²°ú µ¿½Ã¿¡ ¼Ò¸êµÊ
+} // x and y are destroyed here, í•¨ìˆ˜ê°€ ëë‚¨ê³¼ ë™ì‹œì— ì†Œë©¸ë¨
 
 int main()
 {
 	int x = 1, y = 2;
 
 	foo(6, 7);	// 6, 7: arguments (actual parameters)
-	foo(x, y + 1);	// x¿¡ ÀÖ´Â °ªÀÌ argument·Î, ÇÔ¼öÀÇ parameter·Î µé¾î°£´Ù
-	// Ç×»ó x¿¡ ÀÖ´Â °ª¸¸ Àü´ŞµÇ´Â °ÍÀº ¾Æ´Ï´Ù? (°ª, ÂüÁ¶, ÁÖ¼Ò¿¡ ÀÇÇÑ Àü´Ş)
+	foo(x, y + 1);	// xì— ìˆëŠ” ê°’ì´ argumentë¡œ, í•¨ìˆ˜ì˜ parameterë¡œ ë“¤ì–´ê°„ë‹¤
+	// í•­ìƒ xì— ìˆëŠ” ê°’ë§Œ ì „ë‹¬ë˜ëŠ” ê²ƒì€ ì•„ë‹ˆë‹¤? (ê°’, ì°¸ì¡°, ì£¼ì†Œì— ì˜í•œ ì „ë‹¬)
 
 	return 0;
 }

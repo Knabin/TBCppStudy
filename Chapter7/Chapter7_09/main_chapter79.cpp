@@ -28,7 +28,7 @@ bool isOdd(const int &number)
 
 //void printNumbers(const array<int, 10> &my_array , bool print_even)
 void printNumbers(const array<int, 10> &my_array, 
-	bool (*check_fcn)(const int &) = isEven)	// ±âº»°ª ¼³Á¤µµ °¡´É
+	bool (*check_fcn)(const int &) = isEven)	// ê¸°ë³¸ê°’ ì„¤ì •ë„ ê°€ëŠ¥
 {
 	for (auto element : my_array)
 	{
@@ -39,10 +39,10 @@ void printNumbers(const array<int, 10> &my_array,
 }
 
 typedef bool(*check_fcn_t)(const int &);
-//using check_fcn_t = bool(*)(const int &);	// usingµµ °¡´É
+//using check_fcn_t = bool(*)(const int &);	// usingë„ ê°€ëŠ¥
 
 void printNumbers2(const array<int, 10> &my_array,
-	check_fcn_t check_fcn = isEven)	// typedef ¹× using »ç¿ë °¡´É
+	check_fcn_t check_fcn = isEven)	// typedef ë° using ì‚¬ìš© ê°€ëŠ¥
 {
 	// ...
 }
@@ -56,13 +56,13 @@ void printNumbers3(const array<int, 10> &my_array,
 
 int main()
 {
-	func(1);		// ÀÌ ÇÔ¼ö°¡ ¾î´À ÁÖ¼Ò¿¡ ÀÖ´ÂÁö ¾Ë¾Æ³»°í, ±× ÇÁ·Î±×·¥À» ½ÇÇà½ÃÅ´
-	cout << func << endl;	// ÇÔ¼öÀÇ ÁÖ¼Ò Ãâ·Â
+	func(1);		// ì´ í•¨ìˆ˜ê°€ ì–´ëŠ ì£¼ì†Œì— ìˆëŠ”ì§€ ì•Œì•„ë‚´ê³ , ê·¸ í”„ë¡œê·¸ë¨ì„ ì‹¤í–‰ì‹œí‚´
+	cout << func << endl;	// í•¨ìˆ˜ì˜ ì£¼ì†Œ ì¶œë ¥
 
-	int(*fcnptr)(int) = func;	//fcnptrÀº º¯¼ö¸íÀÓ, º¯°æ °¡´É
-	cout << fcnptr(1) << endl;	// ÇÔ¼ö ½ÇÇà
+	int(*fcnptr)(int) = func;	//fcnptrì€ ë³€ìˆ˜ëª…ì„, ë³€ê²½ ê°€ëŠ¥
+	cout << fcnptr(1) << endl;	// í•¨ìˆ˜ ì‹¤í–‰
 
-	//fcnptr = goo;	func() => func(int) ¼öÁ¤ ÈÄ¿¡´Â error!
+	//fcnptr = goo;	func() => func(int) ìˆ˜ì • í›„ì—ëŠ” error!
 	//cout << fcnptr() << endl;
 
 

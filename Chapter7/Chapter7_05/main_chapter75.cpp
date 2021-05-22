@@ -23,7 +23,7 @@ int* getValue2(int x)
 
 int* allocateMemory(int size)
 {
-	return new int[size];	// ÁÖ¼Ò ¹İÈ¯
+	return new int[size];	// ì£¼ì†Œ ë°˜í™˜
 }
 
 int& getValue3(int x)
@@ -53,12 +53,12 @@ std::tuple<int, double> getTuple()
 int main()
 {
 	// return by value
-	int value = getValue(3);	// getValue(int)¿¡¼­ returnµÈ °ªÀÌ º¹»çµÇ¾î µé¾î°¨
+	int value = getValue(3);	// getValue(int)ì—ì„œ returnëœ ê°’ì´ ë³µì‚¬ë˜ì–´ ë“¤ì–´ê°
 
 
 	// return by address
-	int value2 = *getValue2(3);	// ±ÇÀåX, getValue2(int)ÀÇ value´Â ÇÔ¼ö°¡ ³¡³ª¸é »ç¶óÁü! ¾ÈÀüÇÏÁö ¸øÇÔ
-	int *value3 = getValue2(3);	// ´õ À§ÇèÇÔ!!
+	int value2 = *getValue2(3);	// ê¶Œì¥X, getValue2(int)ì˜ valueëŠ” í•¨ìˆ˜ê°€ ëë‚˜ë©´ ì‚¬ë¼ì§! ì•ˆì „í•˜ì§€ ëª»í•¨
+	int *value3 = getValue2(3);	// ë” ìœ„í—˜í•¨!!
 	// warning C4172: returning address of local variable or temporary: value
 	
 	//int *array = new int[10];
@@ -68,24 +68,24 @@ int main()
 
 	// return by reference
 	int value4 = getValue3(5);
-	int &value5 = getValue3(5);	// reference·Î ¹ŞÀ¸¸é? ÇÔ¼ö°¡ ³¡³ª¸é »ç¶óÁö´Â Áö¿ªº¯¼öÀÇ ÁÖ¼Ò°ªÀ» ¹ŞÀ½
+	int &value5 = getValue3(5);	// referenceë¡œ ë°›ìœ¼ë©´? í•¨ìˆ˜ê°€ ëë‚˜ë©´ ì‚¬ë¼ì§€ëŠ” ì§€ì—­ë³€ìˆ˜ì˜ ì£¼ì†Œê°’ì„ ë°›ìŒ
 	// warning C4172: returning address of local variable or temporary: value
 
 	cout << value5 << endl;
-	cout << value5 << endl;	// ¾²·¹±â°ª È£Ãâ
+	cout << value5 << endl;	// ì“°ë ˆê¸°ê°’ í˜¸ì¶œ
 
 
-	std::array<int, 100> my_array;	// ¸Ş¸ğ¸®°¡ ¸íÈ®ÇÏ°Ô ÀâÇô ÀÖÀ½
+	std::array<int, 100> my_array;	// ë©”ëª¨ë¦¬ê°€ ëª…í™•í•˜ê²Œ ì¡í˜€ ìˆìŒ
 	my_array[30] = 10;
 
-	get(my_array, 30) *= 10;	// º¯¼öÀÎ °ÍÃ³·³ »ç¿ë °¡´É
+	get(my_array, 30) *= 10;	// ë³€ìˆ˜ì¸ ê²ƒì²˜ëŸ¼ ì‚¬ìš© ê°€ëŠ¥
 
 	cout << my_array[30] << endl;
 	cout << endl;
 
 
 	// return struct
-	// ±¸Á¶Ã¼¸¦ ¸¸µé ¶§¸¶´Ù ÇÔ¼ö¸¦ ¸¸µé¾î¾ß ÇÔ
+	// êµ¬ì¡°ì²´ë¥¼ ë§Œë“¤ ë•Œë§ˆë‹¤ í•¨ìˆ˜ë¥¼ ë§Œë“¤ì–´ì•¼ í•¨
 	S my_s = getStruct();
 	my_s.b;
 
@@ -97,7 +97,7 @@ int main()
 
 
 	// C++ 11
-	auto[a, d] = getTuple();	// °¢°¢ º¯¼ö¸¦ ¼±¾ğÇÏ¸é¼­ ¹Ş¾Æ ÁÜ
+	auto[a, d] = getTuple();	// ê°ê° ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ë©´ì„œ ë°›ì•„ ì¤Œ
 	cout << a << endl;
 	cout << d << endl;
 

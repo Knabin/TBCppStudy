@@ -3,8 +3,8 @@
 
 using namespace std;
 
-// count: parameter·Î µé¾î¿Ã argumentµéÀÇ °³¼ö
-// »ç¿ëÇÏ±â À§ÇèÇÏ°í µğ¹ö±ë Èûµê...
+// count: parameterë¡œ ë“¤ì–´ì˜¬ argumentë“¤ì˜ ê°œìˆ˜
+// ì‚¬ìš©í•˜ê¸° ìœ„í—˜í•˜ê³  ë””ë²„ê¹… í˜ë“¦...
 double findAverage(int count, ...)
 {
 	double sum = 0;
@@ -13,7 +13,7 @@ double findAverage(int count, ...)
 	va_start(list, count);
 
 	for (int arg = 0; arg < count; arg++)
-		sum += va_arg(list, int);	// int·Î º¯È¯
+		sum += va_arg(list, int);	// intë¡œ ë³€í™˜
 
 	va_end(list);
 
@@ -22,10 +22,10 @@ double findAverage(int count, ...)
 
 int main()
 {
-	cout << findAverage(1, 1, 2, 3, "Hello", 'c') << endl;	// 1¸¸ µé¾î°¨
+	cout << findAverage(1, 1, 2, 3, "Hello", 'c') << endl;	// 1ë§Œ ë“¤ì–´ê°
 	cout << findAverage(3, 1, 2, 3) << endl;
 	cout << findAverage(5, 1, 2, 3, 4, 5) << endl;
-	cout << findAverage(10, 1, 2, 3, 4, 5) << endl;	// error! °³¼ö ¸ÂÃç Áà¾ß ÇÔ
+	cout << findAverage(10, 1, 2, 3, 4, 5) << endl;	// error! ê°œìˆ˜ ë§ì¶° ì¤˜ì•¼ í•¨
 
 	return 0;
 }

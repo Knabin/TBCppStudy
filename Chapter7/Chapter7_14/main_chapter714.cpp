@@ -17,7 +17,7 @@ int main()
 	int number = 5;
 
 	// ...
-	// ÁÖ¼®¸¸ ³²°Ü ³õ´Â´Ù¸é Á÷Á¢ °ªÀ» Âï¾î ºÁ¾ß ÇÔ
+	// ì£¼ì„ë§Œ ë‚¨ê²¨ ë†“ëŠ”ë‹¤ë©´ ì§ì ‘ ê°’ì„ ì°ì–´ ë´ì•¼ í•¨
 	assert(number == 5);
 	
 	std::array<int, 5> my_array{ 1,2,3,4,5 };
@@ -26,8 +26,8 @@ int main()
 
 	int x = 5;
 	const int x2 = 5;
-	//assert(x == 5);	// °¡´É!
-	//static_assert(x == 5);	// error! ÄÄÆÄÀÏ Å¸ÀÓ¿¡ ´Ş¶óÁú ¼ö ÀÖ±â ¶§¹®¿¡ ºÒ°¡´É
+	//assert(x == 5);	// ê°€ëŠ¥!
+	//static_assert(x == 5);	// error! ì»´íŒŒì¼ íƒ€ì„ì— ë‹¬ë¼ì§ˆ ìˆ˜ ìˆê¸° ë•Œë¬¸ì— ë¶ˆê°€ëŠ¥
 	static_assert(x2 == 5, "x should be 5!");
 
 
