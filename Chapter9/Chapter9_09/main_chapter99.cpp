@@ -16,12 +16,12 @@ public:
 		assert(den != 0);
 	}
 
-	// private·Î ¿Å°Ü ÁÖ¸é, ¿ÜºÎ¿¡¼­ »ç¿ëÇÒ ¼ö ¾øÀ½! º¹»ç ºÒ°¡´É!
-	// º¸¾È¼ºÀ» Áß¿ä½Ã ÇÏ´Â °æ¿ì »ç¿ëÇÏ±âµµ ÇÔ
+	// privateë¡œ ì˜®ê²¨ ì£¼ë©´, ì™¸ë¶€ì—ì„œ ì‚¬ìš©í•  ìˆ˜ ì—†ìŒ! ë³µì‚¬ ë¶ˆê°€ëŠ¥!
+	// ë³´ì•ˆì„±ì„ ì¤‘ìš”ì‹œ í•˜ëŠ” ê²½ìš° ì‚¬ìš©í•˜ê¸°ë„ í•¨
 	Fraction(const Fraction &fraction)	// copy constructor
 		: m_numerator(fraction.m_numerator), m_denominator(fraction.m_denominator)
 	{
-		// ¾ó¸¶³ª ÀÚÁÖ È£ÃâµÇ´ÂÁö ¾Ë¾Æº¸±â À§ÇÑ Ãâ·Â¹®
+		// ì–¼ë§ˆë‚˜ ìì£¼ í˜¸ì¶œë˜ëŠ”ì§€ ì•Œì•„ë³´ê¸° ìœ„í•œ ì¶œë ¥ë¬¸
 		cout << "Copy constructor called" << endl;
 	}
 
@@ -45,16 +45,16 @@ int main()
 	Fraction frac(3, 5);
 
 	Fraction fr_copy(frac);
-	Fraction fr_copy2 = frac;	// ÀÌ °æ¿ì¿¡µµ copy constructor È£ÃâµÊ
+	Fraction fr_copy2 = frac;	// ì´ ê²½ìš°ì—ë„ copy constructor í˜¸ì¶œë¨
 
 	cout << frac << fr_copy << fr_copy2 << endl;
 
-	// ÀÌ °æ¿ì¿¡´Â copy constructor ½ÇÇà X!! => ÄÄÆÄÀÏ·¯°¡ »ı·«ÇÔ
+	// ì´ ê²½ìš°ì—ëŠ” copy constructor ì‹¤í–‰ X!! => ì»´íŒŒì¼ëŸ¬ê°€ ìƒëµí•¨
 	Fraction fr_copy3(Fraction(3, 10));
 
-	//   debug: copy constructor ½ÇÇà
-	// release: copy constructor ½ÇÇà X, ¹İÈ¯°ª ÃÖÀûÈ­(ÄÄÆÄÀÏ·¯)
-	// debug ¸ğµå¿¡¼­´Â ´Ù¸¥ ÁÖ¼Ò(µû¶ó¼­ º¹»ç ÁøÇà), release ¸ğµå¿¡¼­´Â °°Àº ÁÖ¼Ò Ãâ·Â
+	//   debug: copy constructor ì‹¤í–‰
+	// release: copy constructor ì‹¤í–‰ X, ë°˜í™˜ê°’ ìµœì í™”(ì»´íŒŒì¼ëŸ¬)
+	// debug ëª¨ë“œì—ì„œëŠ” ë‹¤ë¥¸ ì£¼ì†Œ(ë”°ë¼ì„œ ë³µì‚¬ ì§„í–‰), release ëª¨ë“œì—ì„œëŠ” ê°™ì€ ì£¼ì†Œ ì¶œë ¥
 	Fraction result = doSomething();
 	cout << &result << endl;
 

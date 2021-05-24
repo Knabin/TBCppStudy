@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//functor: ÇÔ¼ö °´Ã¼
+//functor
 class Accumulator
 {
 private:

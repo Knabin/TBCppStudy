@@ -12,7 +12,6 @@ public:
 	int getCents() const { return m_cents; }
 	int& getCents() { return m_cents; }
 
-	//integer형 형변환을 오버로딩
 	operator int()
 	{
 		cout << "cast here" << endl;

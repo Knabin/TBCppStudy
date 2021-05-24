@@ -29,16 +29,16 @@ public:
 
 		m_length = source.m_length;
 
-		// source°¡ ¹Ýµå½Ã »ç¶óÁö´Â °æ¿ì¶ó¸é ±×´ë·Î °¡Á®´Ù ½áµµ OK
-		// ¾Æ´Ï¶ó¸é ¸Þ¸ð¸®¸¦ µû·Î Àâ¾Æ¾ß ÇÔ!
-		// shallow copy: ÁÖ¼Ò°ªÀ» ±×´ë·Î º¹»ç
-		// deep copy: ÁÖ¼Ò°ªÀÌ ¾Æ´Ñ, ¸Þ¸ð¸®¸¦ ÀçÇÒ´ç ÈÄ °ªÀ» Àçº¹»ç
+		// sourceê°€ ë°˜ë“œì‹œ ì‚¬ë¼ì§€ëŠ” ê²½ìš°ë¼ë©´ ê·¸ëŒ€ë¡œ ê°€ì ¸ë‹¤ ì¨ë„ OK
+		// ì•„ë‹ˆë¼ë©´ ë©”ëª¨ë¦¬ë¥¼ ë”°ë¡œ ìž¡ì•„ì•¼ í•¨!
+		// shallow copy: ì£¼ì†Œê°’ì„ ê·¸ëŒ€ë¡œ ë³µì‚¬
+		// deep copy: ì£¼ì†Œê°’ì´ ì•„ë‹Œ, ë©”ëª¨ë¦¬ë¥¼ ìž¬í• ë‹¹ í›„ ê°’ì„ ìž¬ë³µì‚¬
 		if (source.m_data != nullptr)
 		{
-			// ¸Þ¸ð¸®¸¦ »õ·Î ÇÒ´ç
+			// ë©”ëª¨ë¦¬ë¥¼ ìƒˆë¡œ í• ë‹¹
 			m_data = new char[m_length];
 
-			// sourceÀÇ µ¥ÀÌÅÍ¸¦ º¹»ç
+			// sourceì˜ ë°ì´í„°ë¥¼ ë³µì‚¬
 			for (int i = 0; i < m_length; ++i)
 				m_data[i] = source.m_data[i];
 		}
@@ -46,7 +46,7 @@ public:
 			m_data = nullptr;
 	}
 
-	// ±¸ÇöÇÏ°í ½ÍÁö ¾ÊÀ» ¶§´Â ÀÓ½Ã·Î ¸·¾Æ ¹ö¸± ¼öµµ ÀÖÀ½
+	// êµ¬í˜„í•˜ê³  ì‹¶ì§€ ì•Šì„ ë•ŒëŠ” ìž„ì‹œë¡œ ë§‰ì•„ ë²„ë¦´ ìˆ˜ë„ ìžˆìŒ
 	//MyString(const MyString &source) = delete;
 
 	MyString& operator = (const MyString & source)
@@ -57,12 +57,12 @@ public:
 
 		cout << "Assignment operator " << endl;
 
-		// ´ëÀÔ ¿¬»êÀÚÀÏ °æ¿ì, ÀÚ±â°¡ ÀÚ±â¿¡°Ô ´ëÀÔ °¡´É hello = hello;
-		// ÇÁ·Î±×·¥¿¡¼­´Â ¹®Á¦°¡ »ý±æ ¼ö ÀÖ±â ¶§¹®¿¡ ÁÖ¼Ò°¡ °°´Ù¸é ±×³É return
+		// ëŒ€ìž… ì—°ì‚°ìžì¼ ê²½ìš°, ìžê¸°ê°€ ìžê¸°ì—ê²Œ ëŒ€ìž… ê°€ëŠ¥ hello = hello;
+		// í”„ë¡œê·¸ëž¨ì—ì„œëŠ” ë¬¸ì œê°€ ìƒê¸¸ ìˆ˜ ìžˆê¸° ë•Œë¬¸ì— ì£¼ì†Œê°€ ê°™ë‹¤ë©´ ê·¸ëƒ¥ return
 		if (this == &source) // prevent self-assignment
 			return *this;
 
-		// ÀÌ¹Ì ¸Þ¸ð¸®¸¦ °¡Áö°í ÀÖÀ» ¼ö ÀÖ±â ¶§¹®¿¡ ¸ÕÀú Áö¿ò
+		// ì´ë¯¸ ë©”ëª¨ë¦¬ë¥¼ ê°€ì§€ê³  ìžˆì„ ìˆ˜ ìžˆê¸° ë•Œë¬¸ì— ë¨¼ì € ì§€ì›€
 		delete[] m_data;
 
 		m_length = source.m_length;
@@ -106,15 +106,15 @@ int main()
 	cout << hello.getString() << endl;
 
 	MyString str1 = hello;	// Copy constructor
-	//MyString str1(hello);	// ´ú Çò°¥¸®°Ô ÀÌ·¸°Ô ¼±¾ð OK
+	//MyString str1(hello);	// ëœ í—·ê°ˆë¦¬ê²Œ ì´ë ‡ê²Œ ì„ ì–¸ OK
 	MyString str2;
 	str2 = hello;	// Assignment operator
 
 
-	// ÀÌ ¹æ¹ýÀÌ ½È´Ù¸é...?
-	// 1. std::stringÀ» »ç¿ë
-	// 2. std::stringÀ» »ó¼Ó¹Þ¾Æ¼­ Ãß°¡ ±¸Çö
-	// 3. member º¯¼ö¿¡ std::string data ¼±¾ð
+	// ì´ ë°©ë²•ì´ ì‹«ë‹¤ë©´...?
+	// 1. std::stringì„ ì‚¬ìš©
+	// 2. std::stringì„ ìƒì†ë°›ì•„ì„œ ì¶”ê°€ êµ¬í˜„
+	// 3. member ë³€ìˆ˜ì— std::string data ì„ ì–¸
 
 	return 0;
 }

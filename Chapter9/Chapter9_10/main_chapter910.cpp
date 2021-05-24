@@ -10,7 +10,7 @@ private:
 	int m_denominator;
 
 public:
-	// °­·ÂÇÏ°Ô ¸·¾Æ ¹ö¸®±â(ÇÔ¼ö »èÁ¦)
+	// ê°•ë ¥í•˜ê²Œ ë§‰ì•„ ë²„ë¦¬ê¸°(í•¨ìˆ˜ ì‚­ì œ)
 	Fraction(char) = delete;
 
 	explicit Fraction(int num = 0, int den = 1)
@@ -44,7 +44,7 @@ int main()
 
 	doSomething(frac);
 	doSomething(Fraction(7));
-	// »ı¼ºÀÚ ¾Õ¿¡ explicit¶ó´Â Å°¿öµå°¡ ÀÖÀ¸¸é ºÒ°¡´É!!
+	// ìƒì„±ì ì•ì— explicitë¼ëŠ” í‚¤ì›Œë“œê°€ ìˆìœ¼ë©´ ë¶ˆê°€ëŠ¥!!
 	//doSomething(7);
 
 	//Fraction frac2('c');

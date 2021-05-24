@@ -35,7 +35,7 @@ int main()
 	a.printDouble();
 	cout << endl;
 
-	// R-value처럼 작동
+	// R-value
 	A(1).printDouble();
 	A(2).printDouble();
 

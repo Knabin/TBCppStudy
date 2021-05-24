@@ -14,7 +14,7 @@ public:
 	int getCents() const { return m_cents; }
 	int& getCents() { return m_cents; }
 
-	// operator > ÇÏ¸é error! less thanÀÌ ±¸ÇöµÇ¾î¾ß ÇÔ
+	// operator > í•˜ë©´ error! less thanì´ êµ¬í˜„ë˜ì–´ì•¼ í•¨
 	friend bool operator < (const Cents &c1, const Cents &c2)
 	{
 		return c1.m_cents < c2.m_cents;
@@ -39,7 +39,7 @@ int main()
 		cout << e << " ";
 	cout << endl;
 
-	// Cents³¢¸® Å©±â ºñ±³ ºÒ°¡´ÉÇØ¼­ error! => overloading ÇÊ¿ä
+	// Centsë¼ë¦¬ í¬ê¸° ë¹„êµ ë¶ˆê°€ëŠ¥í•´ì„œ error! => overloading í•„ìš”
 	std::sort(begin(arr), end(arr));
 
 	for (auto &e : arr)

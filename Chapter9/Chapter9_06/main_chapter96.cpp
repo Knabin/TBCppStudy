@@ -5,27 +5,27 @@ using namespace std;
 class IntList
 {
 private:
-	// µ¿Àû ÇÒ´ç ½Ã, ¹İµå½Ã ÇØ´ç ¸Ş¸ğ¸®°¡ allocateµÇ¾î ÀÖ´ÂÁö ÁÖÀÇ!
-	// vector¸¦ »ç¿ëÇÒ °æ¿ì, vector ÀÚÃ¼¿¡ ¿À¹ö·ÎµùÀÌ ÀßµÇ¾î ÀÖ±â ¶§¹®¿¡ ±×°É »ç¿ëÇÒ ¼öµµ ÀÖÀ½ => ÅÛÇÃ¸´
+	// ë™ì  í• ë‹¹ ì‹œ, ë°˜ë“œì‹œ í•´ë‹¹ ë©”ëª¨ë¦¬ê°€ allocateë˜ì–´ ìˆëŠ”ì§€ ì£¼ì˜!
+	// vectorë¥¼ ì‚¬ìš©í•  ê²½ìš°, vector ìì²´ì— ì˜¤ë²„ë¡œë”©ì´ ì˜ë˜ì–´ ìˆê¸° ë•Œë¬¸ì— ê·¸ê±¸ ì‚¬ìš©í•  ìˆ˜ë„ ìˆìŒ => í…œí”Œë¦¿
 	int m_list[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 public:
 
-	// parameter¿¡ ´Ù¸¥ µ¥ÀÌÅÍ Å¸ÀÔµµ µé¾î¿Ã ¼ö ÀÖÀ½, ¿ëµµ¿¡ µû¶ó ´Ù¸§
-	// °ªÀ» ÀĞÀ» ¼öµµ ÀÖ°í, Á¢±ÙÇÒ ¼öµµ ÀÖ°Ô²û return°ªÀº reference, Ç×»ó l-value¿©¾ß ÇÔ
+	// parameterì— ë‹¤ë¥¸ ë°ì´í„° íƒ€ì…ë„ ë“¤ì–´ì˜¬ ìˆ˜ ìˆìŒ, ìš©ë„ì— ë”°ë¼ ë‹¤ë¦„
+	// ê°’ì„ ì½ì„ ìˆ˜ë„ ìˆê³ , ì ‘ê·¼í•  ìˆ˜ë„ ìˆê²Œë” returnê°’ì€ reference, í•­ìƒ l-valueì—¬ì•¼ í•¨
 	int & operator [] (const int index)
 	{
-		// assert·Î ¹Ì¸® ¸·¾Æ Áà¾ß runtime error debugging ½Ã ÆíÇÔ
-		// subscript operator´Â ÀÚÁÖ »ç¿ëÇÏ±â À§ÇØ ¸¸µå´Â °ÍÀÌ±â ¶§¹®¿¡
-		// if¹®À» »ç¿ëÇÒ °æ¿ì ¼Óµµ°¡ ´À·ÁÁü, ÆÛÆ÷¸Õ½º¸¦ À§ÇØ if¹®Àº ±ÇÀåX
+		// assertë¡œ ë¯¸ë¦¬ ë§‰ì•„ ì¤˜ì•¼ runtime error debugging ì‹œ í¸í•¨
+		// subscript operatorëŠ” ìì£¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ ë§Œë“œëŠ” ê²ƒì´ê¸° ë•Œë¬¸ì—
+		// ifë¬¸ì„ ì‚¬ìš©í•  ê²½ìš° ì†ë„ê°€ ëŠë ¤ì§, í¼í¬ë¨¼ìŠ¤ë¥¼ ìœ„í•´ ifë¬¸ì€ ê¶Œì¥X
 		assert(index >= 0);
 		assert(index < 10);
 
 		return m_list[index];
 	}
 
-	// const IntListÀÇ °æ¿ì, const·Î ¼±¾ğÇÑ ÇÔ¼ö È£Ãâ
-	// °ªÀ» º¯°æÇÏÁö ¾Ê´Â ÇÔ¼öÀÓÀ» ¸í½Ã(const)ÇØ ÁÖ¾î¾ß ÇÔ
+	// const IntListì˜ ê²½ìš°, constë¡œ ì„ ì–¸í•œ í•¨ìˆ˜ í˜¸ì¶œ
+	// ê°’ì„ ë³€ê²½í•˜ì§€ ì•ŠëŠ” í•¨ìˆ˜ì„ì„ ëª…ì‹œ(const)í•´ ì£¼ì–´ì•¼ í•¨
 	const int & operator [] (const int index) const
 	{
 		return m_list[index];
@@ -59,12 +59,12 @@ int main()
 	cout << my_list[3] << endl;
 
 	const IntList my_clist;
-	//my_clist[3] = 10;   // const¶ó¼­ ¼öÁ¤Àº ºÒ°¡´ÉÇÔ
+	//my_clist[3] = 10;   // constë¼ì„œ ìˆ˜ì •ì€ ë¶ˆê°€ëŠ¥í•¨
 	cout << my_clist[3] << endl;
 
 	IntList *list = new IntList;
 
-	//list[3] = 10;      // Not OK! Æ÷ÀÎÅÍ ÀÚÃ¼¿¡ »ç¿ëÇØ ¹ö¸²
+	//list[3] = 10;      // Not OK! í¬ì¸í„° ìì²´ì— ì‚¬ìš©í•´ ë²„ë¦¼
 	(*list)[3] = 10;   // OK! de-referencing
 
 	return 0;

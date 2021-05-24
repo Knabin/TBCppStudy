@@ -22,17 +22,17 @@ public:
 	//	cout << m_x << " " << m_y << " " << m_z;
 	//}
 
-	// ¸â¹ö ÇÔ¼ö·Î´Â ºÒ°¡´É! Ã¹ ¹øÂ° ¸Å°³º¯¼ö°¡ output stream
-	// ÆÄÀÏ Ãâ·ÂÀÌ °¡´É!!
+	// ë©¤ë²„ í•¨ìˆ˜ë¡œëŠ” ë¶ˆê°€ëŠ¥! ì²« ë²ˆì§¸ ë§¤ê°œë³€ìˆ˜ê°€ output stream
+	// íŒŒì¼ ì¶œë ¥ì´ ê°€ëŠ¥!!
 	friend std::ostream& operator << (std::ostream &out, const Point &point)
 	{
 		out << "(" << point.m_x << " " << point.m_y << " " << point.m_z << ")";
-		return out;	// ¹İÈ¯ Å¸ÀÔÀÌ ostreamÀÌ±â ¶§¹®¿¡ Ã¼ÀÌ´×(¿¬¼â) °¡´É
+		return out;	// ë°˜í™˜ íƒ€ì…ì´ ostreamì´ê¸° ë•Œë¬¸ì— ì²´ì´ë‹(ì—°ì‡„) ê°€ëŠ¥
 	}
 
 	friend std::istream& operator >> (std::istream &in, Point &point)
 	{
-		// ¹æ¾îÀû ÇÁ·Î±×·¡¹ÖÀ» À§ÇÑ Á¶°Ç µî... ÇÊ¿ä
+		// ë°©ì–´ì  í”„ë¡œê·¸ë˜ë°ì„ ìœ„í•œ ì¡°ê±´ ë“±... í•„ìš”
 		in >> point.m_x >> point.m_y >> point.m_z;
 		return in;
 	}

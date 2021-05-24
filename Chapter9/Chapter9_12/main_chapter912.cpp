@@ -17,8 +17,8 @@ public:
 		m_data = new int[length];
 	}
 
-	// initializer_list¸¦ parameter·Î ¹ŞÀ¸¸é {} ÃÊ±âÈ­ °¡´É
-	// Áßº¹µÇ´Â ±â´ÉÀº ÂÉ°³¼­ ÇÑ °÷¿¡¼­¸¸ ½ÇÇàÀÌ µÇ°Ô²û ¸¸µé±â!!
+	// initializer_listë¥¼ parameterë¡œ ë°›ìœ¼ë©´ {} ì´ˆê¸°í™” ê°€ëŠ¥
+	// ì¤‘ë³µë˜ëŠ” ê¸°ëŠ¥ì€ ìª¼ê°œì„œ í•œ ê³³ì—ì„œë§Œ ì‹¤í–‰ì´ ë˜ê²Œë” ë§Œë“¤ê¸°!!
 	IntArray(const std::initializer_list<int> &list)
 		: IntArray(list.size())
 	{
@@ -31,8 +31,8 @@ public:
 
 		//for (unsigned count = 0; count < list.size(); ++count)
 		//	m_data[count] = list[count];	// error!
-		// initializer_list´Â [] operator¸¦ Áö¿øÇÏÁö ¾ÊÀ½
-		// for¹®À» »ç¿ëÇÏ·Á¸é iterator »ç¿ë => ÃßÈÄ ¼³¸í
+		// initializer_listëŠ” [] operatorë¥¼ ì§€ì›í•˜ì§€ ì•ŠìŒ
+		// forë¬¸ì„ ì‚¬ìš©í•˜ë ¤ë©´ iterator ì‚¬ìš© => ì¶”í›„ ì„¤ëª…
 	}
 
 	~IntArray()
@@ -73,15 +73,15 @@ public:
 
 int main()
 {
-	// ±âº» ÀÚ·áÇüÀÇ Á¤Àû, µ¿Àû ¹è¿­ µÑ ´Ù initializer list·Î ÃÊ±âÈ­ °¡´É
+	// ê¸°ë³¸ ìë£Œí˜•ì˜ ì •ì , ë™ì  ë°°ì—´ ë‘˜ ë‹¤ initializer listë¡œ ì´ˆê¸°í™” ê°€ëŠ¥
 	int my_arr1[5] = { 1, 2, 3, 4, 5 };
 	int *my_arr2 = new int[5]{ 1, 2, 3, 4, 5 };
 
-	// initializer list¸¦ include ÇÏ¸é °¡´É!
+	// initializer listë¥¼ include í•˜ë©´ ê°€ëŠ¥!
 	auto il = { 10, 20, 30 };
 
 	//IntArray int_array { 1, 2, 3, 4, 5 };
-	IntArray int_array = { 1, 2, 3, 4, 5 };	// °¡´É
+	IntArray int_array = { 1, 2, 3, 4, 5 };	// ê°€ëŠ¥
 
 	cout << int_array << endl;
 

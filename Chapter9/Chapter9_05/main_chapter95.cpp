@@ -13,11 +13,11 @@ public:
 	Digit & operator ++ ()
 	{
 		++m_digit;
-		// ÀÚ±â ÀÚ½ÅÀ» returnÇÑ´Ù°í º¸¸é µÊ
+		// ìê¸° ìì‹ ì„ returní•œë‹¤ê³  ë³´ë©´ ë¨
 		return *this;
 	}
 
-	// postfix: parameter¿¡ dummy°¡ ÇÊ¿äÇÔ!!
+	// postfix: parameterì— dummyê°€ í•„ìš”í•¨!!
 	Digit operator ++ (int)
 	{
 		Digit temp(m_digit);
@@ -36,7 +36,6 @@ int main()
 {
 	/*
 	int a = 10;
-
 	cout << ++a << endl;   //11
 	cout << a << endl;     //11
 	cout << a++ << endl;   //11
