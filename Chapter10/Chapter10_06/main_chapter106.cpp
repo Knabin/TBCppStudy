@@ -13,7 +13,7 @@ public:
 	//Constructors
 	//Destructors
 	//Initialize()
-	//reset();	// 메모리 싹 지우기
+	//reset();
 	//resize();
 	//insertBefore(const int & value, const int & ix);
 	//remove(const int & ix);
@@ -28,7 +28,7 @@ int main()
 	//my_arr.remove(3);				// 1, 10, 3, 7, 9
 	//my_arr.push_back(13);			// 1, 10, 3, 7, 9, 13
 
-	//standard template library: member of 관계
+	//standard template library
 	//vector<int> int_vec;
 	//array<int, 10> int_arr;
 

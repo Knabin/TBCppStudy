@@ -10,8 +10,8 @@ int main()
 
 	Monster mon2("Parsival", Position2D(0, 0));
 	//mon2.m_location;
-	// m_locationÀº mon1ÀÇ ÀÌ¸§("Sanson")¿¡ ´ëÇØ ¾Ë ÇÊ¿ä°¡ ¾øÀ½
-	// m_locationÀº m_locationÀÇ ±â´É¸¸ ÇÏ¸é µÊ
+	// m_locationì€ mon1ì˜ ì´ë¦„("Sanson")ì— ëŒ€í•´ ì•Œ í•„ìš”ê°€ ì—†ìŒ
+	// m_locationì€ m_locationì˜ ê¸°ëŠ¥ë§Œ í•˜ë©´ ë¨
 
 
 	//while (1)	// gama loop

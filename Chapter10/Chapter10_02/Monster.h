@@ -9,8 +9,8 @@ private:
 	std::string m_name;	// string: char * data, unsigned length;
 	//int m_x;	// location
 	//int m_y;
-	Position2D m_location;	// sub class => »¡¸® ¸¸µå´Â °Ô ÁÁ´Ù
-	// »óÀ§ Å¬·¡½º´Â È£Ãâ¸¸ ÇÏ°í, ¾î¶»°Ô ÀÛµ¿ÇÏ´ÂÁö´Â ½Å°æ ¾²Áö ¾Ê´Â ÆíÀÌ ÁÁÀ½ => ÂÉ°³ÀÚ!
+	Position2D m_location;	// sub class => ë¹¨ë¦¬ ë§Œë“œëŠ” ê²Œ ì¢‹ë‹¤
+	// ìƒìœ„ í´ë˜ìŠ¤ëŠ” í˜¸ì¶œë§Œ í•˜ê³ , ì–´ë–»ê²Œ ì‘ë™í•˜ëŠ”ì§€ëŠ” ì‹ ê²½ ì“°ì§€ ì•ŠëŠ” í¸ì´ ì¢‹ìŒ => ìª¼ê°œì!
 
 public:
 	//Monster(const std::string name_in, const int & x_in, const int & y_in)

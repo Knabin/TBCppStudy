@@ -21,8 +21,8 @@ int main()
 	
 	// Aggregation Relationship
 
-	// Composition ÄÚµåÀÇ ¹®Á¦Á¡:
-	// Student(Jack Jack,0)³¢¸® ¼­·Î ´Ù¸¥ °´Ã¼(´Ù¸¥ ÁÖ¼Ò¸¦ °¡Áü)
+	// Composition ì½”ë“œì˜ ë¬¸ì œì :
+	// Student(Jack Jack,0)ë¼ë¦¬ ì„œë¡œ ë‹¤ë¥¸ ê°ì²´(ë‹¤ë¥¸ ì£¼ì†Œë¥¼ ê°€ì§)
 	Student std1("Jack Jack", 0);
 	Student std2("Dash", 1);
 	Student std3("Violet", 2);
@@ -38,8 +38,8 @@ int main()
 	lec2.assignTeacher(&teacher2);
 	lec2.registerStudent(&std1);
 
-	// 1. ¸ŞÀÎ ÇÔ¼ö¿¡¼­ º¯¼ö·Î ¼±¾ğ(»ó´Ü ±¸Çö)
-	// 2. ´Ù¸¥ ÇÔ¼ö¿¡¼­ »ç¿ëÇÒ ¶§´Â µ¿Àû ÇÒ´çÀ¸·Î ±¸Çö, ¶È°°ÀÌ »ç¿ë °¡´É
+	// 1. ë©”ì¸ í•¨ìˆ˜ì—ì„œ ë³€ìˆ˜ë¡œ ì„ ì–¸(ìƒë‹¨ êµ¬í˜„)
+	// 2. ë‹¤ë¥¸ í•¨ìˆ˜ì—ì„œ ì‚¬ìš©í•  ë•ŒëŠ” ë™ì  í• ë‹¹ìœ¼ë¡œ êµ¬í˜„, ë˜‘ê°™ì´ ì‚¬ìš© ê°€ëŠ¥
 	Student *std11 = new Student("Jack Jack", 0);
 	Student *std22 = new Student("Dash", 1);
 	Student *std33 = new Student("Violet", 2);

@@ -3,8 +3,8 @@
 #include <string>
 using namespace std;
 
-class Doctor;	// Àü¹æ ¼±¾ğ forward declaration
-// ÆÄÀÏ ºĞ¸® ½Ã, Àü¹æ ¼±¾ğÇÑ class°¡ ¾îµğ ÀÖ´ÂÁö Ã£À» ¼ö ¾ø´Â °æ¿ì°¡ ¹ß»ıÇÒ ¼ö ÀÖÀ½!!
+class Doctor;	// ì „ë°© ì„ ì–¸ forward declaration
+// íŒŒì¼ ë¶„ë¦¬ ì‹œ, ì „ë°© ì„ ì–¸í•œ classê°€ ì–´ë”” ìˆëŠ”ì§€ ì°¾ì„ ìˆ˜ ì—†ëŠ” ê²½ìš°ê°€ ë°œìƒí•  ìˆ˜ ìˆìŒ!!
 
 class Patient
 {
@@ -24,8 +24,8 @@ public:
 
 	void meetDoctors();
 	/*
-	// Àü¹æ ¼±¾ğ ½Ã error! Àü¹æ ¼±¾ğ ¾È¿¡ m_nameÀÌ ÀÖ´ÂÁö, ¾ø´ÂÁö¸¦ ¾Ë ¼ö ¾øÀ½
-	// µû¶ó¼­ body¸¦ Doctor Å¬·¡½ºÀÇ ÇÏ´ÜÀ¸·Î »© ÁÜ
+	// ì „ë°© ì„ ì–¸ ì‹œ error! ì „ë°© ì„ ì–¸ ì•ˆì— m_nameì´ ìˆëŠ”ì§€, ì—†ëŠ”ì§€ë¥¼ ì•Œ ìˆ˜ ì—†ìŒ
+	// ë”°ë¼ì„œ bodyë¥¼ Doctor í´ë˜ìŠ¤ì˜ í•˜ë‹¨ìœ¼ë¡œ ë¹¼ ì¤Œ
 	void meetDoctors()
 	{
 		for (auto & ele : m_doctors)
@@ -41,7 +41,7 @@ class Doctor
 {
 private:
 	string m_name;
-	// Æ÷ÀÎÅÍ¸¦ ¾²Áö ¾Ê°í, È¯ÀÚ °íÀ¯¹øÈ£(id)¸¦ ºÎ¿©ÇÏ¿© ÇØ´ç È¯ÀÚ¸¦ Ã£´Â ¹æ½ÄÀ¸·Îµµ ±¸Çö °¡´É
+	// í¬ì¸í„°ë¥¼ ì“°ì§€ ì•Šê³ , í™˜ì ê³ ìœ ë²ˆí˜¸(id)ë¥¼ ë¶€ì—¬í•˜ì—¬ í•´ë‹¹ í™˜ìë¥¼ ì°¾ëŠ” ë°©ì‹ìœ¼ë¡œë„ êµ¬í˜„ ê°€ëŠ¥
 	vector<Patient*> m_patients;
 	Doctor * doctor;	// reflexive association
 
@@ -63,7 +63,7 @@ public:
 		}
 	}
 
-	// friend class ¼±¾ğÀ¸·Î Á÷Á¢ Á¢±ÙÇÒ ¼ö ÀÖ°Ô ÇÔ
+	// friend class ì„ ì–¸ìœ¼ë¡œ ì§ì ‘ ì ‘ê·¼í•  ìˆ˜ ìˆê²Œ í•¨
 	friend class Patient;
 };
 
@@ -71,14 +71,14 @@ void Patient::meetDoctors()
 {
 	for (auto & ele : m_doctors)
 	{
-		// Àü¹æ ¼±¾ğ ½Ã error! Àü¹æ ¼±¾ğ ¾È¿¡ m_nameÀÌ ÀÖ´ÂÁö, ¾ø´ÂÁö¸¦ ¾Ë ¼ö ¾øÀ½
+		// ì „ë°© ì„ ì–¸ ì‹œ error! ì „ë°© ì„ ì–¸ ì•ˆì— m_nameì´ ìˆëŠ”ì§€, ì—†ëŠ”ì§€ë¥¼ ì•Œ ìˆ˜ ì—†ìŒ
 		cout << m_name << " - Meet doctor : " << ele->m_name << endl;
 	}
 }
 
 int main()
 {
-	// ¾î´À ÇÑÂÊÀÌ È®½ÇÈ÷ ÁÖ°¡ µÇÁö ¾Ê´Â °æ¿ì(ÁÖ-ÁÖ, ºÎ-ºÎ)
+	// ì–´ëŠ í•œìª½ì´ í™•ì‹¤íˆ ì£¼ê°€ ë˜ì§€ ì•ŠëŠ” ê²½ìš°(ì£¼-ì£¼, ë¶€-ë¶€)
 
 	Patient *p1 = new Patient("Jack Jack");
 	Patient *p2 = new Patient("Dash");

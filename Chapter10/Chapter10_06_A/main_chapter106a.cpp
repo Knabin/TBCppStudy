@@ -11,7 +11,7 @@ private:
 
 public:
 
-	//TODO: ¸Å°³º¯¼ö¸¦ ¾î¶»°Ô ¹Þ¾Æ¾ß ÇÒÁö Àß ¸ð¸£°Ú´Ù..
+	//TODO: ë§¤ê°œë³€ìˆ˜ë¥¼ ì–´ë–»ê²Œ ë°›ì•„ì•¼ í• ì§€ ìž˜ ëª¨ë¥´ê² ë‹¤..
 	IntArray(int n1, int n2, int n3, int n4, int n5)
 	{
 		m_length = 5;
@@ -126,7 +126,7 @@ int main()
 	my_arr.remove(0);
 	cout << my_arr;
 
-	//standard template library: member of °ü°è
+	//standard template library: member of ê´€ê³„
 	//vector<int> int_vec;
 	//array<int, 10> int_arr;
 

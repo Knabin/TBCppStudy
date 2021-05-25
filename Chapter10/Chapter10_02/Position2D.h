@@ -19,7 +19,7 @@ public:
 		set(pos_target.m_x, pos_target.m_y);
 		// m_x = pos_target.m_x;
 		// m_y = pos_target.m_y;
-		// => ¾Æ·¡¿Í ±â´ÉÀÌ °ãÄ¡±â ¶§¹®¿¡ ÇÔ¼ö¸¦ È£ÃâÇÏ´Â °ÍÀÌ ÁÁÀ½
+		// => ì•„ë˜ì™€ ê¸°ëŠ¥ì´ ê²¹ì¹˜ê¸° ë•Œë¬¸ì— í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” ê²ƒì´ ì¢‹ìŒ
 	}
 
 	void set(const int & x_target, const int & y_target)

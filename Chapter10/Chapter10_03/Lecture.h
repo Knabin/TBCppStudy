@@ -9,13 +9,13 @@ class Lecture
 private:
 	std::string m_name;
 
-	// valueÀÇ vectorÀÌ±â ¶§¹®¿¡ push_backÀ» ÇÏ¸é º¹»çÇÔ
+	// valueì˜ vectorì´ê¸° ë•Œë¬¸ì— push_backì„ í•˜ë©´ ë³µì‚¬í•¨
 	// &student_input != &students[0]
 	//Teacher teacher;
 	//std::vector<Student> students;
 
-	// students ÀÚÃ¼´Â vector¶ó¼­ Lecture°¡ »ç¶óÁö¸é studentsµµ »ç¶óÁü
-	// ´Ü, Student Æ÷ÀÎÅÍ¸¦ ´ã°í ÀÖ±â ¶§¹®¿¡ °¡¸®Å°°í ÀÖ´ø Student °´Ã¼µéÀº »ç¶óÁöÁö ¾ÊÀ½
+	// students ìì²´ëŠ” vectorë¼ì„œ Lectureê°€ ì‚¬ë¼ì§€ë©´ studentsë„ ì‚¬ë¼ì§
+	// ë‹¨, Student í¬ì¸í„°ë¥¼ ë‹´ê³  ìˆê¸° ë•Œë¬¸ì— ê°€ë¦¬í‚¤ê³  ìˆë˜ Student ê°ì²´ë“¤ì€ ì‚¬ë¼ì§€ì§€ ì•ŠìŒ
 	Teacher *teacher;
 	std::vector<Student *> students;
 

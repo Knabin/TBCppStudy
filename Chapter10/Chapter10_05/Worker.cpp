@@ -2,8 +2,8 @@
 #include "Worker.h"
 #include "Timer.h"
 
-// Worker¸¦ ¼±¾ğÇÒ ¶§´Â Timer.h°¡ ÇÊ¿ä ¾ø°í,
-// cpp ÆÄÀÏ¿¡¼­ ±¸ÇöÇÒ ¶§¸é include ÇØ ÁÖ¸é µÊ
+// Workerë¥¼ ì„ ì–¸í•  ë•ŒëŠ” Timer.hê°€ í•„ìš” ì—†ê³ ,
+// cpp íŒŒì¼ì—ì„œ êµ¬í˜„í•  ë•Œë©´ include í•´ ì£¼ë©´ ë¨
 
 void Worker::doSomething()
 {
