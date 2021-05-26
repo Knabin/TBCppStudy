@@ -35,7 +35,7 @@ int main()
 	Child c1;
 
 	cout << sizeof(Mother) << endl;
-	cout << sizeof(Child) << endl;	// Mother의 int m_i 상속받음! padding 찾아보기
+	cout << sizeof(Child) << endl;
 
 	return 0;
 }

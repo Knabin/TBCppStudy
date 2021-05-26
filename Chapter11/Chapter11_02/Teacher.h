@@ -11,7 +11,7 @@ public:
 	Teacher(const std::string & name_in = "No Name")
 		: Person(name_in)
 	{
-		this->getName();	// ºÎ¸ð Å¬·¡½ºÀÇ ÇÔ¼ö Á¢±Ù °¡´É
+		this->getName();	// ë¶€ëª¨ í´ëž˜ìŠ¤ì˜ í•¨ìˆ˜ ì ‘ê·¼ ê°€ëŠ¥
 	}
 
 	void teach()

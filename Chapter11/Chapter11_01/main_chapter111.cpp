@@ -3,9 +3,9 @@ using namespace std;
 
 class Mother	// generalized class
 {
-private:	// ÀÚ½ÄÇÑÅ×µµ Çã¿ëX
-//public:	// ´Ù ¿­¾î ¹ö¸²
-//protected:	// private »óÅÂ¸¦ À¯ÁöÇÏ¸é¼­ ÀÚ½Ä¿¡°Ô´Â Çã¿ë
+private:	// ìì‹í•œí…Œë„ í—ˆìš©X
+//public:	// ë‹¤ ì—´ì–´ ë²„ë¦¼
+//protected:	// private ìƒíƒœë¥¼ ìœ ì§€í•˜ë©´ì„œ ìì‹ì—ê²ŒëŠ” í—ˆìš©
 	int m_i;
 
 public:
@@ -26,7 +26,7 @@ public:
 	}
 };
 
-// Mother class·ÎºÎÅÍ ¸¹Àº Å¬·¡½º¸¦ À¯µµÇØ¼­ ¸¸µé¾î ³¾ ¼ö ÀÖÀ½
+// Mother classë¡œë¶€í„° ë§ì€ í´ë˜ìŠ¤ë¥¼ ìœ ë„í•´ì„œ ë§Œë“¤ì–´ ë‚¼ ìˆ˜ ìˆìŒ
 // Child class is derived from Mother class
 class Child : public Mother	// derived class
 {
@@ -38,7 +38,7 @@ public:
 		//: m_i(i_in), m_d(d_in)
 		: Mother(i_in), m_d(d_in)
 	{
-		// ChildÀÇ »ı¼ºÀÚ°¡ È£ÃâµÉ °æ¿ì, MotherÀÇ »ı¼ºÀÚ¸¦ °°ÀÌ È£ÃâÇÔ!!
+		// Childì˜ ìƒì„±ìê°€ í˜¸ì¶œë  ê²½ìš°, Motherì˜ ìƒì„±ìë¥¼ ê°™ì´ í˜¸ì¶œí•¨!!
 		/*Mother::setValue(i_in);
 		m_d = d_in;*/
 	}
@@ -77,8 +77,8 @@ int main()
 	cout << mother.getValue() << endl;
 
 	Child child(1024, 128);
-	// µû·Î ±¸ÇöÇÏÁö ¾Ê¾Æµµ Mother Å¬·¡½ºÀÇ °Íµé ±×´ë·Î »ç¿ë °¡´É!
-	// => Child Å¬·¡½º¿¡¼­ ±¸ÇöÇÏ¸é ChildÀÇ °ÍÀ» ¿ì¼±À¸·Î ºÎ¸§
+	// ë”°ë¡œ êµ¬í˜„í•˜ì§€ ì•Šì•„ë„ Mother í´ë˜ìŠ¤ì˜ ê²ƒë“¤ ê·¸ëŒ€ë¡œ ì‚¬ìš© ê°€ëŠ¥!
+	// => Child í´ë˜ìŠ¤ì—ì„œ êµ¬í˜„í•˜ë©´ Childì˜ ê²ƒì„ ìš°ì„ ìœ¼ë¡œ ë¶€ë¦„
 	/*child.setValue(128);
 	child.Mother::setValue(1024);*/
 	cout << child.Mother::getValue() << endl;

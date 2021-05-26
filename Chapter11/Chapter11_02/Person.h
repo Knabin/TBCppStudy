@@ -5,14 +5,14 @@
 class Person
 {
 private:
-	// Çì´õ ÆÄÀÏ¿¡¼­´Â using namespace std ¾²Áö ¾Ê´Â ÆíÀÌ ÁÁÀ½
+	// í—¤ë” íŒŒì¼ì—ì„œëŠ” using namespace std ì“°ì§€ ì•ŠëŠ” í¸ì´ ì¢‹ìŒ
 
-	// ÇöÀç Student/Teacher¿¡¼­ m_name¿¡ Á¢±ÙÇÏ·Á¸é error
-	// 1. m_nameÀ» °ü¸®ÇÏ´Â Å¬·¡½º´Â "Person"ÀÓ
-	// 2. Student°¡ »ı¼ºµÇ´Â ½ÃÁ¡¿¡¼­´Â m_nameÀÌ »ı¼ºµÇ¾î ÀÖÁö ¾ÊÀ½
+	// í˜„ì¬ Student/Teacherì—ì„œ m_nameì— ì ‘ê·¼í•˜ë ¤ë©´ error
+	// 1. m_nameì„ ê´€ë¦¬í•˜ëŠ” í´ë˜ìŠ¤ëŠ” "Person"ì„
+	// 2. Studentê°€ ìƒì„±ë˜ëŠ” ì‹œì ì—ì„œëŠ” m_nameì´ ìƒì„±ë˜ì–´ ìˆì§€ ì•ŠìŒ
 
-	// private¶ó¼­ ÀÚ½ÄÀÇ getter/setter¿¡¼­ error! => publicÀ¸·Î ¹Ù²Ù¸é?
-	// ¾îµğ¿¡¼­ m_name¿¡ °ª¿¡ Á¢±ÙÇÏ°í º¯°æÇÏ´ÂÁö ¾Ë±â Èûµé¾îÁü
+	// privateë¼ì„œ ìì‹ì˜ getter/setterì—ì„œ error! => publicìœ¼ë¡œ ë°”ê¾¸ë©´?
+	// ì–´ë””ì—ì„œ m_nameì— ê°’ì— ì ‘ê·¼í•˜ê³  ë³€ê²½í•˜ëŠ”ì§€ ì•Œê¸° í˜ë“¤ì–´ì§
 
 	std::string m_name;
 
@@ -21,7 +21,7 @@ public:
 	//	: m_name("No Name")
 	//{}
 
-	// m_nameÀ» ÃÊ±âÈ­ÇÏ´Â »ı¼ºÀÚ »ı¼º
+	// m_nameì„ ì´ˆê¸°í™”í•˜ëŠ” ìƒì„±ì ìƒì„±
 	Person(const std::string & name_in = "No Name")
 		: m_name(name_in)
 	{}
@@ -31,7 +31,7 @@ public:
 		m_name = name_in;
 	}
 
-	// const ¾øÀ¸¸é error!
+	// const ì—†ìœ¼ë©´ error!
 	std::string getName() const
 	{
 		return m_name;

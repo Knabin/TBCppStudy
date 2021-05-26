@@ -3,7 +3,7 @@
 
 int main()
 {
-	// #include <string>ÀÌ ¾øÁö¸¸, Person.h¿¡ µÇ¾î ÀÖ±â ¶§¹®¿¡ °£Á¢ÀûÀ¸·Î »ç¿ë °¡´É
+	// #include <string>ì´ ì—†ì§€ë§Œ, Person.hì— ë˜ì–´ ìˆê¸° ë•Œë¬¸ì— ê°„ì ‘ì ìœ¼ë¡œ ì‚¬ìš© ê°€ëŠ¥
 	std::string name;
 
 	Student std("Jack Jack");
