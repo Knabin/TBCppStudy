@@ -39,41 +39,41 @@ public:
 int main()
 {
 	Derived1 d1;
-	Base *base = &d1;	// Base¿¡´Â ¾ø°í Derived¿¡¸¸ ÀÖ´Â °Íµé¿¡´Â Á¢±Ù ºÒ°¡´É
+	Base *base = &d1;	// Baseì—ëŠ” ì—†ê³  Derivedì—ë§Œ ìˆëŠ” ê²ƒë“¤ì—ëŠ” ì ‘ê·¼ ë¶ˆê°€ëŠ¥
 	d1.m_j = 2048;
 
-	// °¡±ŞÀû ÀÌ·± ½ÄÀ¸·Î ÄÚµùÀº Áö¾çÇÏ±â...
+	// ê°€ê¸‰ì  ì´ëŸ° ì‹ìœ¼ë¡œ ì½”ë”©ì€ ì§€ì–‘í•˜ê¸°...
 	auto *base_to_d1 = dynamic_cast<Derived1*>(base);
 	cout << base_to_d1->m_j << endl;
 
 	base_to_d1->m_j = 256;
 	cout << d1.m_j << endl;
 
-	// dynamic_cast´Â casting¿¡ ½ÇÆĞÇÏ¸é nullptr¸¦ ³Ö¾î ¹ö¸²
-	// °°Àº ºÎ¸ğ¸¦ °¡Áö°í ÀÖ¾îµµ ÀÌ·± ½ÄÀ¸·Î d1=>d2 Çüº¯È¯Àº ºÒ°¡´ÉÇÔ!
+	// dynamic_castëŠ” castingì— ì‹¤íŒ¨í•˜ë©´ nullptrë¥¼ ë„£ì–´ ë²„ë¦¼
+	// ê°™ì€ ë¶€ëª¨ë¥¼ ê°€ì§€ê³  ìˆì–´ë„ ì´ëŸ° ì‹ìœ¼ë¡œ d1=>d2 í˜•ë³€í™˜ì€ ë¶ˆê°€ëŠ¥í•¨!
 	auto *base_to_d2 = dynamic_cast<Derived2*>(base);
 	if (base_to_d2 != nullptr)
 		base_to_d2->print();
 	else
 		cout << "Failed" << endl;
 
-	// static_castµµ °¡´ÉÇÔ
+	// static_castë„ ê°€ëŠ¥í•¨
 	auto *base_to_d1_2 = static_cast<Derived1*>(base);
 	if (base_to_d1_2 != nullptr)
 		base_to_d1_2->print();
 	else
 		cout << "Failed" << endl;
 
-	// ´Ü, static cast´Â ÃÖ´ëÇÑ Çüº¯È¯ÇÏ·Á°í ÇÏ±â ¶§¹®¿¡ ¿ø·¡¶ó¸é ¾È µÇ´Â °Íµéµµ µÇ´Â °æ¿ì°¡ ÀÖÀ½
+	// ë‹¨, static castëŠ” ìµœëŒ€í•œ í˜•ë³€í™˜í•˜ë ¤ê³  í•˜ê¸° ë•Œë¬¸ì— ì›ë˜ë¼ë©´ ì•ˆ ë˜ëŠ” ê²ƒë“¤ë„ ë˜ëŠ” ê²½ìš°ê°€ ìˆìŒ
 	auto *base_to_d2_2 = static_cast<Derived2*>(base);
 	if (base_to_d2_2 != nullptr)
 		base_to_d2_2->print();
 	else
 		cout << "Failed" << endl;
 
-	// ¹®Á¦°¡ ¾È »ı±â´Â °æ¿ì¿¡´Â ¹» ¾²µç »ó°üÀÌ ¾øÁö¸¸,
-	// dynamic_cast´Â ·±Å¸ÀÓ¿¡ Ã¼Å©¸¦ ÇØ¼­ ¾Æ´Ñ °Í °°Àº °æ¿ì nullptr¸¦ ³Ö¾î ÁÖ³ª
-	// static_cast´Â ±×·± ±â´ÉÀÌ ¾ø°í ¹«Á¶°Ç Çüº¯È¯ÇÔ
+	// ë¬¸ì œê°€ ì•ˆ ìƒê¸°ëŠ” ê²½ìš°ì—ëŠ” ë­˜ ì“°ë“  ìƒê´€ì´ ì—†ì§€ë§Œ,
+	// dynamic_castëŠ” ëŸ°íƒ€ì„ì— ì²´í¬ë¥¼ í•´ì„œ ì•„ë‹Œ ê²ƒ ê°™ì€ ê²½ìš° nullptrë¥¼ ë„£ì–´ ì£¼ë‚˜
+	// static_castëŠ” ê·¸ëŸ° ê¸°ëŠ¥ì´ ì—†ê³  ë¬´ì¡°ê±´ í˜•ë³€í™˜í•¨
 
 	return 0;
 }

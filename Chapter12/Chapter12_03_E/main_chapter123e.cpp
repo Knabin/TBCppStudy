@@ -37,11 +37,11 @@ int main()
 	//C c;
 
 	A &ref = b;
-	b.getThis()->print();   // 출력: B
-	ref.getThis()->print();   // 출력: A
+	b.getThis()->print();   // B
+	ref.getThis()->print();   // A
 
-	cout << typeid(b.getThis()).name() << endl;      // 출력: class B *
-	cout << typeid(ref.getThis()).name() << endl;   // 출력: class A *
+	cout << typeid(b.getThis()).name() << endl;      // class B *
+	cout << typeid(ref.getThis()).name() << endl;   // class A *
 
 	return 0;
 }

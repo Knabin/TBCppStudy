@@ -41,18 +41,16 @@ int main()
 	/*
 	Derived d;
 	Base &b = d;
-	//Base b = d;	// º¹»ç ´ëÀÔ, d¸¸ °¡Áö°í ÀÖ´Â Á¤º¸´Â b°¡ °¡Áú ¼ö ¾øÀ½!! => ÀÇµµÀûÀÎ °ÍÀÌ¶ó¸é ÁÖ¼®À» ´Ş¾Æ ÁÖ´Â °ÍÀÌ ÁÁÀ½
-
+	//Base b = d;	// ë³µì‚¬ ëŒ€ì…, dë§Œ ê°€ì§€ê³  ìˆëŠ” ì •ë³´ëŠ” bê°€ ê°€ì§ˆ ìˆ˜ ì—†ìŒ!! => ì˜ë„ì ì¸ ê²ƒì´ë¼ë©´ ì£¼ì„ì„ ë‹¬ì•„ ì£¼ëŠ” ê²ƒì´ ì¢‹ìŒ
 	b.print();
-
 	doSomething(d);
-	doSomething2(d);	// ¸Å°³º¯¼ö ÀÚ¸®¿¡ &¸¦ »© ¹ö¸®¸é ´ÙÇü¼ºÀÌ »ç¶óÁü!
+	doSomething2(d);	// ë§¤ê°œë³€ìˆ˜ ìë¦¬ì— &ë¥¼ ë¹¼ ë²„ë¦¬ë©´ ë‹¤í˜•ì„±ì´ ì‚¬ë¼ì§!
 	*/
 
 	Base b;
 	Derived d;
 
-	// 1. Base Å¸ÀÔ vector
+	// 1. Base íƒ€ì… vector
 	std::vector<Base> my_vec;
 
 	my_vec.push_back(b);
@@ -62,7 +60,7 @@ int main()
 		ele.print();
 	cout << endl;
 
-	// 2. Base *Å¸ÀÔ vector
+	// 2. Base *íƒ€ì… vector
 	std::vector<Base *> my_vec2;
 	my_vec2.push_back(&b);
 	my_vec2.push_back(&d);
@@ -72,10 +70,10 @@ int main()
 	cout << endl;
 
 
-	// 3. Base &Å¸ÀÔ vector
+	// 3. Base &íƒ€ì… vector
 	//std::vector<Base&> my_vec;	//error! 'data': pointer to reference is illegal
 
-	// #include <functional> ÇÊ¿ä!
+	// #include <functional> í•„ìš”!
 	std::vector<std::reference_wrapper<Base>> my_vec3;
 
 	my_vec3.push_back(b);

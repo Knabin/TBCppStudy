@@ -11,8 +11,8 @@ public:
 class B : public A
 {
 public:
-	// ¸Å°³º¯¼ö°¡ ´Ù¸£¸é/const À¯¹«°¡ ´Ù¸£¸é overriding ºÒ°¡´É
-	// => override ¼±¾ğÇÏ¸é ÄÄÆÄÀÏ·¯°¡ ¿¡·¯ Ã£¾Æ ÁÜ
+	// ë§¤ê°œë³€ìˆ˜ê°€ ë‹¤ë¥´ë©´/const ìœ ë¬´ê°€ ë‹¤ë¥´ë©´ overriding ë¶ˆê°€ëŠ¥
+	// => override ì„ ì–¸í•˜ë©´ ì»´íŒŒì¼ëŸ¬ê°€ ì—ëŸ¬ ì°¾ì•„ ì¤Œ
 	//void print(short x) { cout << "B" << endl; }
 	void print() final { cout << "B" << endl; }
 	//void print1() { cout << "B" << endl; }
@@ -22,7 +22,7 @@ public:
 class C : public B
 {
 public:
-	// ºÎ¸ğ Å¬·¡½º¿¡¼­ final ¼±¾ğ ½Ã override ºÒ°¡´É
+	// ë¶€ëª¨ í´ë˜ìŠ¤ì—ì„œ final ì„ ì–¸ ì‹œ override ë¶ˆê°€ëŠ¥
 	//virtual void print() { cout << "C" << endl; }
 };
 
@@ -32,7 +32,7 @@ int main()
 	B b;
 
 	A &ref = b;
-	//ref.print(1);   // Ãâ·Â: A
+	//ref.print(1);   // ì¶œë ¥: A
 	//cout << typeid(b.getThis()).name() << endl;
 
 	return 0;

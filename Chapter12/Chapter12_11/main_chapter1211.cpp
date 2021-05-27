@@ -5,13 +5,13 @@ class Base
 public:
 	Base() {}
 
-	// friend´Â ¸â¹ö°¡ ¾Æ´Ï±â ¶§¹®¿¡ Á÷Á¢ overridingÀ» ÇÒ ¼ö ¾øÀ½!!
+	// friendëŠ” ë©¤ë²„ê°€ ì•„ë‹ˆê¸° ë•Œë¬¸ì— ì§ì ‘ overridingì„ í•  ìˆ˜ ì—†ìŒ!!
 	friend std::ostream& operator << (std::ostream &out, const Base &b)
 	{
 		return b.print(out);
 	}
 
-	// Á÷Á¢ÀûÀÎ ÀÏÀº ÀÌÂÊÀ¸·Î ³Ñ±â°Ô²û ÇØ¼­ overridingÃ³·³ ±¸Çö °¡´É
+	// ì§ì ‘ì ì¸ ì¼ì€ ì´ìª½ìœ¼ë¡œ ë„˜ê¸°ê²Œë” í•´ì„œ overridingì²˜ëŸ¼ êµ¬í˜„ ê°€ëŠ¥
 	virtual std::ostream& print(std::ostream& out) const
 	{
 		out << "Base";
@@ -44,8 +44,8 @@ int main()
 	Base &bref = d;
 	std::cout << bref << '\n';
 
-	// ¾î¶°ÇÑ ±â´ÉÀ» virtual ÇÔ¼ö ¿©·¯ °³¸¦ Á¶ÇÕÇÏ´Â ¹æ½ÄÀ¸·Î ±¸ÇöÇÏ´Â ¹æ½Äµµ ÀÖÀ½
-	// => ÀÏ¹İÀûÀÎ ÇÁ·Î±×·¡¹Ö Àü·«À¸·Îµµ ¸¹ÀÌ »ç¿ëµÊ
+	// ì–´ë– í•œ ê¸°ëŠ¥ì„ virtual í•¨ìˆ˜ ì—¬ëŸ¬ ê°œë¥¼ ì¡°í•©í•˜ëŠ” ë°©ì‹ìœ¼ë¡œ êµ¬í˜„í•˜ëŠ” ë°©ì‹ë„ ìˆìŒ
+	// => ì¼ë°˜ì ì¸ í”„ë¡œê·¸ë˜ë° ì „ëµìœ¼ë¡œë„ ë§ì´ ì‚¬ìš©ë¨
 
 	return 0;
 }

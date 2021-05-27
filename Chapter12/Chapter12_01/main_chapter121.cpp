@@ -57,11 +57,11 @@ int main()
 	cat.speak();
 	dog.speak();
 
-	// ÀÚ½Ä Å¬·¡½º¸¦ ºÎ¸ğ Å¬·¡½ºÀÇ Æ÷ÀÎÅÍ·Î Ä³½ºÆÃÇÏ¸é..
+	// ìì‹ í´ë˜ìŠ¤ë¥¼ ë¶€ëª¨ í´ë˜ìŠ¤ì˜ í¬ì¸í„°ë¡œ ìºìŠ¤íŒ…í•˜ë©´..
 	Animal *ptr_animal1 = &cat;
 	Animal *ptr_animal2 = &dog;
 
-	// °¢°¢ÀÇ ¿ïÀ½¼Ò¸®°¡ ¾Æ´Ñ ???(Animal::speak) Ãâ·Â
+	// ê°ê°ì˜ ìš¸ìŒì†Œë¦¬ê°€ ì•„ë‹Œ ???(Animal::speak) ì¶œë ¥
 	ptr_animal1->speak();
 	ptr_animal2->speak();
 
@@ -83,8 +83,8 @@ int main()
 	Animal *my_animals[] = { &cats[0], &cats[1], &cats[2], &cats[3], &cats[4],
 							 &dogs[0], &dogs[1]};
 
-	// ÇÑ °³ÀÇ for¹®À¸·Î Ã³¸® °¡´É!
-	// virtualÀÌ ¾øÀ¸¸é ±×³É AnimalÀÇ speak() ½ÇÇà, virtual ºÙÀÌ¸é °¢°¢ÀÇ ¿ïÀ½¼Ò¸® Ãâ·Â
+	// í•œ ê°œì˜ forë¬¸ìœ¼ë¡œ ì²˜ë¦¬ ê°€ëŠ¥!
+	// virtualì´ ì—†ìœ¼ë©´ ê·¸ëƒ¥ Animalì˜ speak() ì‹¤í–‰, virtual ë¶™ì´ë©´ ê°ê°ì˜ ìš¸ìŒì†Œë¦¬ ì¶œë ¥
 	for (int i = 0; i < 7; i++)
 		my_animals[i]->speak();
 

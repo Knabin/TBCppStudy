@@ -39,7 +39,7 @@ class Copier : public Scanner, public Printer
 public:
 	Copier(int scanner, int printer, int power)
 		: Scanner(scanner, power), Printer(printer, power),
-		PoweredDevice(power)	// º°µµ È£Ãâ ÇÊ¿äÇÔ
+		PoweredDevice(power)	// ë³„ë„ í˜¸ì¶œ í•„ìš”í•¨
 	{
 	}
 };
@@ -49,7 +49,7 @@ int main()
 {
 	Copier cop(1, 2, 3);
 
-	// PoweredDevice »ı¼ºÀÚ µÎ ¹ø È£Ãâ ¹× ÁÖ¼Ò°¡ ´Ù¸§!! ¼­·Î ´Ù¸¥ µÎ °³ÀÇ PoweredDevice »ı¼º
+	// PoweredDevice ìƒì„±ì ë‘ ë²ˆ í˜¸ì¶œ ë° ì£¼ì†Œê°€ ë‹¤ë¦„!! ì„œë¡œ ë‹¤ë¥¸ ë‘ ê°œì˜ PoweredDevice ìƒì„±
 	cout << &cop.Scanner::PoweredDevice::m_i << endl;
 	cout << &cop.Printer::PoweredDevice::m_i << endl;
 

@@ -4,7 +4,7 @@ using namespace std;
 class Base
 {
 public:
-	// ºÎ¸ğ Å¬·¡½ºÀÇ ¼Ò¸êÀÚ¸¦ virtual·Î ¼±¾ğÇÏ¸é ÇØ°á!
+	// ë¶€ëª¨ í´ë˜ìŠ¤ì˜ ì†Œë©¸ìë¥¼ virtualë¡œ ì„ ì–¸í•˜ë©´ í•´ê²°!
 	virtual ~Base()
 	{
 		cout << "~Base()" << endl;
@@ -22,7 +22,7 @@ public:
 		m_array = new int[length];
 	}
 
-	// ºÎ¸ğ ¼Ò¸êÀÚ¿¡ virtual ºÙ¿´À¸¸é ÀÚ½Ä ¼Ò¸êÀÚ¿¡ override Ç¥½ÃÇÒ ¼ö ÀÖÀ½
+	// ë¶€ëª¨ ì†Œë©¸ìì— virtual ë¶™ì˜€ìœ¼ë©´ ìì‹ ì†Œë©¸ìì— override í‘œì‹œí•  ìˆ˜ ìˆìŒ
 	~Derived() override
 	{
 		cout << "~Derived()" << endl;

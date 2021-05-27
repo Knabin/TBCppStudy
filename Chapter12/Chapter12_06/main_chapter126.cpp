@@ -19,7 +19,7 @@ public:
 
 int main()
 {
-	cout << sizeof(Base) << endl;	// 32비트 기준 출력: 1(virtual X) / 4(virtual O)
+	cout << sizeof(Base) << endl;	// 1(virtual X) / 4(virtual O)
 	cout << sizeof(Der) << endl;
 
 	return 0;

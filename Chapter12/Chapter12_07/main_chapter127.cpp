@@ -15,7 +15,7 @@ public:
 public:
 	string getName() { return m_name; }
 
-	// body°¡ ¾ø´Â virtual functionÀÎµ¥ = 0 µÇ¾î ÀÖ´Â ÇÔ¼ö => pure virtual function
+	// bodyê°€ ì—†ëŠ” virtual functionì¸ë° = 0 ë˜ì–´ ìˆëŠ” í•¨ìˆ˜ => pure virtual function
 	virtual void speak() const = 0;
 	/*
 	virtual void speak() const
@@ -71,9 +71,9 @@ public:
 
 int main()
 {
-	//Animal ani("Hi");	// error! abstract class¶ó¼­ ºÒ°¡´É!
+	//Animal ani("Hi");	// error! abstract classë¼ì„œ ë¶ˆê°€ëŠ¥!
 
-	Cow cow("hello");	// Animal::speak() ÀçÁ¤ÀÇ ÇÊ¿ä!!
+	Cow cow("hello");	// Animal::speak() ì¬ì •ì˜ í•„ìš”!!
 	cow.speak();
 
 

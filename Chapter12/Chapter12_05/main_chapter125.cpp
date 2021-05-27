@@ -26,8 +26,8 @@ int main()
 	cin >> op;
 
 	// static binding (early binding)
-	// ¸ğµç º¯¼ö¸í/ÇÔ¼ö¸íÀÌ ºôµåÇÒ ¶§ Á¤ÇØÁ® ÀÖÀ½
-	// ¼Óµµ°¡ ºü¸§
+	// ëª¨ë“  ë³€ìˆ˜ëª…/í•¨ìˆ˜ëª…ì´ ë¹Œë“œí•  ë•Œ ì •í•´ì ¸ ìˆìŒ
+	// ì†ë„ê°€ ë¹ ë¦„
 	int result;
 	switch (op)
 	{
@@ -39,8 +39,8 @@ int main()
 
 
 	// dynamic binding (late binding)
-	// function pointer¿¡ ¾î¶² ÇÔ¼ö ÁÖ¼Ò°¡ µé¾î°¥Áö "·±Å¸ÀÓ"¿¡ °áÁ¤µÊ
-	// ¼Óµµ°¡ static bindingº¸´Ù ´À¸®³ª, ÇÁ·Î±×·¡¹ÖÀÌ À¯¿¬ÇØÁü!
+	// function pointerì— ì–´ë–¤ í•¨ìˆ˜ ì£¼ì†Œê°€ ë“¤ì–´ê°ˆì§€ "ëŸ°íƒ€ì„"ì— ê²°ì •ë¨
+	// ì†ë„ê°€ static bindingë³´ë‹¤ ëŠë¦¬ë‚˜, í”„ë¡œê·¸ë˜ë°ì´ ìœ ì—°í•´ì§!
 	int(*func_ptr)(int, int) = nullptr;
 	switch (op)
 	{

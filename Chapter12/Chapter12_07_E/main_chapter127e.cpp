@@ -2,8 +2,8 @@
 #include <string>
 using namespace std;
 
-// interface class´Â ½ÇÁ¦·Î ¹» ÇÒÁö´Â ¾ø°í, ¹«¾ùÀ» ÇØ¾ß ÇÑ´Ù°í °¡ÀÌµå¸¸ Á¦°øÇÔ
-// interface classÀÇ °æ¿ì ¾Õ¿¡ I ºÙÀÌ´Â °ÍÀÌ °ü½ÀÀÓ
+// interface classëŠ” ì‹¤ì œë¡œ ë­˜ í• ì§€ëŠ” ì—†ê³ , ë¬´ì—‡ì„ í•´ì•¼ í•œë‹¤ê³  ê°€ì´ë“œë§Œ ì œê³µí•¨
+// interface classì˜ ê²½ìš° ì•ì— I ë¶™ì´ëŠ” ê²ƒì´ ê´€ìŠµì„
 class IErrorLog
 {
 public:
@@ -32,7 +32,7 @@ public:
 	}
 };
 
-// interface¸¦ ¸Å°³º¯¼ö·Î ¹ŞÀ» ¼ö ÀÖÀ½!
+// interfaceë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì„ ìˆ˜ ìˆìŒ!
 void doSomething(IErrorLog & log)
 {
 	log.reportError("Runtime error!!");
