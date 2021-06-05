@@ -1,9 +1,9 @@
 #include "MyArray.h"
 
-// cpp ÆÄÀÏ·Î ¿Å±â¸é linking error!!
-// => Á¤ÀÇ´Â cpp ÆÄÀÏ¿¡ ÀÖ°í, main.cpp´Â MyArray.h¸¦ includeÇÔ
-//    µû¶ó¼­ instantiationÀ» ÇÒ ¶§, ¾î¶² Å¸ÀÔÀ¸·Î ÇØ¾ß ÇÏ´ÂÁö¸¦ print()¸¦ ÄÄÆÄÀÏÇÒ ¶§ ¾Ë ¼ö ¾øÀ½
-// MyArray.cpp¸¦ includeÇÏ¸é ÇØ°áÀÌ µÇ³ª, ÇÁ·ÎÁ§Æ®°¡ Ä¿Áö¸é ¿À·ù ¹ß»ı °¡´É¼º ³ôÀ½
+// cpp íŒŒì¼ë¡œ ì˜®ê¸°ë©´ linking error!!
+// => ì •ì˜ëŠ” cpp íŒŒì¼ì— ìˆê³ , main.cppëŠ” MyArray.hë¥¼ includeí•¨
+//    ë”°ë¼ì„œ instantiationì„ í•  ë•Œ, ì–´ë–¤ íƒ€ì…ìœ¼ë¡œ í•´ì•¼ í•˜ëŠ”ì§€ë¥¼ print()ë¥¼ ì»´íŒŒì¼í•  ë•Œ ì•Œ ìˆ˜ ì—†ìŒ
+// MyArray.cppë¥¼ includeí•˜ë©´ í•´ê²°ì´ ë˜ë‚˜, í”„ë¡œì íŠ¸ê°€ ì»¤ì§€ë©´ ì˜¤ë¥˜ ë°œìƒ ê°€ëŠ¥ì„± ë†’ìŒ
 
 template<typename T>
 inline void MyArray<T>::print()
@@ -13,10 +13,10 @@ inline void MyArray<T>::print()
 	std::cout << std::endl;
 }
 
-// ÇØ°á ¹æ¹ı: explicit instantiation
+// í•´ê²° ë°©ë²•: explicit instantiation
 //template void MyArray<double>::print();
-//template void MyArray<char>::print();	// ³»°¡ ÀÌ print¶ó´Â ÇÔ¼ö¸¦ char Å¸ÀÔÀ¸·Î »ç¿ëÇÒ °Å´Ï±î ºôµåÇÒ ¶§ instantiation ÇÏ¶ó
+//template void MyArray<char>::print();	// ë‚´ê°€ ì´ printë¼ëŠ” í•¨ìˆ˜ë¥¼ char íƒ€ì…ìœ¼ë¡œ ì‚¬ìš©í•  ê±°ë‹ˆê¹Œ ë¹Œë“œí•  ë•Œ instantiation í•˜ë¼
 
-// Å¬·¡½º ÀÚÃ¼¸¦ exlicit
+// í´ë˜ìŠ¤ ìì²´ë¥¼ exlicit
 template class MyArray<double>;
 template class MyArray<char>;

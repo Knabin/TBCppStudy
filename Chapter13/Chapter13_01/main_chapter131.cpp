@@ -36,8 +36,8 @@ int main()
 	std::cout << getMax(1.0f, 3.4f) << std::endl;
 	std::cout << getMax('a', 'c') << std::endl;
 
-	// user defined type¿¡ ´ëÇØ¼­µµ ÅÛÇÃ¸´ »ç¿ë °¡´É
-	// ´Ü, ÀÌ °æ¿ì << operator, < operator µîÀÌ ±¸ÇöµÇ¾î ÀÖ¾î¾ß »ç¿ë °¡´ÉÇÔ ÁÖÀÇ!
+	// user defined typeì— ëŒ€í•´ì„œë„ í…œí”Œë¦¿ ì‚¬ìš© ê°€ëŠ¥
+	// ë‹¨, ì´ ê²½ìš° << operator, < operator ë“±ì´ êµ¬í˜„ë˜ì–´ ìˆì–´ì•¼ ì‚¬ìš© ê°€ëŠ¥í•¨ ì£¼ì˜!
 	// template instantiation
 	std::cout << getMax(Cents(5), Cents(9)) << std::endl;
 

@@ -49,7 +49,7 @@ public:
 };
 
 //template<typename T>
-//inline void MyArray<T>::print()	// MyArray::print()가 아니라 MyArray"<T>"!!
+//inline void MyArray<T>::print()	// MyArray::print() -> MyArray"<T>"!!
 //{
 //	for (int i = 0; i < m_length; ++i)
 //		std::cout << m_data[i] << " ";

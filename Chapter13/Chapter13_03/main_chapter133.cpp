@@ -3,10 +3,10 @@
 int main()
 {
 	// std::vector<double> my_array; my_array.resize(100);
-	// MyArray<double> my_array(100); => ÀÌÀü ¿¹Á¦´Â µ¿Àû ÇÒ´çÀÌ¾ú±â ¶§¹®¿¡ cin µîÀ¸·Îµµ Ã³¸® °¡´ÉÇßÀ½
+	// MyArray<double> my_array(100); => ì´ì „ ì˜ˆì œëŠ” ë™ì  í• ë‹¹ì´ì—ˆê¸° ë•Œë¬¸ì— cin ë“±ìœ¼ë¡œë„ ì²˜ë¦¬ ê°€ëŠ¥í–ˆìŒ
 	
 	int i = 100;
-	//MyArray<double, i> my_array;	// error! int i¿¡ const ºÙÀÌ¸é OK
+	//MyArray<double, i> my_array;	// error! int iì— const ë¶™ì´ë©´ OK
 	MyArray<double, 100> my_array;	// std::array<double,100>
 
 	for (int i = 0; i < my_array.getLength(); ++i)

@@ -31,8 +31,8 @@ public:
 		return T_SIZE;
 	}
 
-	// explicit instantiationÀ» ÇÑ´Ù¸é, T_SIZE·Î µé¾î¿À´Â ¸ðµç °æ¿ì¿¡ ´ëÇØ ´Ù Ã³¸®ÇØ¾ß ÇÔ => ??
-	// non-typeÀÇ °æ¿ì Çì´õ¿¡¼­ »ç¿ëÇÏ´Â °ÍÀÌ ±¦ÂúÀº µíÇÏ´Ù!
+	// explicit instantiationì„ í•œë‹¤ë©´, T_SIZEë¡œ ë“¤ì–´ì˜¤ëŠ” ëª¨ë“  ê²½ìš°ì— ëŒ€í•´ ë‹¤ ì²˜ë¦¬í•´ì•¼ í•¨ => ??
+	// non-typeì˜ ê²½ìš° í—¤ë”ì—ì„œ ì‚¬ìš©í•˜ëŠ” ê²ƒì´ ê´œì°®ì€ ë“¯í•˜ë‹¤!
 	void print()
 	{
 		for (int i = 0; i < T_SIZE; ++i)

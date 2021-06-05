@@ -22,8 +22,8 @@ public:
 	}
 };
 
-// Çì´õÆÄÀÏ¿¡¼­ ±¸ÇöÇÏ´Â °ÍÀÌ °¡Àå ÁÁÀº ¹æ¹ı!
-// cpp¿¡¼­ »ç¿ëÇÏ°í ½Í´Ù¸é main.cpp¿¡ #include "Storage.cpp"
+// í—¤ë”íŒŒì¼ì—ì„œ êµ¬í˜„í•˜ëŠ” ê²ƒì´ ê°€ì¥ ì¢‹ì€ ë°©ë²•!
+// cppì—ì„œ ì‚¬ìš©í•˜ê³  ì‹¶ë‹¤ë©´ main.cppì— #include "Storage.cpp"
 template <>
 void Storage<double>::print()
 {

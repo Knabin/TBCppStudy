@@ -23,7 +23,7 @@ public:
 	}
 };
 
-// »ó¼ÓÀ¸·Î Ã³¸®ÇÏ´Â ÀÌÀ¯? ÅÛÇÃ¸´À» ÅëÂ°·Î Æ¯¼öÈ­ÇÏ´Â °Íº¸´Ù Æí¸®ÇÔ
+// ìƒì†ìœ¼ë¡œ ì²˜ë¦¬í•˜ëŠ” ì´ìœ ? í…œí”Œë¦¿ì„ í†µì§¸ë¡œ íŠ¹ìˆ˜í™”í•˜ëŠ” ê²ƒë³´ë‹¤ íŽ¸ë¦¬í•¨
 template <class T, int size>
 class StaticArray : public StaticArray_BASE<T, size>
 {

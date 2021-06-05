@@ -35,16 +35,16 @@ public:
 
 int main()
 {
-	// C++17¿¡¼­´Â ÄÄÆÄÀÏ °¡´É!
+	// C++17ì—ì„œëŠ” ì»´íŒŒì¼ ê°€ëŠ¥!
 	//A a_int(1);
 	A<int> a_int(1);
 	A<double> a_double(3.14);
 	A<char> a_char('A');
 
-	// ÁÖÀÇ»çÇ×: ´Ù¸¥ Å¬·¡½º¶ó°í º¸¸é µÊ!!
+	// ì£¼ì˜ì‚¬í•­: ë‹¤ë¥¸ í´ë˜ìŠ¤ë¼ê³  ë³´ë©´ ë¨!!
 	a_int.test();
 	a_double.test();
-	//a_char.test();	// error! ¾øÀ½
+	//a_char.test();	// error! ì—†ìŒ
 
 	a_int.doSomething();
 	a_double.doSomething();

@@ -13,7 +13,7 @@ public:
 	{
 	}
 
-	// TT: doSomething()¿¡¼­¸¸ Àû¿ëµÇ´Â template parameter
+	// TT: doSomething()ì—ì„œë§Œ ì ìš©ë˜ëŠ” template parameter
 	template<typename TT>
 	void doSomething(const TT & input)
 	{
@@ -32,7 +32,7 @@ int main()
 	A<int> a_int(123);
 	a_int.print();
 
-	// <float>: TT°¡ ¾î¶² Å¸ÀÔÀÎÁö ¸í½Ã, ¸Å°³º¯¼ö¸¦ ³Ö´Â °æ¿ì »ı·« °¡´É
+	// <float>: TTê°€ ì–´ë–¤ íƒ€ì…ì¸ì§€ ëª…ì‹œ, ë§¤ê°œë³€ìˆ˜ë¥¼ ë„£ëŠ” ê²½ìš° ìƒëµ ê°€ëŠ¥
 	a_int.doSomething<float>(123.4);	//truncation from 'double' to 'const TT'
 	a_int.doSomething(123.4);
 

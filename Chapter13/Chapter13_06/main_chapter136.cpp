@@ -24,7 +24,7 @@ void print(StaticArray<T, size> & array)
 	std::cout << std::endl;
 }
 
-// ºÎºÐÀûÀ¸·Î Æ¯¼öÈ­ÇÏ±â, char Å¸ÀÔÀÎ °æ¿ì¿¡¸¸
+// ë¶€ë¶„ì ìœ¼ë¡œ íŠ¹ìˆ˜í™”í•˜ê¸°, char íƒ€ìž…ì¸ ê²½ìš°ì—ë§Œ
 template <int size>
 void print(StaticArray<char, size> & array)
 {
